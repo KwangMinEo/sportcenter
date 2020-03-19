@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16440\viewh12900\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae
+\f1  
+\f0 center\'bf\'a1 \'b0\'fc\'c7\'d1\'b0\'cd \
+\'c5\'e8\'c4\'b4 \'b9\'f6\'c1\'af v9.0;\
+\'c5\'e8\'c4\'cf \'c6\'f7\'c6\'ae \'b9\'f8\'c8\'a3:
+\f1 {{\NeXTGraphic 스크린샷 2020-03-14 오전 11.17.24.png \width11460 \height2540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}�}\
+
+\f0 \
+db \'c6\'f7\'c6\'ae \'b9\'f8\'c8\'a3 : \
+
+\f1 {{\NeXTGraphic 스크린샷 2020-03-14 오전 11.23.04.png \width7120 \height2300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}�}\
+\
+\
+\
+
+\f0 db \'b3\'bb\'bf\'eb\
+\
+create table ClientData (\
+     id varchar2  not null  primary key,\
+     pwd varchar2  not null,\
+     name varchar2 not null,\
+     phone varchar2 not null,\
+     bdate date not null,          --\'bb\'fd\'b3\'e2\'bf\'f9\'c0\'cf\
+     gender boolean not null,   --1/2\'b7\'ce \'b9\'de\'c0\'bb\'c1\'f6\'b4\'c2 \'c7\'fc\'c0\'cc \'c1\'a4\'c7\'d8\'c1\'d6\'bc\'bc\'bf\'e4 \
+     email varchar2 not null,\
+     loc varchar2 not null\
+);\
+\
+create table reservation (\
+     dname varchar2 not null,     --\'c0\'d4\'b1\'de\'c0\'da\'b8\'ed\
+     coment varcahr2 ,                -- \'b3\'b2\'b1\'e2\'bd\'c7 \'b8\'bb\'be\'b8\'c0\'cc\'b6\'f3\'b0\'ed \'be\'b2\'bc\'cc\'b4\'c2\'b5\'a5 \'b9\'ba\'c1\'f8\'b8\'f0\'b8\'a3\'b0\'da\'c1\'f6\'b8\'b8 \'c0\'cf\'b4\'dc \'b8\'b8\'b5\'e9\'be\'ee \'b3\'f9\'be\'ee\'bf\'a9\
+     Rnum varcahr2 not null,      --\'bf\'b9\'be\'e0 \'b9\'f8\'c8\'a3\
+     Rstart date not null,\
+     Rend date not null,\
+     Rconfirm boolean not null\
+);\
+\
+create table List (\
+     Lid varchar2 not null foreign key,\
+     Ltitle varchar2 not null,\
+     Lcontent varchar2 not null.\
+     Ldate date not null,\
+     Lhit number(999) not null,\
+     Lcenter varchar2 not null\
+);\
+\
+create table ListReply (\
+     Reid varchar2 not null foreign key,\
+     Repwd varchar2 not null,\
+     ReDate date not null\
+);\
+\
+\
+\
+\
+\
+\
+\
+}
