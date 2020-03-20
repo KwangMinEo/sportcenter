@@ -187,22 +187,63 @@ img::-moz-selection {
 	border-top: solid;
 }
 
-#accordion .accordion_title {
-	background-color: green;
-	background-image:
+
+#accordion .accordion_Soccer {
+	background-image: url(../images/place/축구장.jpg);
+	background-size: 100% 150px;
 	border-bottom: solid;
+	height: 150px;
+	font-weight: center;
+}
+
+#accordion .accordion_title{
+	padding-top : 20px;
+	font-size: 60px;
+	font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji','Kaushan Script', -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji'
+}
+
+#accordion .accordion_Soccer:first-child {
+	font-weight: center;
+}
+
+
+#accordion .accordion_basketball {
+	background-image: url(../images/place/농구장.jpg);
+	background-size: 100% 150px;
+	border-bottom: solid;
+	height: 150px;
+}
+
+
+#accordion .accordion_baseball {
+	background-image: url(../images/place/야구장.jpg);
+	background-size: 100% 150px;
+	border-bottom: solid;
+	height: 150px;
+}
+
+
+#accordion .accordion_swimming {
+	background-image: url(../images/place/수영장.jpg);
+	background-size: 100% 150px;
+	border-bottom: solid;
+	height: 150px;
 }
 
 #accordion .accordion_content {
-	background-color: blue;
-	background-image:
+	border-bottom: solid 3px;
 }
 
 
 header.masthead {
 	text-align: center;
 	color: #fff;
-	background-image: url(../images/football.jpg);
+	background-image: url(../images/place/경기장.jpg);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;

@@ -130,32 +130,32 @@
 	</header>
 
 <div id="accordion">
- <div class="accordion_title">
- <h3>축구장</h3>
+ <div class="accordion_Soccer">
+ <p class="accordion_title">축구장</p>
  </div>
   <div class="accordion_content">
     <p>축구장 설명</p>
   </div>
   
- <div class="accordion_title">
-  <h3>농구장</h3>
+ <div class="accordion_basketball">
+  <p class="accordion_title">농구장</h3>
   </div>
   <div class="accordion_content">
     <p>농구장 설명</p>
   </div>
   
- <div class="accordion_title">
-  <h3>야구장</h3>
+ <div class="accordion_baseball">
+  <p class="accordion_title">야구장</h3>
   </div>
   <div class="accordion_content">
     <p>야구장 설명</p>
   </div>
   
- <div class="accordion_title">
-  <h3>배구장</h3>
+ <div class="accordion_swimming">
+  <p class="accordion_title">수영장</h3>
   </div>
   <div class="accordion_content">
-    <p>배구장 설명</p></div>
+    <p>수영장 설명</p></div>
 </div>
 
 <jsp:include page="Footter.jsp"></jsp:include>
