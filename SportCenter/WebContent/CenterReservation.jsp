@@ -33,22 +33,34 @@
 .head1 {
 	font-size: 20pt;
 }
+
+
 </style>
 <script type="text/javascript">
+$(document).ready(function(){
+	  $('#ab1').click(function(){
+	    $('#menu1').toggle();
+	  });
+	});
+$(document).ready(function(){
+	  $('#ab2').click(function(){
+	    $('#menu2').toggle();
+	  });
+	});
+	
 	
 </script>
 </head>
-<body>
-	<div class="container-fluid" id="headbg" align="center">
+<body style="background-color: gray">
+	<div class="container-fluid" id="headbg" align="center"
+		style="padding-top: 50pt">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
-				<font color="white" size="20pt">예약화면</font>
+				<font style="color: white; font-size: 50px">예약화면</font>
 			</div>
 			<div class="col">
-				<label for="salutation"><font
-					style="padding-right: 5pt; padding-top: 20pt; color: white;">경기장:
-				</font></label> <select name="salutation" id="salutation">
+				<font style="align: right; color: white;">경기장:</font> <select>
 					<option disabled selected>경기장 선택</option>
 					<option>축구장</option>
 					<option>농구장</option>
@@ -60,23 +72,67 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<nav class="navbar navbar-expand-sm bg-success justify-content-center">
+		<nav
+			class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center"
+			style="background-color: #75dd66; margin-left: -15px; margin-right: -15px;">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
-				<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					data-toggle="dropdown"> Dropdown link </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="#">Link 1</a> <a
 							class="dropdown-item" href="#">Link 2</a> <a
 							class="dropdown-item" href="#">Link 3</a>
-					</div>
-				</li>
+					</div></li>
 			</ul>
 		</nav>
 	</div>
+	<div class="container"
+		style="margin-top: 0px; margin-left: 0px; height: 100%;">
+		<div class="row">
+			<div class="col-sm-4" style="background-color: #59cb59;">
+				<h3>
+					<button id="ab1">About Me 1</button>
+				</h3>
+				<h3>
+					<button id="ab2">About Me 2</button>
+				</h3>
+				<h3>
+					<a href="#">About Me 3</a>
+				</h3>
+				<h3>
+					<a href="#">About Me 4</a>
+				</h3>
+				<h3>
+					<a href="#">About Me 5</a>
+				</h3>
+				<ul class="nav nav-pills flex-column">
+					<li class="nav-item"><a class="nav-link active" href="#">Active</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+					<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-8" style="padding-top: 20px; padding-left: 20px;">
+				<form id="menu1" >
+					<h1>About Me 1은 여기</h1>
+					<img src="images/goal.jpg" style="height:65%;width:65%;">
+				</form>
 
+				<form id="menu2">
+					<h1>About Me 2는 여기</h1>
+					<img src="images/football2.jpg" style="height:65%;width:65%;">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div align="center">
+		<jsp:include page="Footter.jsp" />
+	</div>
 </body>
 </html>
