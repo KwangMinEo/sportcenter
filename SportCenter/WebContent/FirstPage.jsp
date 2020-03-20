@@ -7,13 +7,6 @@
 <meta charset="UTF-8">
 <title>스포츠센터</title>
 
-<!-- jquery 영기 수정 -->
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 <!-- bootstrap -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -63,70 +56,108 @@
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
 
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+  </script>
 
-
-<style>
-
-</style>
-<script type="text/javascript">	
-
-</script>
-
-<!-- 상단 네비게이터 -->
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-	<div class="container">
-		<a class="navbar-brand js-scroll-trigger" href="#page-top">Sport
-			Center</a>
-		<button class="navbar-toggler navbar-toggler-right" type="button"
-			data-toggle="collapse" data-target="#navbarResponsive"
-			aria-controls="navbarResponsive" aria-expanded="false"
-			aria-label="Toggle navigation">
-			Menu <i class="fas fa-bars"></i>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav text-uppercase ml-auto">
-				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href="#services">예약확인</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href="#portfolio">개인정보수정</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href="#about">내 게시물 및 댓글 확인</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<!-- 상단 배경 및 로그인 -->
-<header class="masthead">
-	<div class="container">
-		<div class="intro-text">
-			<div class="intro-lead-in">Welcome To Our SportCenter!</div>
-			<div class="intro-heading text-uppercase">
-				
-				<!-- 로그인 -->
-				<form class="form-signin">
-					
-					<!-- 	로그인 창 위 아이콘	 -->
-					<img class="mb-4"
-						src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
-						alt="" width="72" height="72">
-					<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-					<label for="inputEmail" class="sr-only">Email address</label> <input
-						type="email" id="inputEmail" class="form-control"
-						placeholder="Email address" required autofocus> <label
-						for="inputPassword" class="sr-only">Password</label> <input
-						type="password" id="inputPassword" class="form-control"
-						placeholder="Password" required>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-						in</button>
-					<p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
-				</form>
-			</div>
-		</div>
-	</div>
-</header>
 <body class="text-center">
 
+	<!-- 상단 네비게이터 -->
+	<!-- Navigation -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">Sport
+				Center</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#services">예약확인</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#portfolio">개인정보수정</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger"
+						href="#about">내 게시물 및 댓글 확인</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- 상단 배경 및 로그인 -->
+
+	<header class="masthead">
+		<div class="container">
+			<div class="intro-text">
+				<div class="intro-lead-in">Welcome To Our SportCenter!</div>
+				<div class="intro-heading text-uppercase">
+
+					<!-- 로그인 -->
+					<form class="form-signin">
+
+						<!-- 	로그인 창 위 아이콘	 -->
+						<img class="mb-4"
+							src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+							alt="" width="72" height="72">
+						<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+						<label for="inputEmail" class="sr-only">Email address</label> <input
+							type="email" id="inputEmail" class="form-control"
+							placeholder="Email address" required autofocus> <label
+							for="inputPassword" class="sr-only">Password</label> <input
+							type="password" id="inputPassword" class="form-control"
+							placeholder="Password" required>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+							in</button>
+						<p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<div id="accordion">
+ <div class="accordion_title">
+ <h3>축구장</h3>
+ </div>
+  <div class="accordion_content">
+    <p>축구장 설명</p>
+  </div>
+  
+ <div class="accordion_title">
+  <h3>농구장</h3>
+  </div>
+  <div class="accordion_content">
+    <p>농구장 설명</p>
+  </div>
+  
+ <div class="accordion_title">
+  <h3>야구장</h3>
+  </div>
+  <div class="accordion_content">
+    <p>야구장 설명</p>
+  </div>
+  
+ <div class="accordion_title">
+  <h3>배구장</h3>
+  </div>
+  <div class="accordion_content">
+    <p>배구장 설명</p></div>
+</div>
+
+<jsp:include page="Footter.jsp"></jsp:include>
 </body>
 </html>

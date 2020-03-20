@@ -183,11 +183,26 @@ img::-moz-selection {
 	}
 }
 
-<!-- 상단 배경 및 로그인 -->
+#accordion{
+	border-top: solid;
+}
+
+#accordion .accordion_title {
+	background-color: green;
+	background-image:
+	border-bottom: solid;
+}
+
+#accordion .accordion_content {
+	background-color: blue;
+	background-image:
+}
+
+
 header.masthead {
 	text-align: center;
 	color: #fff;
-	background-image: url("../images/football.jpg");
+	background-image: url(../images/football.jpg);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
