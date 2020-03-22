@@ -8,11 +8,10 @@
 <title>CenterReservation.jsp</title>
 
 <!-- jquery -->
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <!-- bootstrap -->
 <link rel="stylesheet"
@@ -32,7 +31,9 @@ hr{
 
 </style>
 <script type="text/javascript">
-
+	$( function() {
+		$( "#datepicker" ).datepicker( "option", "showAnim", "fadeIn");
+  	 });
 
 </script>
 </head>
@@ -51,7 +52,7 @@ hr{
 		<td><hr>사용인원<br><input type="number" value="0"></td>
     </tr>
 	<tr align="center">
-		<td><hr>사용시간<br><input type="date"> ~ <input type="date"></td>
+		<td><hr>사용시간<br><input type="text" id="datepicker"> ~ <input type="text" id="datepicker"></td>
     </tr>
 	<tr align="center">
 		<td><hr>가격<br><input type="text" value="1234" disabled="disabled"></td>

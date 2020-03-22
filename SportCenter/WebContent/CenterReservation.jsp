@@ -33,37 +33,71 @@
 .head1 {
 	font-size: 20pt;
 }
+
+.carousel-control.right, .carousel-control.left {
+	background-image: none;
+	color: #f4511e;
+}
+
+.carousel-indicators li {
+	border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+	background-color: #f4511e;
+}
+
+.item h4 {
+	font-size: 19px;
+	line-height: 1.375em;
+	font-weight: 400;
+	font-style: italic;
+	margin: 70px 0;
+}
+
+.item span {
+	font-style: normal;
+}
 </style>
 <script type="text/javascript">
 	$(function() {
-		$('#ab').ready(function(){
-			$('#menus').html("<div align='center'><font size='20px'>이용수칙</font></div><br><div align='right'><font><img src='ico-home.gif'>예약하기>이용수칙</font></div><hr><img src='images/sub.jpg'>");
-		});
-		$('#ab').click(function() {
-			$('#menus').html("<div align='center'><font size='20px'>이용수칙</font></div><br><hr><img src='images/sub.jpg'>");
-		});
+		$('#ab')
+				.ready(
+						function() {
+							$('#menus')
+									.html(
+											"<div align='center'><font size='20px'>이용수칙</font></div><br><div align='right'><font><img src='ico-home.gif'>예약하기>이용수칙</font></div><hr><img src='images/sub.jpg'>");
+						});
+		$('#ab')
+				.click(
+						function() {
+							$('#menus')
+									.html(
+											"<div align='center'><font size='20px'>이용수칙</font></div><br><hr><img src='images/sub.jpg'>");
+						});
 		$('#ab1')
-			.click(
-				function() {
-					$('#menus').html(
-						"<form id='menu1'><h1 align='center'>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
-			});
+				.click(
+						function() {
+							$('#menus')
+									.html(
+											"<form id='menu1'><h1 align='center'>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
+						});
 		$('#ab2')
-			.click(
-				function() {
-					$('#menus').html(
-						"<form id=\"menu2\"><h1 align='center'>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
-			});
-		$('#ab3').click(function(){
+				.click(
+						function() {
+							$('#menus')
+									.html(
+											"<form id=\"menu2\"><h1 align='center'>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
+						});
+		$('#ab3').click(function() {
 			$.ajax({
-	        url:'CenterReservationtable.jsp',
-	        success:function(data){
-	            $('#menus').html(data);
-	        	}
+				url : 'CenterReservationtable.jsp',
+				success : function(data) {
+					$('#menus').html(data);
+				}
 			});
 		});
 	});
-	
 </script>
 </head>
 <body>
@@ -89,8 +123,7 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<nav
-			class="navbar navbar-expand-sm bg justify-content-center"
+		<nav class="navbar navbar-expand-sm bg justify-content-center"
 			style="background-color: #2F3E46; margin-left: -15px; margin-right: -15px;">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
@@ -107,33 +140,68 @@
 			</ul>
 		</nav>
 	</div>
-	<div class="container"
-		style="margin-top: 0px; margin-left: 0px; height: 100%;">
-		<div class="row">
-			<div class="col-sm-4" style="background-color: #26A65B;">
-				<h3>
-					<button id="ab">메인</button>
-				</h3>
-				<h3>
-					<button id="ab1">About Me 1</button>
-				</h3>
-				<h3>
-					<button id="ab2">About Me 2</button>
-				</h3>
-				<h3>
-					<button id="ab3">예약 화면</button>
-				</h3>
-				<ul class="nav nav-pills flex-column">
-					<li class="nav-item"><a class="nav-link active" href="#">Active</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-					<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
-					</li>
-				</ul>
+	<div style="background-color: lightgray; padding-bottom: 50px;">
+		<div class="container"
+			style="margin-top: 0px; margin-left: 0px; height: 100%;">
+			<div class="row">
+				<div class="col-sm-4" style="background-color: #26A65B;">
+					<h2>새로운 소식</h2>
+					<div id="myCarousel" class="carousel slide text-center"
+						data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<h4>
+									코로나 바이러스<br> <span style="font-style: normal;">
+										예방수칙:1, 2, 3, 4...</span>
+								</h4>
+							</div>
+							<div class="item">
+								<h4>
+									새로운 시설 개설<br> <span style="font-style: normal;">볼링장:
+										1, 2, 3, 4, 5, ...</span>
+								</h4>
+							</div>
+							<div class="item">
+								<h4>
+									국가 시설 평가<br> <span style="font-style: normal;">2020년
+										최고의 시설</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+					<h3>
+						<button id="ab" class="btn btn-primary btn-block"
+							style="background-color: #2F3E46;">메인</button>
+					</h3>
+					<h3>
+						<button id="ab1" class="btn btn-primary btn-block">대관 현황</button>
+					</h3>
+					<h3>
+						<button id="ab2" class="btn btn-primary btn-block">About
+							Me 2</button>
+					</h3>
+					<h3>
+						<button id="ab3" class="btn btn-primary btn-block">예약 화면</button>
+					</h3>
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item"><a class="nav-link active" href="#">Active</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+						<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+						</li>
+					</ul>
+				</div>
+				<div id="menus" class="col-sm-8"
+					style="padding-top: 20px; padding-left: 250px"></div>
 			</div>
-			<div id="menus" class="col-sm-8"
-				style="padding-top: 20px; padding-left:250px"></div>
 		</div>
 	</div>
 	<div align="center">
