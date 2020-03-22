@@ -23,6 +23,10 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato"
+	rel="stylesheet" type="text/css">
 <style type="text/css">
 #headbg {
 	background: url('images/football.jpg') no-repeat center fixed;
@@ -89,6 +93,13 @@
 									.html(
 											"<form id=\"menu2\"><h1 align='center'>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
 						});
+		$('#ab4')
+				.click(
+						function() {
+							$('#menus')
+									.html(
+											"<a href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\" target=\"_blank\"><img width=\"800\" height=\"600\" src=\"https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo\" style=\"border:1px solid #ccc\"></a><div class=\"hide\" style=\"overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;\"><strong style=\"float: left;\"><img src=\"//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png\" width=\"72\" height=\"16\" alt=\"카카오맵\"></strong><div style=\"float: right;position:relative\"><a style=\"font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000\" target=\"_blank\" href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\">지도 크게 보기</a></div></div>")
+						});
 		$('#ab3').click(function() {
 			$.ajax({
 				url : 'CenterReservationtable.jsp',
@@ -145,16 +156,15 @@
 			style="margin-top: 0px; margin-left: 0px; height: 100%;">
 			<div class="row">
 				<div class="col-sm-4" style="background-color: #26A65B;">
+				<!-- carousel시작 -->
 					<h2>새로운 소식</h2>
-					<div id="myCarousel" class="carousel slide text-center"
+					<div id="carousel-example-generic" class="carousel slide"
 						data-ride="carousel">
-						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 							<li data-target="#myCarousel" data-slide-to="1"></li>
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 						</ol>
-						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 								<h4>
@@ -175,7 +185,18 @@
 								</h4>
 							</div>
 						</div>
+						<a class="left carousel-control" href="#myCarousel" role="button"
+							data-slide="prev"> <span
+							class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a> <a class="right carousel-control" href="#myCarousel"
+							role="button" data-slide="next"> <span
+							class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
+					
+					<!-- 왼쪽 메뉴바 -->
 					<h3>
 						<button id="ab" class="btn btn-primary btn-block"
 							style="background-color: #2F3E46;">메인</button>
@@ -190,6 +211,9 @@
 					<h3>
 						<button id="ab3" class="btn btn-primary btn-block">예약 화면</button>
 					</h3>
+					<h3>
+						<button id="ab4" class="btn btn-primary btn-block">오시는 길</button>
+					</h3>
 					<ul class="nav nav-pills flex-column">
 						<li class="nav-item"><a class="nav-link active" href="#">Active</a>
 						</li>
@@ -199,8 +223,12 @@
 						</li>
 					</ul>
 				</div>
+				
+				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"
 					style="padding-top: 20px; padding-left: 250px"></div>
+
+
 			</div>
 		</div>
 	</div>
