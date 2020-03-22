@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CenterReservation.jsp</title>
+<title>스포츠센터</title>
 
 <!-- jquery -->
 <link rel="stylesheet"
@@ -49,10 +49,18 @@
 						"<form id=\"menu2\"><h1>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
 			});
 		$('#ab').click(function() {
-			$('#menus').html(this);
-
+			$('#menus').html('<div><font>예약 페이지 입니다.</font></div><br><hr> ');
+		});
+		$('#ab3').click(function(){
+			$.ajax({
+	        url:'CenterReservationtable.html',
+	        success:function(data){
+	            $('#menus').html(data);
+	        	}
+			});
 		});
 	});
+	
 </script>
 </head>
 <body style="background-color: gray">

@@ -21,7 +21,10 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
-
+hr{
+	padding-top:12px;
+	padding-bottom:12px;
+}
 	
 
 </style>
@@ -36,31 +39,22 @@
         <td><font style="font-size: 30px; color: cadetblue">예약</font></td>
 	</tr>
 	<tr align="center">
-     <td><hr>경기장<br><select><option>축구장</option></select></td>
+     <td><hr>경기장<br><select><option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option></select></td>
     </tr>
+    <tr align="center">
+		<td><hr>입금자명<br><input type="text"> </td>
+	</tr>
 	<tr align="center" style="padding-top: 20"> 
-		<td><hr>사용인원<br><input type="text"></td>
+		<td><hr>사용인원<br><input type="number" value="0"></td>
     </tr>
 	<tr align="center">
 		<td><hr>사용시간<br><input type="date"> ~ <input type="date"></td>
     </tr>
 	<tr align="center">
-		<td><hr> </td>
+		<td><hr>가격<br><input type="text" value="1234" disabled="disabled"></td>
 	</tr>
 	<tr align="center">
-		<td> </td>
-	</tr>
-	<tr align="center">
-		<td> </td>
-	</tr>
-	<tr align="center">
-		<td> </td>
-	</tr>
-	<tr align="center">
-		<td> </td>
-	</tr>
-	<tr align="center">
-		<td><hr>가격:<input type="text"></td>
+		<td><hr><button>예약하기</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>취소하기</button></td>
 	</tr>
 
 
