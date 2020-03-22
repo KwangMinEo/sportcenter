@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,12 +37,12 @@ hr{
 </script>
 </head>
 <body>
-<table align="center">
+<table align="center" style="column-width: 1000px;">
     <tr align="center">
-        <td><font style="font-size: 30px; color: cadetblue">예약</font></td>
+        <td width="1000px"><font style="font-size: 30px; color: cadetblue">예약</font></td>
 	</tr>
 	<tr align="center">
-     <td><hr>경기장<br><select><option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option></select></td>
+     	<td><hr>경기장<br><select><option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option></select></td>
     </tr>
     <tr align="center">
 		<td><hr>입금자명<br><input type="text"> </td>

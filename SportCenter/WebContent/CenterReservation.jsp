@@ -36,24 +36,27 @@
 </style>
 <script type="text/javascript">
 	$(function() {
+		$('#ab').ready(function(){
+			$('#menus').html("<div align='center'><font size='20px'>이용수칙</font></div><br><div align='right'><font><img src='ico-home.gif'>예약하기>이용수칙</font></div><hr><img src='images/sub.jpg'>");
+		});
+		$('#ab').click(function() {
+			$('#menus').html("<div align='center'><font size='20px'>이용수칙</font></div><br><hr><img src='images/sub.jpg'>");
+		});
 		$('#ab1')
 			.click(
 				function() {
 					$('#menus').html(
-						"<form id='menu1'><h1>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
+						"<form id='menu1'><h1 align='center'>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
 			});
 		$('#ab2')
 			.click(
 				function() {
 					$('#menus').html(
-						"<form id=\"menu2\"><h1>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
+						"<form id=\"menu2\"><h1 align='center'>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
 			});
-		$('#ab').click(function() {
-			$('#menus').html('<div><font>예약 페이지 입니다.</font></div><br><hr> ');
-		});
 		$('#ab3').click(function(){
 			$.ajax({
-	        url:'CenterReservationtable.html',
+	        url:'CenterReservationtable.jsp',
 	        success:function(data){
 	            $('#menus').html(data);
 	        	}
@@ -63,7 +66,7 @@
 	
 </script>
 </head>
-<body style="background-color: gray">
+<body>
 	<div class="container-fluid" id="headbg" align="center"
 		style="padding-top: 50pt">
 		<div class="row">
@@ -87,8 +90,8 @@
 	</div>
 	<div class="container-fluid">
 		<nav
-			class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center"
-			style="background-color: #75dd66; margin-left: -15px; margin-right: -15px;">
+			class="navbar navbar-expand-sm bg justify-content-center"
+			style="background-color: #2F3E46; margin-left: -15px; margin-right: -15px;">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
@@ -107,7 +110,7 @@
 	<div class="container"
 		style="margin-top: 0px; margin-left: 0px; height: 100%;">
 		<div class="row">
-			<div class="col-sm-4" style="background-color: #59cb59;">
+			<div class="col-sm-4" style="background-color: #26A65B;">
 				<h3>
 					<button id="ab">메인</button>
 				</h3>
@@ -130,7 +133,7 @@
 				</ul>
 			</div>
 			<div id="menus" class="col-sm-8"
-				style="padding-top: 20px; padding-left: 20px;"></div>
+				style="padding-top: 20px; padding-left:250px"></div>
 		</div>
 	</div>
 	<div align="center">
