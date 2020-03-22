@@ -35,21 +35,24 @@
 }
 </style>
 <script type="text/javascript">
+	$(function() {
+		$('#ab1')
+			.click(
+				function() {
+					$('#menus').html(
+						"<form id='menu1'><h1>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
+			});
+		$('#ab2')
+			.click(
+				function() {
+					$('#menus').html(
+						"<form id=\"menu2\"><h1>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")
+			});
+		$('#ab').click(function() {
+			$('#menus').html(this);
 
-	$(function(){
-		$('#ab1').click(function(){
-			$('#menus').html("<form id='menu1'><h1>About Me 1은 여기</h1><img src='images/goal.jpg' style='height:65%;width:65%;'></form>")
+		});
 	});
-  		$('#ab2').click(function(){
-			 $('#menus').html("<form id=\"menu2\"><h1>About Me 2는 여기</h1><img src=\"images/football2.jpg\" style=\"height:65%;width:65%;\"></form>")	
-	  });
-	  	// $('#ab3').click(function(){
-		// 	  $('#menus').html('<form ')
-
-		//   });
-	});
-
-	
 </script>
 </head>
 <body style="background-color: gray">
@@ -61,15 +64,16 @@
 				<font style="color: white; font-size: 50px">예약화면</font>
 			</div>
 			<div class="col">
-				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-					<font style="align: right; color: white;">경기장 선택</font> </button>
-					<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">축구장</a>
-					<a class="dropdown-item" href="#">농구장</a>
-					<a class="dropdown-item" href="#">야구장</a>
-					<a class="dropdown-item" href="#">수영장</a>
-					<a class="dropdown-item" href="#">태니스장</a>
-					</div>
+				<button type="button" class="btn btn-danger dropdown-toggle"
+					data-toggle="dropdown">
+					<font style="align: right; color: white;">경기장 선택</font>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">축구장</a> <a class="dropdown-item"
+						href="#">농구장</a> <a class="dropdown-item" href="#">야구장</a> <a
+						class="dropdown-item" href="#">수영장</a> <a class="dropdown-item"
+						href="#">태니스장</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -117,17 +121,12 @@
 					</li>
 				</ul>
 			</div>
-			<div id="menus" class="col-sm-8" style="padding-top: 20px; padding-left: 20px;">
-				<h1>축구장</h1>
-				<h1>농구장</h1>
-				<h1>야구장</h1>
-				<h1>수영장</h1>
-				<h1>선택하기</h1>
-			</div>
+			<div id="menus" class="col-sm-8"
+				style="padding-top: 20px; padding-left: 20px;"></div>
 		</div>
 	</div>
-	<!-- <div align="center">
+	<div align="center">
 		<jsp:include page="Footter.jsp" />
-	</div> -->
+	</div>
 </body>
 </html>
