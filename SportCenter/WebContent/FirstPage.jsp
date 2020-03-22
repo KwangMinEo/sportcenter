@@ -58,17 +58,16 @@
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#accordion" ).accordion({
-      collapsible: true
-    });
-  } );
-  </script>
-
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#accordion").accordion({
+			collapsible : true
+		});
+	});
+</script>
 <body class="text-center">
 
 	<!-- 상단 네비게이터 -->
@@ -86,6 +85,16 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#section1">어서오세요</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section2">경기장지도</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section3">경기장소개</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbardrop"
+						data-toggle="dropdown"> Section 4 </a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#section41">Link 1</a> <a
+								class="dropdown-item" href="#section42">Link 2</a>
+						</div></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
 						href="#services">예약확인</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
@@ -97,7 +106,7 @@
 		</div>
 	</nav>
 
-
+<div id="section1">
 	<!-- 상단 배경 및 로그인 -->
 
 	<header class="masthead">
@@ -110,9 +119,8 @@
 					<form class="form-signin">
 
 						<!-- 	로그인 창 위 아이콘	 -->
-						<img class="mb-4"
-							src="images/place/축구공.jpg"
-							alt="" width="400" height="400">
+						<img class="mb-4" src="images/place/축구공.jpg" alt="" width="400"
+							height="400">
 						<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 						<label for="inputEmail" class="sr-only">Email address</label> <input
 							type="email" id="inputEmail" class="form-control"
@@ -128,36 +136,45 @@
 			</div>
 		</div>
 	</header>
-
-<div id="accordion">
- <div class="accordion_Soccer">
- <p class="accordion_title">축구장</p>
- </div>
-  <div class="accordion_content">
-    <p>축구장 설명</p>
-  </div>
-  
- <div class="accordion_basketball">
-  <p class="accordion_title">농구장</h3>
-  </div>
-  <div class="accordion_content">
-    <p>농구장 설명</p>
-  </div>
-  
- <div class="accordion_baseball">
-  <p class="accordion_title">야구장</h3>
-  </div>
-  <div class="accordion_content">
-    <p>야구장 설명</p>
-  </div>
-  
- <div class="accordion_swimming">
-  <p class="accordion_title">수영장</h3>
-  </div>
-  <div class="accordion_content">
-    <p>수영장 설명</p></div>
 </div>
 
-<jsp:include page="Footter.jsp"></jsp:include>
+<div id="section2">
+</div>
+
+<div id="section3">
+	<div id="accordion">
+		<div class="accordion_Soccer">
+			<p class="accordion_title">축구장</p>
+		</div>
+		<div class="accordion_content">
+			<p>축구장 설명</p>
+		</div>
+
+		<div class="accordion_basketball">
+			<p class="accordion_title">농구장
+			</h3>
+		</div>
+		<div class="accordion_content">
+			<p>농구장 설명</p>
+		</div>
+
+		<div class="accordion_baseball">
+			<p class="accordion_title">야구장
+			</h3>
+		</div>
+		<div class="accordion_content">
+			<p>야구장 설명</p>
+		</div>
+
+		<div class="accordion_swimming">
+			<p class="accordion_title">수영장
+			</h3>
+		</div>
+		<div class="accordion_content">
+			<p>수영장 설명</p>
+		</div>
+	</div>
+</div>
+	<jsp:include page="Footter.jsp"></jsp:include>
 </body>
 </html>
