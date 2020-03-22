@@ -26,7 +26,7 @@
 <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
 
-<link rel="canonical"
+<link rel="canonical"o
 	href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
 <!-- Bootstrap core CSS -->
@@ -70,111 +70,116 @@
 </script>
 <body class="text-center">
 
-	<!-- 상단 네비게이터 -->
-	<!-- Navigation -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-		<div class="container">
-			<a class="navbar-brand js-scroll-trigger" href="#page-top">Sport
-				Center</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button"
-				data-toggle="collapse" data-target="#navbarResponsive"
-				aria-controls="navbarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
-				Menu <i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item"><a class="nav-link" href="#section1">어서오세요</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section2">경기장지도</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section3">경기장소개</a></li>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbardrop"
-						data-toggle="dropdown"> Section 4 </a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#section41">Link 1</a> <a
-								class="dropdown-item" href="#section42">Link 2</a>
-						</div></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="#services">예약확인</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="#portfolio">개인정보수정</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="#about">내 게시물 및 댓글 확인</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
 
-<div id="section1">
-	<!-- 상단 배경 및 로그인 -->
+	<div id="section1">
+		<!-- 상단 배경 및 로그인 -->
 
-	<header class="masthead">
-		<div class="container">
-			<div class="intro-text">
-				<div class="intro-lead-in">Welcome To Our SportCenter!</div>
-				<div class="intro-heading text-uppercase">
+		<header class="masthead">
+			<!-- 상단 네비게이터 -->
+			<!-- Navigation -->
 
-					<!-- 로그인 -->
-					<form class="form-signin">
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top"
+				id="mainNav">
+				<div class="container">
+					<a class="navbar-brand js-scroll-trigger" href="#page-top">Sport
+						Center</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button"
+						data-toggle="collapse" data-target="#navbarResponsive"
+						aria-controls="navbarResponsive" aria-expanded="false"
+						aria-label="Toggle navigation">
+						Menu <i class="fas fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav text-uppercase ml-auto">
+							<li class="nav-item"><a class="nav-link" href="#section1">어서오세요</a></li>
+							<li class="nav-item"><a class="nav-link" href="#section2">경기장지도</a></li>
+							<li class="nav-item"><a class="nav-link" href="#section3">경기장소개</a></li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#" id="navbardrop"
+								data-toggle="dropdown"> Section 4 </a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#section41">Link 1</a> <a
+										class="dropdown-item" href="#section42">Link 2</a>
+								</div></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger"
+								href="#services">예약확인</a></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger"
+								href="#portfolio">개인정보수정</a></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger"
+								href="#about">내 게시물 및 댓글 확인</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- 상단 네비게이터 end-->
+			<!-- Navigation end-->
 
-						<!-- 	로그인 창 위 아이콘	 -->
-						<img class="mb-4" src="images/place/축구공.jpg" alt="" width="400"
-							height="400">
-						<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-						<label for="inputEmail" class="sr-only">Email address</label> <input
-							type="email" id="inputEmail" class="form-control"
-							placeholder="Email address" required autofocus> <label
-							for="inputPassword" class="sr-only">Password</label> <input
-							type="password" id="inputPassword" class="form-control"
-							placeholder="Password" required>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-							in</button>
-						<p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
-					</form>
+
+			<div class="container">
+				<div class="intro-text">
+					<div class="intro-lead-in">Welcome To Our SportCenter!</div>
+					<div class="intro-heading text-uppercase">
+
+						<!-- 로그인 -->
+						<form class="form-signin">
+
+							<!-- 	로그인 창 위 아이콘	 -->
+							<img class="mb-4" src="images/place/축구공.jpg" alt="" width="400"
+								height="400">
+							<h1 class="h3 mb-3 font-weight-normal">Show in our Homepage</h1>
+							<p class="mt-5 mb-3 text-muted">our history</p>
+							<p class="mt-5 mb-3 text-muted">Since 2019. 11. 19</p>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-</div>
+		</header>
+	</div>
 
-<div id="section2">
-</div>
+	<div id="section2">
+<!-- Services -->
+  <section class="page-section" id="plasmap">
+    <div class="container">
+      
+    </div>
+  </section>
+	</div>
 
-<div id="section3">
-	<div id="accordion">
-		<div class="accordion_Soccer">
-			<p class="accordion_title">축구장</p>
-		</div>
-		<div class="accordion_content">
-			<p>축구장 설명</p>
-		</div>
+	<div id="section3">
+		<div id="accordion">
+			<div class="accordion_Soccer">
+				<p class="accordion_title">축구장</p>
+			</div>
+			<div class="accordion_content">
+				<p>축구장 설명</p>
+			</div>
 
-		<div class="accordion_basketball">
-			<p class="accordion_title">농구장
-			</h3>
-		</div>
-		<div class="accordion_content">
-			<p>농구장 설명</p>
-		</div>
+			<div class="accordion_basketball">
+				<p class="accordion_title">농구장
+				</h3>
+			</div>
+			<div class="accordion_content">
+				<p>농구장 설명</p>
+			</div>
 
-		<div class="accordion_baseball">
-			<p class="accordion_title">야구장
-			</h3>
-		</div>
-		<div class="accordion_content">
-			<p>야구장 설명</p>
-		</div>
+			<div class="accordion_baseball">
+				<p class="accordion_title">야구장
+				</h3>
+			</div>
+			<div class="accordion_content">
+				<p>야구장 설명</p>
+			</div>
 
-		<div class="accordion_swimming">
-			<p class="accordion_title">수영장
-			</h3>
-		</div>
-		<div class="accordion_content">
-			<p>수영장 설명</p>
+			<div class="accordion_swimming">
+				<p class="accordion_title">수영장
+				</h3>
+			</div>
+			<div class="accordion_content">
+				<p>수영장 설명</p>
+			</div>
 		</div>
 	</div>
-</div>
 	<jsp:include page="Footter.jsp"></jsp:include>
 </body>
 </html>
