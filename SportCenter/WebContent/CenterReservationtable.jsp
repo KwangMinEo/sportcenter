@@ -50,7 +50,8 @@ hr {
 <script type="text/javascript">
 	$(function() {
 		$(function() {
-			var dateFormat = "mm/dd/yy", from = $("#from").datepicker({
+			var dateFormat = "yy/mm/dd", 
+				from = $("#from").datepicker({
 				defaultDate : "+1w",
 				changeMonth : true,
 				numberOfMonths : 2
@@ -117,22 +118,16 @@ hr {
 		<tr align="center">
 			<td><hr>사용시간대( 드레그하여 선택 )<br>
 				<table> 
-					<tr id="selectable">
-						<td class="ui-widget-content">08:00~10:00</td>
-						<td class="ui-widget-content">10:00~12:00</td>
-						<td class="ui-widget-content">12:00~14:00</td>
-						<td class="ui-widget-content">14:00~16:00</td>
-						<td class="ui-widget-content">16:00~18:00</td>
-						<td class="ui-widget-content">18:00~20:00</td>
-						<td class="ui-widget-content">20:00~22:00</td>
+					<tr id="selectable" heigt="50px">
+						<td class="ui-widget-content" width="75px">08:00<br>~10:00</td>
+						<td class="ui-widget-content">10:00<br>~12:00</td>
+						<td class="ui-widget-content">12:00<br>~14:00</td>
+						<td class="ui-widget-content">14:00<br>~16:00</td>
+						<td class="ui-widget-content">16:00<br>~18:00</td>
+						<td class="ui-widget-content">18:00<br>~20:00</td>
+						<td class="ui-widget-content">20:00<br>~22:00</td>
 						<br>
-						<input type="checkbox" id="fill">24시간
-						<br> <!-- 구현 않했음... -->
-					</tr>
-					<tr align="center">
-						<td colsapn="7">
-							<div id="totalhour"> 선택된 총 일수를 표시한다</div>
-						</td>
+						<input type="checkbox" id="fill">24시간   <!-- 아직 구현 않함 -->
 					</tr>
 				</table>
 			</td>
@@ -140,7 +135,9 @@ hr {
 		<tr align="center">
 			<td>
 				<hr>가격<br>
+				<div id="total"><font color="blue">여기에 총 일수 + 시간을 표시</font></div>
 				<div id="price"></div>
+				
 			</td>
 		</tr>
 		<tr align="center">
