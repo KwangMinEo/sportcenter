@@ -116,7 +116,7 @@ hr {
 		</tr>
 		<tr align="center">
 			<td><hr>사용시간대( 드레그하여 선택 )<br>
-				<table>
+				<table> 
 					<tr id="selectable">
 						<td class="ui-widget-content">08:00~10:00</td>
 						<td class="ui-widget-content">10:00~12:00</td>

@@ -33,7 +33,7 @@
 	background-image: none;
 	color: #f4511e;
 }
-
+ 
 .carousel-indicators li {
 	border-color: #f4511e;
 }
