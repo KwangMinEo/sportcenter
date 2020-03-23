@@ -7,26 +7,27 @@
 <meta charset="UTF-8">
 <title>스포츠센터</title>
 
-<!-- jquery -->
+<!-- jQuery -->
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<!-- bootstrap -->
+<!-- Bootstrap -->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+	integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+	crossorigin="anonymous">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato"
-	rel="stylesheet" type="text/css">
+	src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+	crossorigin="anonymous"></script>
+
 <style type="text/css">
 #headbg {
 	background: url('images/football.jpg') no-repeat center fixed;
@@ -70,7 +71,7 @@
 						function() {
 							$('#menus')
 									.html(
-											"<div align='center'><font size='20px'>이용수칙</font></div><br><div align='right'><font><img src='ico-home.gif'>예약하기>이용수칙</font></div><hr><img src='images/sub.jpg'>");
+											"<div align='center'><font size='20px'>이용수칙</font><br><img src='images/ico-home.gif'><font>예약하기>이용수칙</font><hr width='800px'><img src='images/sub.jpg'></div>");
 						});
 		$('#ab')
 				.click(
@@ -119,7 +120,7 @@
 			<div class="col">
 				<font style="color: white; font-size: 50px">예약화면</font>
 			</div>
-			<div class="col">
+			<div class="col dropdown">
 				<button type="button" class="btn btn-danger dropdown-toggle"
 					data-toggle="dropdown">
 					<font style="align: right; color: white;">경기장 선택</font>
@@ -153,19 +154,20 @@
 	</div>
 	<div style="background-color: lightgray; padding-bottom: 50px;">
 		<div class="container"
-			style="margin-top: 0px; margin-left: 0px; height: 100%;">
+			style="margin-left: 0px; height: 100%;">
 			<div class="row">
 				<div class="col-sm-4" style="background-color: #26A65B;">
-				<!-- carousel시작 -->
+					<!-- carousel시작 -->
 					<h2>새로운 소식</h2>
 					<div id="carousel-example-generic" class="carousel slide"
 						data-ride="carousel">
 						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						</ol>
-						<div class="carousel-inner" role="listbox">
+						<div class="carousel-inner" role="listbox" align="center">
 							<div class="item active">
 								<h4>
 									코로나 바이러스<br> <span style="font-style: normal;">
@@ -185,17 +187,17 @@
 								</h4>
 							</div>
 						</div>
-						<a class="left carousel-control" href="#myCarousel" role="button"
-							data-slide="prev"> <span
+						<a class="left carousel-control" href="#carousel-example-generic"
+							role="button" data-slide="prev"> <span
 							class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
-						</a> <a class="right carousel-control" href="#myCarousel"
-							role="button" data-slide="next"> <span
-							class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
+						</a> <a class="right carousel-control"
+							href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"
+							aria-hidden="true"></span> <span class="sr-only">Next</span>
 						</a>
 					</div>
-					
+
 					<!-- 왼쪽 메뉴바 -->
 					<h3>
 						<button id="ab" class="btn btn-primary btn-block"
@@ -223,11 +225,10 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"
-					style="padding-top: 20px; padding-left: 250px"></div>
-
+					style="padding-top: 20px; width: 780px"></div>
 
 			</div>
 		</div>

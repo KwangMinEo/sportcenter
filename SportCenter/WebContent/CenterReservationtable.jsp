@@ -51,6 +51,10 @@ hr {
 	$(function() {
 		$("#datepicker").datepicker();
 		$("#datepicker2").datepicker();
+		$("#datepicker2").onchange(function(){
+		$('#totalday').html(' ');
+		});
+			
 		$("#selectable").selectable();
 		$("#price").html('<font style="color:red;"> 1234 </font>');
 		$(".widget input[type=submit], .widget a, .widget button").button();
@@ -78,7 +82,9 @@ hr {
 		</tr>
 		<tr align="center">
 			<td><hr>사용날자<br> <input type="text" id="datepicker">
-				~ <input type="text" id="datepicker2"></td>
+				~ <input type="text" id="datepicker2"><br>
+				<div id="totalday"> </div>
+				</td>
 		</tr>
 		<tr align="center">
 			<td><hr>사용시간대( 드레그하여 선택 )<br>
@@ -92,6 +98,7 @@ hr {
 						<td class="ui-widget-content">18:00~20:00</td>
 						<td class="ui-widget-content">20:00~22:00</td>
 					</tr>
+					<tr><td colsapn="7><div id="totalhour"></div>	</td></tr>
 				</table></td>
 		</tr>
 		<tr align="center">
