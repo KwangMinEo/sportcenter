@@ -26,7 +26,7 @@
 <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
 
-<link rel="canonical"o
+<link rel="canonical"
 	href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
 <!-- Bootstrap core CSS -->
@@ -67,12 +67,30 @@
 			collapsible : true
 		});
 	});
+    $(window).scroll(function () {
+        var scrollValue = $(document).scrollTop();
+        if (scrollValue > 1250) {
+           $(".navbar").css("background", "black");
+        }
+        else {
+           $(".navbar").css("background", "");
+        }
+     });
+     $(document).ready(function () {
+        $('.nav-link').click(function () {
+           $('html, body').animate({ scrollTop: '1330' }, 1200);
+        });
+     });
+     $(document).ready(function () {
+        $('.navbar').click(function () {
+           $('html, body').animate({ scrollTop: '0' }, 1200);
+        });
+     });
 </script>
 <body class="text-center">
 
 
 
-	<div id="section1">
 		<!-- 상단 배경 및 로그인 -->
 
 		<header class="masthead">
@@ -92,23 +110,23 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav text-uppercase ml-auto">
-							<li class="nav-item"><a class="nav-link" href="#section1">어서오세요</a></li>
-							<li class="nav-item"><a class="nav-link" href="#section2">경기장지도</a></li>
-							<li class="nav-item"><a class="nav-link" href="#section3">경기장소개</a></li>
+							<li class="nav-item"><label class="nav-link">경기장소개</label></li>
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle" href="#" id="navbardrop"
-								data-toggle="dropdown"> Section 4 </a>
+								data-toggle="dropdown"> 마이페이지 </a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#section41">Link 1</a> <a
-										class="dropdown-item" href="#section42">Link 2</a>
+									<a class="dropdown-item" href="#section41">예약확인</a>
+									 <a	class="dropdown-item" href="#section42">개인정보수정</a>
+									 <a	class="dropdown-item" href="#section42">내 게시물 및 댓글 확인</a>
 								</div></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger"
-								href="#services">예약확인</a></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger"
-								href="#portfolio">개인정보수정</a></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger"
-								href="#about">내 게시물 및 댓글 확인</a></li>
 						</ul>
+						<form method="post" action="#">
+							<label for="userid">아 이 디 : </label>
+							<input type="text" name="id" id="userid">
+							<label for="userpwd">비밀번호 : </label>
+							<input type="text" name="ped" id="userpwd">
+							<input type="submit" value="로그인">
+						</form>
 					</div>
 				</div>
 			</nav>
@@ -135,18 +153,8 @@
 				</div>
 			</div>
 		</header>
-	</div>
 
-	<div id="section2">
-<!-- Services -->
-  <section class="page-section" id="plasmap">
-    <div class="container">
-      
-    </div>
-  </section>
-	</div>
-
-	<div id="section3">
+	
 		<div id="accordion">
 			<div class="accordion_Soccer">
 				<p class="accordion_title">축구장</p>
@@ -157,7 +165,6 @@
 
 			<div class="accordion_basketball">
 				<p class="accordion_title">농구장
-				</h3>
 			</div>
 			<div class="accordion_content">
 				<p>농구장 설명</p>
@@ -165,7 +172,6 @@
 
 			<div class="accordion_baseball">
 				<p class="accordion_title">야구장
-				</h3>
 			</div>
 			<div class="accordion_content">
 				<p>야구장 설명</p>
@@ -173,13 +179,16 @@
 
 			<div class="accordion_swimming">
 				<p class="accordion_title">수영장
-				</h3>
 			</div>
 			<div class="accordion_content">
 				<p>수영장 설명</p>
 			</div>
 		</div>
-	</div>
+	
+
+	
+	<div style="background-color: black; color: white;">
 	<jsp:include page="Footter.jsp"></jsp:include>
+	</div>
 </body>
 </html>

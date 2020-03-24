@@ -192,9 +192,9 @@ img::-moz-selection {
 
 #accordion .accordion_Soccer {
 	background-image: url(../images/place/축구장.jpg);
-	background-size: 100% 150px;
+	background-size: 100% 250px;
 	border-bottom: solid;
-	height: 150px;
+	height: 250px;
 	font-weight: center;
 }
 
@@ -216,25 +216,25 @@ img::-moz-selection {
 
 #accordion .accordion_basketball {
 	background-image: url(../images/place/농구장.jpg);
-	background-size: 100% 150px;
+	background-size: 100% 250px;
 	border-bottom: solid;
-	height: 150px;
+	height: 250px;
 }
 
 
 #accordion .accordion_baseball {
 	background-image: url(../images/place/야구장.jpg);
-	background-size: 100% 150px;
+	background-size: 100% 250px;
 	border-bottom: solid;
-	height: 150px;
+	height: 250px;
 }
 
 
 #accordion .accordion_swimming {
 	background-image: url(../images/place/수영장.jpg);
-	background-size: 100% 150px;
+	background-size: 100% 250px;
 	border-bottom: solid;
-	height: 150px;
+	height: 250px;
 }
 
 #accordion .accordion_content {
