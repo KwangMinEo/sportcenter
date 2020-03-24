@@ -296,36 +296,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div align="center">
-		<jsp:include page="Footter.jsp" />
-	</div>
-
-</body>
-
-</html>
-					<h3>
-						<button id="ab3" class="btn btn-primary btn-block">예약 화면</button>
-					</h3>
-					<h3>
-						<button id="ab4" class="btn btn-primary btn-block">오시는 길</button>
-					</h3>
-					<ul class="nav nav-pills flex-column">
-						<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-						<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
-					</ul>
-				</div>
-					<div class="col-sm-8" style="margin-left: 0px;">
-						<div id="menus" style="padding-top: 20px; width:1000px;background-color:lightgray; padding-bottom:50px;">
-						<!-- 메인 내용 표시되는 곳 -->
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-	
 	<div align="center">
 		<jsp:include page="Footter.jsp" />
 	</div>
