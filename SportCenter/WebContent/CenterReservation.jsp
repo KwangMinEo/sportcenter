@@ -79,12 +79,12 @@
 <body>
 <jsp:include page="CenterHeader.jsp"/>
 				<!-- 메인 내용 표시되는 곳 -->
-				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
+				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: #FFFFFF; padding-bottom:50px">
 				
 				</div>
 
 
-				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+				<div class="col-sm-2" style="padding-top: 20px; background-color: #82A5c5;">
 					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="padding:0px;width:100%; height:100%;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 	</div>
-	<div align="center">
+	<div align="center" style="background-color:black; color:white;">
 		<jsp:include page="Footter.jsp" />
 	</div>
 </body>
