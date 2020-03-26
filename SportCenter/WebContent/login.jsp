@@ -8,6 +8,34 @@
 
 <link href="css/login.css" rel="stylesheet">
 <link href="js/login.css" rel="stylesheet">
+
+<script type="text/javascript">
+jQuery(function() {
+    jQuery(document).on("click", "form.ajax button:submit, form.ajax input:submit, form.ajax input:image", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var f  = this.form;
+        var $f = jQuery(f);
+        var $b = jQuery(this);
+        var $t, t;
+        var result = true;
+        $f.find("input, select, textarea").each(function(i) {
+            $t = jQuery(this);
+            if($t.prop("required")) {
+                if(!jQuery.trim($t.val())) {
+                    t = jQuery("label[for='"+$t.attr("id")+"']").text();
+                    result = false;
+                    $t.focus();
+                    alert(t+" 필수 입력입니다.");
+                    return false;
+                }
+            }
+        });
+        if(!result)
+            return false;
+    });
+});
+</script>
 </head>
 <body>
 
@@ -22,13 +50,13 @@
               <h3 class="login-heading mb-4">Welcome back!</h3>
               <form>
                 <div class="form-label-group">
-                  <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus>
-                  <label for="userid">userid</label>
+                  <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus >
+                  <label for="userid">UserID</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                  <label for="inputPassword">Password</label>
+                  <input type="password" id="userpwd" class="form-control" placeholder="Password" required>
+                  <label for="userpwd">Password</label>
                 </div>
 
                 <div class="custom-control custom-checkbox mb-3">
