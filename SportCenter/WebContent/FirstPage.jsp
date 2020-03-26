@@ -54,7 +54,7 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Custom styles for this template -->
-<link href="css/agency.min.css" rel="stylesheet">
+<link href="css/FirstPage.css" rel="stylesheet">
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
@@ -62,11 +62,6 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-	$(function() {
-		$("#accordion").accordion({
-			collapsible : true
-		});
-	});
     $(window).scroll(function () {
         var scrollValue = $(document).scrollTop();
         if (scrollValue > 1250) {
@@ -76,16 +71,31 @@
            $(".navbar").css("background", "");
         }
      });
+    $(document).ready(function () {
+       $('.navbar-brand').click(function () {
+          $('html, body').animate({ scrollTop: '0' }, 1200);
+       });
+    });
      $(document).ready(function () {
-        $('.nav-link').click(function () {
+        $('.introduction_Soccer').click(function () {
            $('html, body').animate({ scrollTop: '1330' }, 1200);
         });
      });
      $(document).ready(function () {
-        $('.navbar').click(function () {
-           $('html, body').animate({ scrollTop: '0' }, 1200);
-        });
-     });
+         $('.introduction_Basketball').click(function () {
+            $('html, body').animate({ scrollTop: '1430' }, 1300);
+         });
+      });
+     $(document).ready(function () {
+         $('.introduction_Baseball').click(function () {
+            $('html, body').animate({ scrollTop: '1530' }, 1400);
+         });
+      });
+     $(document).ready(function () {
+         $('.introduction_Swimming').click(function () {
+            $('html, body').animate({ scrollTop: '1630' }, 1500);
+         });
+      });
 </script>
 <body class="text-center">
 
@@ -110,23 +120,43 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav text-uppercase ml-auto">
-							<li class="nav-item"><label class="nav-link">경기장소개</label></li>
+						
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle introduction" href="#" id="navbardrop"
+								data-toggle="dropdown"> 경기장소개 </a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item introduction_Soccer" href="#">축구장 소개</a>
+									 <a	class="dropdown-item introduction_Basketball" href="#">농구장 소개</a>
+									 <a	class="dropdown-item introduction_Baseball" href="#">야구장 소개</a>
+									 <a	class="dropdown-item introduction_Swimming" href="#">수영장 소개</a>
+							</div></li>
+							
+							<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbardrop"
+							data-toggle="dropdown"> 예약하기 </a>
+							<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">축구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">농구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">야구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">수영장 예약하기</a>
+							</div></li>
+								
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle" href="#" id="navbardrop"
 								data-toggle="dropdown"> 마이페이지 </a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#section41">예약확인</a>
-									 <a	class="dropdown-item" href="#section42">개인정보수정</a>
-									 <a	class="dropdown-item" href="#section42">내 게시물 및 댓글 확인</a>
+									<a class="dropdown-item" href="#">예약확인</a>
+									 <a	class="dropdown-item" href="#">개인정보수정</a>
+									 <a	class="dropdown-item" href="#">내 게시물 및 댓글 확인</a>
 								</div></li>
 						</ul>
-						<form method="post" action="#">
-							<label for="userid">아 이 디 : </label>
-							<input type="text" name="id" id="userid">
-							<label for="userpwd">비밀번호 : </label>
-							<input type="text" name="ped" id="userpwd">
-							<input type="submit" value="로그인">
-						</form>
+						<ul class="navbar-nav text-uppercase ml-auto">
+							<li class="nav-item"><label class="nav-link">로그인</label></li>
+							<li class="nav-item"><label class="nav-link">회원가입</label></li>
+
+								
+						</ul>
+						
 					</div>
 				</div>
 			</nav>
@@ -155,33 +185,47 @@
 		</header>
 
 	
-		<div id="accordion">
-			<div class="accordion_Soccer">
-				<p class="accordion_title">축구장</p>
-			</div>
-			<div class="accordion_content">
-				<p>축구장 설명</p>
-			</div>
-
-			<div class="accordion_basketball">
-				<p class="accordion_title">농구장
-			</div>
-			<div class="accordion_content">
-				<p>농구장 설명</p>
-			</div>
-
-			<div class="accordion_baseball">
-				<p class="accordion_title">야구장
-			</div>
-			<div class="accordion_content">
-				<p>야구장 설명</p>
-			</div>
-
-			<div class="accordion_swimming">
-				<p class="accordion_title">수영장
-			</div>
-			<div class="accordion_content">
-				<p>수영장 설명</p>
+		<div id="introduction_page">
+			<div class="introduction_page_1" style="margin: 10px; border: solid; border-radius: 12px; padding: 20px; background-color: #000000; height: 1310px;">
+				<!-- 축구장소개 -->
+				<div class="introduction_page_Soccer_img" style="margin: 10px; border: solid; background-image: url(./images/other/축구장소개.jpg); background-size: 100%; border-radius: 12px; float: left; width: 48%; height: 300px;">
+				</div>
+				<div class="introduction_page_Soccer_content" style="margin: 10px; padding:20px; border: solid #202020;  border-radius: 12px; width: 48%; height: 300px; float: right; color: white;">
+					<p>천연잔디가 깔린 잔디광장으로 축구, 레크레이션 등 다양한 행사가 가능한 곳으로 대규모 행사를 진행하기에 적합한 시설입니다.(최대 1,000명 수용)</p>
+					<p>크 기 : 길이100m×폭58m</p>
+					<p>용 도 : 축구경기 및 대규모 일반행사 등</p>
+					<p>부속시설 : 족구장 1개, 배구장 1개</p>
+				</div>
+				
+				<!-- 농구장소개 -->
+				<div class="introduction_page_basketball_img" style="margin: 10px; border: solid; background-image: url(./images/other/농구장소개.jpg); background-size: 100%; border-radius: 12px; float: right; width: 48%; height: 300px;">
+				</div>
+				<div class="introduction_page_basketball_content" style="margin: 10px; padding:20px; border: solid #202020;  border-radius: 12px; width: 48%; height: 300px; float: left; color: white;">
+					<p>천연잔디가 깔린 잔디광장으로 축구, 레크레이션 등 다양한 행사가 가능한 곳으로 대규모 행사를 진행하기에 적합한 시설입니다.(최대 1,000명 수용)</p>
+					<p>크 기 : 길이100m×폭58m</p>
+					<p>용 도 : 축구경기 및 대규모 일반행사 등</p>
+					<p>부속시설 : 족구장 1개, 배구장 1개</p>
+				</div>
+				
+				<!-- 야구장소개 --> 
+				<div class="introduction_page_baseball_img" style="margin: 10px; border: solid; background-image: url(./images/other/야구장소개.jpg); background-size: 100%; border-radius: 12px; float: left; width: 48%; height: 300px;">
+				</div>
+				<div class="introduction_page_baseball_content" style="margin: 10px; padding:20px; border: solid #202020;  border-radius: 12px; width: 48%; height: 300px; float: right; color: white;">
+					<p>천연잔디가 깔린 잔디광장으로 축구, 레크레이션 등 다양한 행사가 가능한 곳으로 대규모 행사를 진행하기에 적합한 시설입니다.(최대 1,000명 수용)</p>
+					<p>크 기 : 길이100m×폭58m</p>
+					<p>용 도 : 축구경기 및 대규모 일반행사 등</p>
+					<p>부속시설 : 족구장 1개, 배구장 1개</p>
+				</div>
+				
+				<!-- 수영장소개 --> 
+				<div class="introduction_page_swimming_img" style="margin: 10px; border: solid; background-image: url(./images/other/수영장소개.jpg); background-size: 100%; border-radius: 12px; float: right; width: 48%; height: 300px;">
+				</div>
+				<div class="introduction_page_swimming_content" style="margin: 10px; padding:20px; border: solid #202020;  border-radius: 12px; width: 48%; height: 300px; float: left; color: white;">
+					<p>천연잔디가 깔린 잔디광장으로 축구, 레크레이션 등 다양한 행사가 가능한 곳으로 대규모 행사를 진행하기에 적합한 시설입니다.(최대 1,000명 수용)</p>
+					<p>크 기 : 길이100m×폭58m</p>
+					<p>용 도 : 축구경기 및 대규모 일반행사 등</p>
+					<p>부속시설 : 족구장 1개, 배구장 1개</p>
+				</div>
 			</div>
 		</div>
 	
