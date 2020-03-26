@@ -15,6 +15,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
 <!-- Bootstrap -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -33,13 +34,20 @@
 	crossorigin="anonymous"></script>
 <link href="css/calendar.css" rel="stylesheet">
 <script src="js/calendar.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+	rel="stylesheet">
 
 <style type="text/css">
 #headbg {
 	background: url('images/football.jpg') no-repeat center;
 	background-size: cover;
 	height: 150pt;
+}
+
+hr {
+	padding-top: 12px;
+	padding-bottom: 12px;
 }
 
 .head1 {
@@ -122,188 +130,199 @@
 }
 </style>
 <script type="text/javascript">
-		$(function () {
-			$('#ab')
-				.click(
-					function () {
-						$('#menus')
-							.html(
-								"<div align='center'><font size='20px'>이용수칙</font><br><img src='images/ico-home.gif'><font>예약하기>이용수칙</font><hr width='800px'><img src='images/sub.jpg'></div>");
-					});
-			$('#ab1')
-				.click(
-					function () {
-						$('#menus')
-							.html(
-								"<div id='wrap'><div id='calendar'></div><div style='clear:both'></div></div>")
-					});
-			$('#ab4')
-				.click(
-					function () {
-						$('#menus')
-							.html(
-								"<div align='center' width='400px' height='200px'><h2>오시는 길</h2><br><a href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\" target=\"_blank\"><img width=\"800\" height=\"600\" src=\"https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo\" style=\"border:1px solid #ccc\"></a><div class=\"hide\" style=\"overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;\"><strong style=\"float: left;\"><img src=\"//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png\" width=\"72\" height=\"16\" alt=\"카카오맵\"></strong><div style=\"float: right;position:relative\"><a style=\"font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000\" target=\"_blank\" href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\">지도 크게 보기</a></div></div></div>")
-					});
-			});
-		function list(){
-			location.href="CenterList.jsp";
-		}
-		function Calendar(){
-			location.href="CenterReservationCalendar.jsp";
-		}
-		function Rtable(){
-			location.href="CenterReservationTable.jsp";
-		}
-		function main(){
-			location.href="CenterReservation.jsp"
-		}
-		$(document).ready(function() {
-		    var date = new Date();
-			var d = date.getDate();
-			var m = date.getMonth();
-			var y = date.getFullYear();
-			
-			/*  className colors
-			
-			className: default(transparent), important(red), chill(pink), success(green), info(blue)
-			
-			*/		
-			/* initialize the external events
-			-----------------------------------------------------------------*/
-			$('#external-events div.external-event').each(function() {
-			
-				// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-				// it doesn't need to have a start or end
-				var eventObject = {
-					title: $.trim($(this).text()) // use the element's text as the event title
-				};
-				
-				// store the Event Object in the DOM element so we can get to it later
-				$(this).data('eventObject', eventObject);
-				
-				// make the event draggable using jQuery UI
-				$(this).draggable({
-					zIndex: 999,
-					revert: true,      // will cause the event to go back to its
-					revertDuration: 0  //  original position after the drag
-				});
-			});
-			/* initialize the calendar
-			-----------------------------------------------------------------*/
-			var calendar =  $('#calendar').fullCalendar({
-				header: {
-					left: 'title',
-					center: 'agendaDay,agendaWeek,month',
-					right: 'prev,next today'
-				},
-				editable: true,
-				firstDay: 0, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-				selectable: true,
-				defaultView: 'month',
-				
-				axisFormat: 'h:mm',
-				columnFormat: {
-	                month: 'ddd',    // Mon
-	                week: 'ddd d', // Mon 7
-	                day: 'dddd M/d',  // Monday 9/7
-	                agendaDay: 'dddd d'
-	            },
-	            titleFormat: {
-	                month: 'MMMM yyyy', // September 2009
-	                week: "MMMM yyyy", // September 2009
-	                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
-	            },
-				allDaySlot: false,
-				selectHelper: true,
-				select: function(start, end, allDay) {
-					var title = prompt('Event Title:');
-					if (title) {
-						calendar.fullCalendar('renderEvent',
-							{
-								title: title,
-								start: start,
-								end: end,
-								allDay: allDay
-							},
-							true // make the event "stick"
-						);
-					}
-					calendar.fullCalendar('unselect');
-				},
-				droppable: true, // this allows things to be dropped onto the calendar !!!
-				drop: function(date, allDay) { // this function is called when something is dropped
-				
-					// retrieve the dropped element's stored Event Object
-					var originalEventObject = $(this).data('eventObject');
-					
-					// we need to copy it, so that multiple events don't have a reference to the same object
-					var copiedEventObject = $.extend({}, originalEventObject);
-					
-					// assign it the date that was reported
-					copiedEventObject.start = date;
-					copiedEventObject.allDay = allDay;
-					
-					// render the event on the calendar
-					// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-					$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-					
-					// is the "remove after drop" checkbox checked?
-					if ($('#drop-remove').is(':checked')) {
-						// if so, remove the element from the "Draggable Events" list
-						$(this).remove();
-					}
-					
-				},
-				events: [
-					{
-						title: 'All Day Event',
-						start: new Date(y, m, 1)
-					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: new Date(y, m, d-3, 16, 0),
-						allDay: false,
-						className: 'info'
-					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: new Date(y, m, d+4, 16, 0),
-						allDay: false,
-						className: 'info'
-					},
-					{
-						title: 'Meeting',
-						start: new Date(y, m, d, 10, 30),
-						allDay: false,
-						className: 'important'
-					},
-					{
-						title: 'Lunch',
-						start: new Date(y, m, d, 12, 0),
-						end: new Date(y, m, d, 14, 0),
-						allDay: false,
-						className: 'important'
-					},
-					{
-						title: 'Birthday Party',
-						start: new Date(y, m, d+1, 19, 0),
-						end: new Date(y, m, d+1, 22, 30),
-						allDay: false,
-					},
-					{
-						title: 'Click for Google',
-						start: new Date(y, m, 28),
-						end: new Date(y, m, 29),
-						url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
-						className: 'success'
-					}
-				],			
-			});
-		});
+	$(document)
+			.ready(
+					function() {
+						var date = new Date();
+						var d = date.getDate();
+						var m = date.getMonth();
+						var y = date.getFullYear();
 
-	</script>
+						/*  className colors
+						
+						className: default(transparent), important(red), chill(pink), success(green), info(blue)
+						
+						 */
+
+						/* initialize the external events
+						-----------------------------------------------------------------*/
+
+						$('#external-events div.external-event').each(
+								function() {
+
+									// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+									// it doesn't need to have a start or end
+									var eventObject = {
+										title : $.trim($(this).text())
+									// use the element's text as the event title
+									};
+
+									// store the Event Object in the DOM element so we can get to it later
+									$(this).data('eventObject', eventObject);
+
+									// make the event draggable using jQuery UI
+									$(this).draggable({
+										zIndex : 999,
+										revert : true, // will cause the event to go back to its
+										revertDuration : 0
+									//  original position after the drag
+									});
+
+								});
+
+						/* initialize the calendar
+						-----------------------------------------------------------------*/
+
+						var calendar = $('#calendar')
+								.fullCalendar(
+										{
+											header : {
+												left : 'title',
+												center : 'agendaDay,agendaWeek,month',
+												right : 'prev,next today'
+											},
+											editable : true,
+											firstDay : 0, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+											selectable : true,
+											defaultView : 'month',
+
+											axisFormat : 'h:mm',
+											columnFormat : {
+												month : 'ddd', // Mon
+												week : 'ddd d', // Mon 7
+												day : 'dddd M/d', // Monday 9/7
+												agendaDay : 'dddd d'
+											},
+											titleFormat : {
+												month : 'MMMM yyyy', // September 2009
+												week : "MMMM yyyy", // September 2009
+												day : 'MMMM yyyy' // Tuesday, Sep 8, 2009
+											},
+											allDaySlot : false,
+											selectHelper : true,
+											select : function(start, end,
+													allDay) {
+												var title = prompt('Event Title:');
+												if (title) {
+													calendar.fullCalendar(
+															'renderEvent', {
+																title : title,
+																start : start,
+																end : end,
+																allDay : allDay
+															}, true // make the event "stick"
+													);
+												}
+												calendar
+														.fullCalendar('unselect');
+											},
+											droppable : true, // this allows things to be dropped onto the calendar !!!
+											drop : function(date, allDay) { // this function is called when something is dropped
+
+												// retrieve the dropped element's stored Event Object
+												var originalEventObject = $(
+														this).data(
+														'eventObject');
+
+												// we need to copy it, so that multiple events don't have a reference to the same object
+												var copiedEventObject = $
+														.extend({},
+																originalEventObject);
+
+												// assign it the date that was reported
+												copiedEventObject.start = date;
+												copiedEventObject.allDay = allDay;
+
+												// render the event on the calendar
+												// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+												$('#calendar')
+														.fullCalendar(
+																'renderEvent',
+																copiedEventObject,
+																true);
+
+												// is the "remove after drop" checkbox checked?
+												if ($('#drop-remove').is(
+														':checked')) {
+													// if so, remove the element from the "Draggable Events" list
+													$(this).remove();
+												}
+
+											},
+
+											events : [
+													{
+														title : 'All Day Event',
+														start : new Date(y, m,
+																1)
+													},
+													{
+														id : 999,
+														title : 'Repeating Event',
+														start : new Date(y, m,
+																d - 3, 16, 0),
+														allDay : false,
+														className : 'info'
+													},
+													{
+														id : 999,
+														title : 'Repeating Event',
+														start : new Date(y, m,
+																d + 4, 16, 0),
+														allDay : false,
+														className : 'info'
+													},
+													{
+														title : 'Meeting',
+														start : new Date(y, m,
+																d, 10, 30),
+														allDay : false,
+														className : 'important'
+													},
+													{
+														title : 'Lunch',
+														start : new Date(y, m,
+																d, 12, 0),
+														end : new Date(y, m, d,
+																14, 0),
+														allDay : false,
+														className : 'important'
+													},
+													{
+														title : 'Birthday Party',
+														start : new Date(y, m,
+																d + 1, 19, 0),
+														end : new Date(y, m,
+																d + 1, 22, 30),
+														allDay : false,
+													},
+													{
+														title : 'Click for Google',
+														start : new Date(y, m,
+																28),
+														end : new Date(y, m, 29),
+														url : 'https://ccp.cloudaccess.net/aff.php?aff=5188',
+														className : 'success'
+													} ],
+										});
+					});
+
+	function list() {
+		location.href = "CenterList.jsp";
+	}
+	function Calendar() {
+		location.href = "CenterReservationCalendar.jsp";
+	}
+	function Rtable() {
+		location.href = "CenterReservationTable.jsp";
+	}
+	function main() {
+		location.href = "CenterReservation.jsp";
+	}
+	function location() {
+		location.href = "CenterLocation.jsp";
+	}
+</script>
 </head>
 
 <body>
@@ -356,8 +375,8 @@
 							</div>
 							<div class="carousel-item" align="center">
 								<h4>
-									새로운 시설 개설<br> <span style="font-style: normal;">볼링장:
-										1, 2, 3, 4, 5, ...</span>
+									새로운 시설 개설<br> <span style="font-style: normal;">볼링장:1,
+										2, 3, 4, 5, ...</span>
 								</h4>
 							</div>
 							<div class="carousel-item" align="center">
@@ -429,19 +448,25 @@
 					</div>
 					<hr>
 					<h3>
-						<button id="ab" class="btn btn-primary btn-block" onclick="main()">메인</button>
+						<a href="CenterReservation.jsp" id="ab"
+							class="btn btn-primary btn-block" onclick="main()">메인</a>
 					</h3>
 					<h3>
-						<button id="ab2" class="btn btn-primary btn-block" onclick="list()">게시판</button>
+						<a href="CenterList.jsp" id="ab2"
+							class="btn btn-primary btn-block" onclick="list()">게시판</a>
 					</h3>
 					<h3>
-						<button id="ab1" class="btn btn-primary btn-block" onclick="Calendar()">전체 대관 현황</button>
+						<a href="CenterReservationCalendar.jsp" id="ab1"
+							class="btn btn-primary btn-block" onclick="Calendar()">전체 대관
+							현황</a>
 					</h3>
 					<h3>
-						<button id="ab3" class="btn btn-primary btn-block" onclick="Rtable()">예약 화면</button>
+						<a href='CenterReservationTable.jsp' id="ab3"
+							class="btn btn-primary btn-block" onclick="Rtable()">예약 화면</a>
 					</h3>
 					<h3>
-						<button id="ab4" class="btn btn-primary btn-block">오시는 길</button>
+						<button id="ab4" class="btn btn-primary btn-block"
+							onclick="location()">오시는 길</button>
 					</h3>
 				</div>
 				<!-- 메인 내용 표시되는 곳 -->
