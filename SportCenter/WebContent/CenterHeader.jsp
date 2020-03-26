@@ -109,7 +109,7 @@ hr {
 	}
 	
 	$(document).ready(function(){
-		$('.fm').mouseenter(function(){
+		$('.fm').mouseenter(function(){ 
 			$('.fmsub').stop().slideDown("normal")
 		});
 		$('.fmm').mouseleave(function(){
