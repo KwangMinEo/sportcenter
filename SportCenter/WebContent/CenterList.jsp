@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>스포츠센터</title>
+	<title>스포츠센터게시판</title>
 
 	<!-- jQuery -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -33,81 +33,30 @@
 			height: 150pt;
 		}
 
-		.head1 {
-			font-size: 20pt;
-		}
 
-		.carousel-control.right,
-		.carousel-control.left {
-			background-image: none;
-			color: #f4511e;
-		}
-
-		.carousel-indicators li {
-			border-color: #f4511e;
-		}
-
-		.carousel-indicators li.active {
-			background-color: #f4511e;
-		}
-
-		.item h4 {
-			font-size: 19px;
-			line-height: 1.375em;
-			font-weight: 400;
-			font-style: italic;
-			margin: 70px 0;
-		}
-
-		.item span {
-			font-style: normal;
-		}
 	</style>
 	<script type="text/javascript">
-		$(function () {
-			$('#ab')
-				.ready(
-					function () {
-						$('#menus')
-							.html(
-								"<div align='center'><font size='20px'>이용수칙</font><br><hr><img src='images/sub.jpg'></div>");
-					});
-			$('#ab')
-				.click(
-					function () {
-						$('#menus')
-							.html(
-								"<div align='center'><font size='20px'>이용수칙</font><br><img src='images/ico-home.gif'><font>예약하기>이용수칙</font><hr width='800px'><img src='images/sub.jpg'></div>");
-					});
-			$('#ab4')
-				.click(
-					function () {
-						$('#menus')
-							.html(
-								"<div align='center' width='400px' height='200px'><h2>오시는 길</h2><br><a href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\" target=\"_blank\"><img width=\"800\" height=\"600\" src=\"https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo\" style=\"border:1px solid #ccc\"></a><div class=\"hide\" style=\"overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;\"><strong style=\"float: left;\"><img src=\"//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png\" width=\"72\" height=\"16\" alt=\"카카오맵\"></strong><div style=\"float: right;position:relative\"><a style=\"font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000\" target=\"_blank\" href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\">지도 크게 보기</a></div></div></div>")
-					});
-			$('#ab3').click(function(){
-				$.ajax({
-					url:'CenterReservationtable.jsp',
-					type:'get',
-					cache:'false',
-					success: function (data) { $('#menus').html(data);
-					}
-				});
+	$(function(){
+		$('#ab4')
+			.click(
+				function () {
+					$('#menus')
+						.html(
+							"<div align='center' width='400px' height='200px'><h2>오시는 길</h2><br><a href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\" target=\"_blank\"><img width=\"800\" height=\"600\" src=\"https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo\" style=\"border:1px solid #ccc\"></a><div class=\"hide\" style=\"overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;\"><strong style=\"float: left;\"><img src=\"//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png\" width=\"72\" height=\"16\" alt=\"카카오맵\"></strong><div style=\"float: right;position:relative\"><a style=\"font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000\" target=\"_blank\" href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\">지도 크게 보기</a></div></div></div>")
 			});
 		});
-		function list(){
-			location.href="CenterList.jsp";
-		}
-		function Calendar(){
-			location.href="CenterReservationCalendar.jsp";
-		}
-		function Rtable(){
-			location.href="CenterReservationTable.jsp";
-		}
-		function main(){
-			location.href="CenterReservation.jsp"
-		}
+	function list(){
+		location.href="CenterList.jsp";
+	}
+	function Calendar(){
+		location.href="CenterReservationCalendar.jsp";
+	}
+	function Rtable(){
+		location.href="CenterReservationTable.jsp";
+	}
+	function main(){
+		location.href="CenterReservation.jsp"
+	}
 	</script>
 </head>
 
@@ -120,11 +69,10 @@
 			</div>
 			<div class="col-sm-2">
 				<div class="dropdown">
-					<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
+					<button type="button" class="btn dropdown-toggle" style="background-color:rgb(89, 102, 114)"data-toggle="dropdown">
 						<font style="color: white;">경기장 선택</font>
 					</button>
-					<div class="dropdown-menu">
+					<div class="dropdown-menu" style="background-color:RGB(146, 164, 181)">
 						<a class="dropdown-item" href="#">축구장</a>
 						<a class="dropdown-item" href="#">농구장</a>
 						<a class="dropdown-item" href="#">야구장</a>
@@ -138,7 +86,9 @@
 		<div class="navbar navbar-sm"
 			style="background-color: #2F3E46; margin-left:-15px; margin-right:-15px; height:50px;">
 			<div class="navbar">
-				현제위치 표시 ex):<img src='images/ico-home.gif'><font color="white">예약하기>이용수칙</font>
+				<a class="nav-link" href="#">Link 1</a>
+				<a class="nav-link" href="#">Link 2</a>
+				<a class="nav-link" href="#">Link 3</a>
 			</div>
 		</div>
 	</div>
@@ -174,7 +124,7 @@
 
 					<!-- 왼쪽 메뉴바 -->
 					<div>
-						<button class="btn btn-primary btn-block rounded" type="button" data-toggle="collapse"
+						<button class="btn btn-primary btn-block rounded-lg" type="button" data-toggle="collapse"
 							data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
 							축구장
 						</button>
@@ -189,7 +139,7 @@
 						</div>
 					</div>
 					<div>
-						<button class="btn btn-primary btn-block rounded" type="button" data-toggle="collapse"
+						<button class="btn btn-primary btn-block rounded-lg" type="button" data-toggle="collapse"
 							data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
 							농구장
 						</button>
@@ -204,7 +154,7 @@
 						</div>
 					</div>
 					<div>
-						<button class="btn btn-primary btn-block rounded" type="button" data-toggle="collapse"
+						<button class="btn btn-primary btn-block rounded-lg" type="button" data-toggle="collapse"
 							data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
 							야구장
 						</button>
@@ -219,7 +169,7 @@
 						</div>
 					</div>
 					<div>
-						<button class="btn btn-primary btn-block rounded" type="button" data-toggle="collapse"
+						<button class="btn btn-primary btn-block rounded-lg" type="button" data-toggle="collapse"
 							data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
 							수영장
 						</button>
@@ -252,15 +202,27 @@
 				</div>
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
+					<table class="table">
+					<tr>
+					<td colspan="2">총10건 &nbsp;&nbsp;2/12</td><td colspan="4" align="right"><select><option>제목</option><option>작성자</option></select><input type="text" ></td>
+					</tr>
+					<tr>
+					<td>번호</td><td>제목</td><td>작성자</td><td>작성 날짜</td><td>카테고리</td><td>조회수</td>
+					</tr>
+					<tr>
+					<td></td>
+					</tr>
+					</table>
 				
 				</div>
 
 
-				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="padding:0px;width:100%; height:100%;">
+				<div id="menus" class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+						<br>
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
-								<img src="images/football2.jpg" style="width:300px; height:600px;">
+								<img src="images/football2.jpg" style="width:280px; height:600px;">
 							</div>
 							<div class="carousel-item" align="center">
 								<img src="images/goal.jpg" style="width:300px; height:600px;">
