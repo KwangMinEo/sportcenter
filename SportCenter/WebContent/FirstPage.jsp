@@ -229,6 +229,10 @@
 			</div>
 		</div>
 	
+	<div style="border: ; background-color: ; margin: 10px; border-radius: 12px;">
+			<video id="" src="./video/stadium.mp4" controls autoplay style="width: 80%; height: 80%; border: ; border-radius: 12px; margin-top: 2%; margin-bottom: 2%"></video>
+		
+	</div>
 
 	
 	<div style="background-color: black; color: white;">
