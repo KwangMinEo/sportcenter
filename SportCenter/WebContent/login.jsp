@@ -23,13 +23,13 @@
               <h3 class="login-heading mb-4">Welcome back!</h3>
               <form>
                 <div class="form-label-group">
-                  <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('필수 입력 정보입니다.')" oninput="setCustomValidity('')">
+                  <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userid">UserID</label>
                   	
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="userpwd" class="form-control" placeholder="Password" required>
+                  <input type="password" id="userpwd" class="form-control" placeholder="Password" required oninvalid="this.setCustomValidity('영어 + 숫자 , 특수문자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userpwd">Password</label>
                 </div>
 
