@@ -61,12 +61,6 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<!-- 네이게이션바 풀 드롭다운 -->
-<link href="css/full.css" rel="stylesheet">
-
-
-
 <script>
     $(window).scroll(function () {
         var scrollValue = $(document).scrollTop();
@@ -107,98 +101,15 @@
             $('html, body').animate({ scrollTop: '2670' }, 1200);
          });
       });
-
 </script>
-
-<!-- 네비게이션 바 -->
-  <script type="text/javascript" language="JavaScript" src="js/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript">
- $(document).ready(function(){
-   $(".gnbSec p").on("mouseenter", function() {
-     $("#header").stop().animate({
-    height: 265
-     }, 1000);
-   });
-   $("#header").on("mouseleave", function() {
-     $(this).stop().animate({
-    height: 99
-     }, 1000);
-   });
- });
-  </script>
-  
 <body class="text-center">
 
 
 
-			<!-- 전체 헤더 -->
+		<!-- 상단 배경 및 로그인 -->
 
 		<header class="masthead">
 			<!-- 상단 네비게이터 -->
-			<!-- Navigation -->
-
-<!-- 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" -->
-<!-- 				id="mainNav"> -->
-<!-- 				<div class="container"> -->
-<!-- 					<a class="navbar-brand js-scroll-trigger" href="#page-top">Sport -->
-<!-- 						Center</a> -->
-<!-- 					<button class="navbar-toggler navbar-toggler-right" type="button" -->
-<!-- 						data-toggle="collapse" data-target="#navbarResponsive" -->
-<!-- 						aria-controls="navbarResponsive" aria-expanded="false" -->
-<!-- 						aria-label="Toggle navigation"> -->
-<!-- 						Menu <i class="fas fa-bars"></i> -->
-<!-- 					</button> -->
-<!-- 					<div class="collapse navbar-collapse" id="navbarResponsive"> -->
-<!-- 						<ul class="navbar-nav text-uppercase ml-auto"> -->
-						
-<!-- 							<li class="nav-item dropdown"><a -->
-<!-- 								class="nav-link dropdown-toggle introduction" href="#" id="navbardrop" -->
-<!-- 								data-toggle="dropdown"> 경기장소개 </a> -->
-<!-- 								<div class="dropdown-menu"> -->
-<!-- 									<a class="dropdown-item introduction_Soccer" href="#">축구장 소개</a> -->
-<!-- 									 <a	class="dropdown-item introduction_Basketball" href="#">농구장 소개</a> -->
-<!-- 									 <a	class="dropdown-item introduction_Baseball" href="#">야구장 소개</a> -->
-<!-- 									 <a	class="dropdown-item introduction_Swimming" href="#">수영장 소개</a> -->
-<!-- 									 <a	class="dropdown-item introduction_video" href="#">영상 소개</a> -->
-<!-- 							</div></li> -->
-							
-<!-- 							<li class="nav-item dropdown"><a -->
-<!-- 							class="nav-link dropdown-toggle" href="#" id="navbardrop" -->
-<!-- 							data-toggle="dropdown"> 예약하기 </a> -->
-<!-- 							<div class="dropdown-menu"> -->
-<!-- 									<a class="dropdown-item" href="#">축구장 예약하기</a> -->
-<!-- 									 <a	class="dropdown-item" href="#">농구장 예약하기</a> -->
-<!-- 									 <a	class="dropdown-item" href="#">야구장 예약하기</a> -->
-<!-- 									 <a	class="dropdown-item" href="#">수영장 예약하기</a> -->
-<!-- 							</div></li> -->
-								
-<!-- 							<li class="nav-item dropdown"><a -->
-<!-- 								class="nav-link dropdown-toggle" href="#" id="navbardrop" -->
-<!-- 								data-toggle="dropdown"> 마이페이지 </a> -->
-<!-- 								<div class="dropdown-menu"> -->
-<!-- 									<a class="dropdown-item" href="#">예약확인</a> -->
-<!-- 									 <a	class="dropdown-item" href="#">개인정보수정</a> -->
-<!-- 									 <a	class="dropdown-item" href="#">내 게시물 및 댓글 확인</a> -->
-<!-- 								</div></li> -->
-<!-- 						</ul> -->
-<!-- 						<ul class="navbar-nav text-uppercase ml-auto"> -->
-<!-- 							<li class="nav-item"><label class="nav-link">로그인</label></li> -->
-<!-- 							<li class="nav-item"><label class="nav-link">회원가입</label></li> -->
-
-								
-<!-- 						</ul> -->
-						
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</nav> -->
-			<!-- 상단 네비게이터 end-->
-			<!-- Navigation end-->
-
-
-
-
-
-<!-- 상단 네비게이터 -->
 			<!-- Navigation -->
 
 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top"
@@ -213,73 +124,51 @@
 						Menu <i class="fas fa-bars"></i>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
-							<div class="header_inner">
-								    <div id="nav">
-								     <div class="gnbSec">
-								      <!--gnb-->
-								      <div>
-								       <p><a href="#">HOME</a></p>
-								      </div>
-								      <div>
-								       <p><a href="#">COMPANY</a></p>
-								       <ul class="sub-menu-in">
-								        <li><a href="#">인사말</a></li>
-								        <li><a href="#">회사연혁</a></li>
-								        <li><a href="#">라이센스</a></li>
-								        <li><a href="#">조직도</a></li>
-								        <li><a href="#">약도&nbsp;연락처</a></li>
-								       </ul>
-								      </div>
-								      <div class="long">
-								       <p><a href="#">SOLUTION</a></p>
-								       <ul class="sub-menu-in sub-menu-in3">
-								        <li><a href="#">NEOaDD</a></li>
-								        <li><a href="#">Space&nbsp;Viewer_Client</a></li>
-								        <li><a href="#">Space&nbsp;Viewer_Core</a></li>
-								       </ul>
-								      </div>
-								      <div>
-								       <p><a href="#">PROJECT</a></p>
-								       <ul class="sub-menu-in">
-								        <li><a href="#">프로젝트</a></li>
-								       </ul>
-								      </div>
-								      <div>
-								       <p><a href="#">NEWS</a></p>
-								       <ul class="sub-menu-in">
-								        <li><a href="#">공지사항</a></li>
-								        <li><a href="#">언론기사</a></li>
-								        <li><a href="#">사내활동</a></li>
-								       </ul>
-								      </div>
-								      <div>
-								       <p><a href="#">RECRUIT</a></p>
-								       <ul class="sub-menu-in">
-								        <li><a href="#">채용정보</a></li>
-								        <li><a href="#">복리후생</a></li>
-								       </ul>
-								      </div>
-								      <!--gnb end-->
-								     </div>
-								    </div>
-								   </div>
-								  </div>
-					        <ul class="navbar-nav text-uppercase ml-auto">
-								<li class="nav-item"><label class="nav-link">로그인</label></li>
-								<li class="nav-item"><label class="nav-link">회원가입</label></li>
-							</ul>
+						<ul class="navbar-nav text-uppercase ml-auto">
+						
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle introduction" href="#" id="navbardrop"
+								data-toggle="dropdown"> 경기장소개 </a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item introduction_Soccer" href="#">축구장 소개</a>
+									 <a	class="dropdown-item introduction_Basketball" href="#">농구장 소개</a>
+									 <a	class="dropdown-item introduction_Baseball" href="#">야구장 소개</a>
+									 <a	class="dropdown-item introduction_Swimming" href="#">수영장 소개</a>
+									 <a	class="dropdown-item introduction_video" href="#">영상 소개</a>
+							</div></li>
+							
+							<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbardrop"
+							data-toggle="dropdown"> 예약하기 </a>
+							<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">축구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">농구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">야구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">수영장 예약하기</a>
+							</div></li>
+								
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#" id="navbardrop"
+								data-toggle="dropdown"> 마이페이지 </a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">예약확인</a>
+									 <a	class="dropdown-item" href="#">개인정보수정</a>
+									 <a	class="dropdown-item" href="#">내 게시물 및 댓글 확인</a>
+								</div></li>
+						</ul>
+						<ul class="navbar-nav text-uppercase ml-auto">
+							<li class="nav-item"><label class="nav-link">로그인</label></li>
+							<li class="nav-item"><label class="nav-link">회원가입</label></li>
 
-
+								
+						</ul>
+						
+					</div>
 				</div>
 			</nav>
 			<!-- 상단 네비게이터 end-->
 			<!-- Navigation end-->
-			
-			
-			
-			
-			
-		<!-- 상단 배경 및 로그인 -->
+
 
 			<div class="container">
 				<div class="intro-text">
