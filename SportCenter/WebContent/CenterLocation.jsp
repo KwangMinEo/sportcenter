@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>스포츠센터 예약화면</title>
+<title>스포츠센터 오시는길</title>
 
 <!-- jQuery -->
 <link rel="stylesheet"
@@ -90,26 +90,26 @@ hr {
 .hasDatepicker {
 	cursor: pointer;
 }
+
+.upperbtn{
+	background-color:#82A5c5;
+}
+.lowerbtn{
+	background-color:#82A5c5;
+}
+.shadow{
+	margin: 0 auto;
+	width: 900px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px #C3C3C3;
+	-webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+}
+
 </style>
 <script type="text/javascript">
-		$(function(){
-			$('input[name="dates"]').daterangepicker({
-				  autoApply:true,
-			      autoUpdateInput: false,
-			      locale: {
-			          cancelLabel: 'Clear'
-			      }
-			  });
-			  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-			      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
-			  });
-
-			  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-			      $(this).val('');
-			  });
-
-		});
-
 	</script>
 </head>
 
@@ -117,53 +117,44 @@ hr {
 <jsp:include page="CenterHeader.jsp"/>
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px; align:center">
-					<div align="center" style="width:400px; height:200px;">
-						<h2>오시는 길</h2>
-							<br>
-						<a href="https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
-						<img width="800" height="600" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a>
-						<div class="hide" style="overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;">
-							<strong style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵"></strong>
-							<div style="float: right;position:relative">
-								<a style="font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000" target="_blank" href="https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false">지도 크게 보기</a>
-							</div>
+					<div class="shadow">
+						<div style="align:center;">
+							<h2>오시는 길</h2>
+							<img src="images/map.png" style="width:700px;height:500px;">
 						</div>
-					</div>
+					</div> 
 				</div>
-
-				<div class="col-sm-2"
-					style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-					<div id="carouselExampleControls1" class="carousel slide"data-ride="carousel" style="padding: 0px; width: 100%; height: 100%;">
+				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
-								<img src="images/football2.jpg"	style="width: 300px; height: 600px;">
+								<img src="images/football2.jpg" style="width:300px; height:600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<img src="images/goal.jpg" style="width: 300px; height: 600px;">
+								<img src="images/goal.jpg" style="width:300px; height:600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<img src="images/place/경기장야경.jpg"	style="width: 280px; height: 600px;">
+								<img src="images/place/경기장야경.jpg" style="width:280px; height:600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<h1>
-									광고문의:<br> 000-0000-0000
-								</h1>
+								<h1>광고문의:<br> 000-0000-0000</h1>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
+						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button"	data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
 						</a>
-						<a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-						</a> <Br>
+						<a class="carousel-control-next" href="#carouselExampleControls1" role="button"	data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+						<Br>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div align="center">
+		<div align="center" style="background-color:black; color:white;">
 		<jsp:include page="Footter.jsp" />
 	</div>
 </body>

@@ -85,18 +85,24 @@
 .hasDatepicker {
 	cursor: pointer;
 }
+.shadow{
+	margin: 0 auto;
+	width: 900px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px #C3C3C3;
+	-webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+}
+.upperbtn{
+	background-color:#82A5c5;
+}
+.lowerbtn{
+	background-color:#82A5c5;
+}
 </style>
 <script type="text/javascript">
-	$(function() {
-		$('#ab4')
-				.click(
-						function() {
-							$('#menus')
-									.html(
-											"<div align='center' width='400px' height='200px'><h2>오시는 길</h2><br><a href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\" target=\"_blank\"><img width=\"800\" height=\"600\" src=\"https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=477590&MY=1120840&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo\" style=\"border:1px solid #ccc\"></a><div class=\"hide\" style=\"overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;\"><strong style=\"float: left;\"><img src=\"//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png\" width=\"72\" height=\"16\" alt=\"카카오맵\"></strong><div style=\"float: right;position:relative\"><a style=\"font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000\" target=\"_blank\" href=\"https://map.kakao.com/?urlX=477590&urlY=1120840&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false\">지도 크게 보기</a></div></div></div>")
-						});
-	});
-
 	$(function() {
 		$("#price").html('<font style="color:red;"> 1234 </font>');
 		$(".widget input[type=submit, .widget a, .widget button").button();
@@ -124,39 +130,28 @@
 				});
 
 	});
-	function list() {
-		location.href = "CenterList.jsp";
-	}
-	function Calendar() {
-		location.href = "CenterReservationCalendar.jsp";
-	}
-	function Rtable() {
-		location.href = "CenterReservationTable.jsp";
-	}
-	function main() {
-		location.href = "CenterReservation.jsp"
-	}
 </script>
 </head>
 
 <body>
 	<jsp:include page="CenterHeader.jsp" />
 	<!-- 메인 내용 표시되는 곳 -->
-	<div id="menus" class="col-sm-8"
-		style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
+	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
+		<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
 		<table style="column-width: 1000px;">
 			<tr align="center">
-				<td width="1000px"><font
-					style="font-size: 30px; color: cadetblue">예약</font></td>
+				<td width="1000px"><font style="font-size: 30px; color: cadetblue">예약</font></td>
 			</tr>
 			<tr align="center">
 				<td>
 					<hr>
-					<h4>경기장</h4> <br> <select><option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
+					<h4>경기장</h4> <br>
+					<select class="custom-select" style="width:300px">
+						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
 						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;농구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
 						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;야구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
 						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수영장&nbsp;&nbsp;&nbsp;&nbsp;</option>
-				</select> <br>
+					</select> <br>
 				</td>
 			</tr>
 			<tr align="center">
@@ -185,20 +180,20 @@
 						<tr>
 							<td>
 								<div class="btn-group" data-toggle="buttons">
-									<label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">08:00~10:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">00:00~12:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">12:00~14:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">14:00~16:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">16:00~18:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">18:00~20:00
-									</label> <label class="btn btn-info"> <input type="checkbox"
-										autocomplete="off">20:00~22:00
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">08:00~10:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">00:00~12:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">12:00~14:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">14:00~16:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">16:00~18:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">18:00~20:00</label>
+									<label class="btn btn-info">
+										<input type="checkbox" autocomplete="off">20:00~22:00
 									</label>
 								</div>
 							</td>
@@ -218,52 +213,47 @@
 			<tr align="center">
 				<td><hr>
 					<div class="widget">
-						<button>예약하기</button>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button>취소하기</button>
-					</div></td>
+					<button type="button" class="btn btn-outline-primary" style="width:35%">예약하기</button>
+					<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+					<button type="button" class="btn btn-outline-secondary" style="width:35%">취소하기</button>
+					</div>
+				</td>
 			</tr>
 		</table>
-	</div>
-
-
-	<div class="col-sm-2"
-		style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-		<div id="carouselExampleControls1" class="carousel slide"
-			data-ride="carousel" style="padding: 0px; width: 100%; height: 100%;">
-			<div class="carousel-inner">
-				<div class="carousel-item active" align="center">
-					<img src="images/football2.jpg"
-						style="width: 300px; height: 600px;">
-				</div>
-				<div class="carousel-item" align="center">
-					<img src="images/goal.jpg" style="width: 300px; height: 600px;">
-				</div>
-				<div class="carousel-item" align="center">
-					<img src="images/place/경기장야경.jpg"
-						style="width: 280px; height: 600px;">
-				</div>
-				<div class="carousel-item" align="center">
-					<h1>
-						광고문의:<br> 000-0000-0000
-					</h1>
-				</div>
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleControls1"
-				role="button" data-slide="prev"> <span
-				class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-				class="sr-only">Previous</span>
-			</a> <a class="carousel-control-next" href="#carouselExampleControls1"
-				role="button" data-slide="next"> <span
-				class="carousel-control-next-icon" aria-hidden="true"></span> <span
-				class="sr-only">Next</span>
-			</a> <Br>
 		</div>
 	</div>
+	<br><br><br><br>
+				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
+						<div class="carousel-inner">
+							<div class="carousel-item active" align="center">
+								<img src="images/football2.jpg" style="width:300px; height:600px;">
+							</div>
+							<div class="carousel-item" align="center">
+								<img src="images/goal.jpg" style="width:300px; height:600px;">
+							</div>
+							<div class="carousel-item" align="center">
+								<img src="images/place/경기장야경.jpg" style="width:280px; height:600px;">
+							</div>
+							<div class="carousel-item" align="center">
+								<h1>광고문의:<br> 000-0000-0000</h1>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button"	data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls1" role="button"	data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+						<Br>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-	</div>
-	<div align="center">
+		<div align="center" style="background-color:black; color:white;">
 		<jsp:include page="Footter.jsp" />
 	</div>
 </body>

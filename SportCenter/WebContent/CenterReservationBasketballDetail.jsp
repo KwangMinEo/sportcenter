@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>스포츠센터</title>
+	<title>스포츠센터 농구장</title>
 
 	<!-- jQuery -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -73,6 +73,10 @@
 			-moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
 			box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
 		}
+		.detailimg{
+			width:300px;
+			height:200px;
+		}
 	</style>
 	<script type="text/javascript">
 	</script>
@@ -84,12 +88,45 @@
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
 					<div align='center'>
 						<div class='shadow'>
-							<font size='20px'>이용수칙</font><br><hr>
-							<img src='images/sub.jpg'>
+							<table class="table">
+							<tr>
+							<td>농구장 설명</td>
+							</tr>
+							<tr>
+							<td><img src="images/place/경기장1.jpg"></td>
+							<td>농구장<br>
+								22,911㎡부지에 2,893석의 관람석이 있으며 축구장(운동장) 전용조명시설을 갖추고 있습니다.
+								약 5,000여명의 인원을 수용할 수 있는 축구장(운동장)은 천연잔디의 촉감과 동일하고 눈의 피로가 전혀 없는 국제 규격의 인조잔디이며 육상트랙은 
+								400m 8레인으로 인체공학적인 탁월한 탄력성이 있는 트랙으로 선수 보호 및 기록향상을 위한 시설로 설치되어 있습니다.
+							</td>
+							<tr>
+							<td>경기장 면적</td>
+							</tr>
+							</tr>
+							<td colspan="2">
+								-주경기장 : 120m × 80m(9,600㎡)<br>
+								-실외 : 110m × 76m(8,360㎡)<br>
+							</td>
+							<tr>
+							<td>부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(6,050석), 조명 및 음향시스템 <br></td><td></td>
+							</tr>
+							<tr>
+							<td>
+							선수 대기실
+							<hr>
+							<img src="images/place/basketballlocker.jpg" class="detailimg">
+							<br><hr width="100%">
+							샤워실
+							<hr width="100%">
+							<img src="images/place/basketballshower.jpg" class="detailimg">
+							</td>
+							</tr>
+							
+							
+							</table>
 						</div>
 					</div>
 				</div>
-
 				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
 					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
 						<div class="carousel-inner">

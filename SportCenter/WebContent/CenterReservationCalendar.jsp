@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -7,14 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>스포츠센터 대관현황</title>
-
-<!-- jQuery -->
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 
 <!-- Bootstrap -->
 <link rel="stylesheet"
@@ -34,9 +25,7 @@
 	crossorigin="anonymous"></script>
 <link href="css/calendar.css" rel="stylesheet">
 <script src="js/calendar.js"></script>
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
 <style type="text/css">
 #headbg {
@@ -128,6 +117,12 @@ hr {
 	-moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
 	box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
 }
+.upperbtn{
+	background-color:#82A5c5;
+}
+.lowerbtn{
+	background-color:#82A5c5;
+}
 </style>
 <script type="text/javascript">
 	$(document)
@@ -183,7 +178,7 @@ hr {
 											},
 											editable : true,
 											firstDay : 0, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-											selectable : true,
+											selectable : false,
 											defaultView : 'month',
 
 											axisFormat : 'h:mm',
@@ -253,104 +248,94 @@ hr {
 											events : [
 													{
 														title : 'All Day Event',
-														start : new Date(y, m,
-																1)
+														start : new Date(y, m, 1)
 													},
 													{
 														id : 999,
 														title : 'Repeating Event',
-														start : new Date(y, m,
-																d - 3, 16, 0),
+														start : new Date(y, m, d - 3, 16, 0),
 														allDay : false,
 														className : 'info'
 													},
 													{
 														id : 999,
 														title : 'Repeating Event',
-														start : new Date(y, m,
-																d + 4, 16, 0),
+														start : new Date(y, m, d + 4, 16, 0),
 														allDay : false,
 														className : 'info'
 													},
 													{
 														title : 'Meeting',
-														start : new Date(y, m,
-																d, 10, 30),
+														start : new Date(y, m, d, 10, 30),
 														allDay : false,
 														className : 'important'
 													},
 													{
 														title : 'Lunch',
-														start : new Date(y, m,
-																d, 12, 0),
-														end : new Date(y, m, d,
-																14, 0),
+														start : new Date(y, m, d, 12, 0),
+														end : new Date(y, m, d, 14, 0),
 														allDay : false,
 														className : 'important'
 													},
 													{
 														title : 'Birthday Party',
-														start : new Date(y, m,
-																d + 1, 19, 0),
-														end : new Date(y, m,
-																d + 1, 22, 30),
+														start : new Date(y, m, d + 1, 19, 0),
+														end : new Date(y, m, d + 1, 22, 30),
 														allDay : false,
 													},
 													{
 														title : 'Click for Google',
-														start : new Date(y, m,
-																28),
+														start : new Date(y, m, 28),
 														end : new Date(y, m, 29),
 														url : 'https://ccp.cloudaccess.net/aff.php?aff=5188',
 														className : 'success'
 													} ],
 										});
 					});
-
-	function list() {
-		location.href = "CenterList.jsp";
-	}
-	function Calendar() {
-		location.href = "CenterReservationCalendar.jsp";
-	}
-	function Rtable() {
-		location.href = "CenterReservationTable.jsp";
-	}
-	function main() {
-		location.href = "CenterReservation.jsp";
-	}
-	function location() {
-		location.href = "CenterLocation.jsp";
-	}
+	
+	$(document).ready(function(){
+		$('.fm').mouseenter(function(){ 
+			$('.fmsub').stop().slideDown("normal")
+		});
+		$('.fmm').mouseleave(function(){
+			$('.fmsub').stop().slideUp("normal")
+		});
+		$('.bm').mouseenter(function(){
+			$('.bmsub').stop().slideDown("normal")
+		});
+		$('.bmm').mouseleave(function(){
+			$('.bmsub').stop().slideUp("normal")
+		});
+		$('.bbm').mouseenter(function(){
+			$('.bbmsub').stop().slideDown("normal")
+		});
+		$('.bbmm').mouseleave(function(){
+			$('.bbmsub').stop().slideUp("normal")
+		});
+		$('.sm').mouseenter(function(){
+			$('.smsub').stop().slideDown("normal")
+		});
+		$('.smm').mouseleave(function(){
+			$('.smsub').stop().slideUp("normal")
+		});
+	});
 </script>
 </head>
 
-<body>
-	<div class="container-fluid" id="headbg" align="center"
-		style="padding-top: 45pt">
-		<div class="row">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<font style="color: white; font-size: 50px">예약화면</font>
-			</div>
-			<div class="col-sm-2">
-				<div class="dropdown">
-					<button type="button" class="btn btn-danger dropdown-toggle"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<font style="color: white;">경기장 선택</font>
-					</button>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">축구장</a> <a class="dropdown-item"
-							href="#">농구장</a> <a class="dropdown-item" href="#">야구장</a> <a
-							class="dropdown-item" href="#">수영장</a>
-					</div>
-				</div>
-			</div>
+<body style="background-color:black;">
+<div class="container-fluid" id="headbg" align="center"	style="padding-top: 45pt">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<font style="color: white; font-size: 50px">예약화면</font>
+		</div>
+		<div class="col-sm-2">
 		</div>
 	</div>
+</div>
 	<div class="container-fluid">
-		<div class="navbar navbar-sm"
-			style="background-color: #2F3E46; margin-left: -15px; margin-right: -15px; height: 50px;">
+		<div class="navbar navbar-sm" style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
 			<div class="navbar">
 				현제위치 표시 ex):<img src='images/ico-home.gif'><font color="white">예약하기>이용수칙</font>
 			</div>
@@ -359,12 +344,10 @@ hr {
 	<div>
 		<div class="container-fluid " style="margin-left: 0px;">
 			<div class="row">
-				<div class="col-sm-2"
-					style="background-color: rgb(89, 102, 114); height: auto">
+				<div class="col-sm-2" style="background-color: rgb(89, 102, 114); height: auto">
 					<!-- carousel시작 -->
 					<h2>새로운 소식</h2>
-					<div id="carouselExampleControls" class="carousel slide"
-						data-ride="carousel">
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 						<br>
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
@@ -386,92 +369,92 @@ hr {
 								</h4>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls"
-							role="button" data-slide="prev"> <span
-							class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-							class="sr-only">Previous</span>
-						</a> <a class="carousel-control-next" href="#carouselExampleControls"
-							role="button" data-slide="next"> <span
-							class="carousel-control-next-icon" aria-hidden="true"></span> <span
-							class="sr-only">Next</span>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
 						</a> <Br>
 					</div>
 
 					<!-- 왼쪽 메뉴바 -->
-					<div>
-						<button class="btn btn-primary btn-block rounded" type="button"
-							data-toggle="collapse" data-target="#collapseExample1"
-							aria-expanded="false" aria-controls="collapseExample">
-							축구장</button>
-						<div class="collapse" id="collapseExample1">
+					<div class="fmm">
+						<button class="btn upperbtn btn-block rounded fm" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+							축구장
+						</button>
+						<div class="collapse fmsub" id="collapseExample1">
 							<div class="card card-body">
-								<a href="#">축구장 설명</a> <a href="#">축구장 계시판</a> <a href="#">축구장
-									예약하기</a> <a href="#">축구장 예약확인</a> <a href="#">축구장 관련 정보</a>
+								<a href="#">축구장 설명</a>
+								<a href="#">축구장 계시판</a>
+								<a href="#">축구장 예약하기</a>
+								<a href="#">축구장 예약확인</a>
+								<a href="#">축구장 관련 정보</a>
 							</div>
 						</div>
 					</div>
-					<div>
-						<button class="btn btn-primary btn-block rounded" type="button"
-							data-toggle="collapse" data-target="#collapseExample2"
-							aria-expanded="false" aria-controls="collapseExample">
-							농구장</button>
-						<div class="collapse" id="collapseExample2">
+					<div class="bmm">
+						<button class="btn upperbtn btn-block rounded bm" type="button"	data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+							농구장
+						</button>
+						<div class="collapse bmsub" id="collapseExample2">
 							<div class="card card-body">
-								<a href="#">농구장 설명</a> <a href="#">농구장 게시판</a> <a href="#">축구장
-									예약하기</a> <a href="#">축구장 예약확인</a> <a href="#">농구장 관련 정보</a>
+								<a href="#">농구장 설명</a>
+								<a href="#">농구장 게시판</a>
+								<a href="#">축구장 예약하기</a>
+								<a href="#">축구장 예약확인</a>
+								<a href="#">농구장 관련 정보</a>
 							</div>
 						</div>
 					</div>
-					<div>
-						<button class="btn btn-primary btn-block rounded" type="button"
-							data-toggle="collapse" data-target="#collapseExample3"
-							aria-expanded="false" aria-controls="collapseExample">
-							야구장</button>
-						<div class="collapse" id="collapseExample3">
+					<div class="bbmm">
+						<button class="btn upperbtn btn-block rounded bbm" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+							야구장
+						</button>
+						<div class="collapse bbmsub" id="collapseExample3">
 							<div class="card card-body">
-								<a href="#">야구장 설명</a> <a href="#">야구장 게시판</a> <a href="#">축구장
-									예약하기</a> <a href="#">축구장 예약확인</a> <a href="#">야구장 관련 정보</a>
+								<a href="#">야구장 설명</a>
+								<a href="#">야구장 게시판</a>
+								<a href="#">축구장 예약하기</a>
+								<a href="#">축구장 예약확인</a>
+								<a href="#">야구장 관련 정보</a>
 							</div>
 						</div>
 					</div>
-					<div>
-						<button class="btn btn-primary btn-block rounded" type="button"
-							data-toggle="collapse" data-target="#collapseExample4"
-							aria-expanded="false" aria-controls="collapseExample">
-							수영장</button>
-						<div class="collapse" id="collapseExample4">
+					<div class="smm">
+						<button class="btn upperbtn btn-block rounded sm" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+							수영장
+						</button>
+						<div class="collapse smsub" id="collapseExample4">
 							<div class="card card-body">
-								<a href="#">수영장 설명</a> <a href="#">수영장 게시판</a> <a href="#">축구장
-									예약하기</a> <a href="#">축구장 예약확인</a> <a href="#">수영장 관련 정보</a>
+								<a href="#">수영장 설명</a>
+								<a href="#">수영장 게시판</a>
+								<a href="#">축구장 예약하기</a>
+								<a href="#">축구장 예약확인</a>
+								<a href="#">수영장 관련 정보</a>
 							</div>
 						</div>
 					</div>
 					<hr>
 					<h3>
-						<a href="CenterReservation.jsp" id="ab"
-							class="btn btn-primary btn-block" onclick="main()">메인</a>
+						<a href="CenterReservation.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
 					</h3>
 					<h3>
-						<a href="CenterList.jsp" id="ab2"
-							class="btn btn-primary btn-block" onclick="list()">게시판</a>
+						<a href="CenterList.jsp" id="ab2" class="btn btn-block lowerbtn">게시판</a>
 					</h3>
 					<h3>
-						<a href="CenterReservationCalendar.jsp" id="ab1"
-							class="btn btn-primary btn-block" onclick="Calendar()">전체 대관
-							현황</a>
+						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관	현황</a>
 					</h3>
 					<h3>
-						<a href='CenterReservationTable.jsp' id="ab3"
-							class="btn btn-primary btn-block" onclick="Rtable()">예약 화면</a>
+						<a href='CenterReservationTable.jsp' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
 					</h3>
 					<h3>
-						<button id="ab4" class="btn btn-primary btn-block"
-							onclick="location()">오시는 길</button>
+						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
 					</h3>
 				</div>
 				<!-- 메인 내용 표시되는 곳 -->
-				<div id="menus" class="col-sm-8"
-					style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
+				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
 					<div id='wrap'>
 						<div id='calendar'></div>
 						<div style='clear: both'></div>
@@ -479,22 +462,17 @@ hr {
 				</div>
 
 
-				<div class="col-sm-2"
-					style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-					<div id="carouselExampleControls1" class="carousel slide"
-						data-ride="carousel"
-						style="padding: 0px; width: 100%; height: 100%;">
+				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="padding: 0px; width: 100%; height: 100%;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
-								<img src="images/football2.jpg"
-									style="width: 300px; height: 600px;">
+								<img src="images/football2.jpg"	style="width: 300px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
 								<img src="images/goal.jpg" style="width: 300px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<img src="images/place/경기장야경.jpg"
-									style="width: 280px; height: 600px;">
+								<img src="images/place/경기장야경.jpg"	style="width: 280px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
 								<h1>
@@ -502,21 +480,21 @@ hr {
 								</h1>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls1"
-							role="button" data-slide="prev"> <span
-							class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-							class="sr-only">Previous</span>
-						</a> <a class="carousel-control-next" href="#carouselExampleControls1"
-							role="button" data-slide="next"> <span
-							class="carousel-control-next-icon" aria-hidden="true"></span> <span
-							class="sr-only">Next</span>
-						</a> <Br>
+						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+						<Br>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div align="center">
+	<div align="center" style="background-color:black; color:white;">
 		<jsp:include page="Footter.jsp" />
 	</div>
 </body>
