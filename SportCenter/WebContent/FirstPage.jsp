@@ -122,6 +122,16 @@
 		$('.dropdown-menu').stop().slideUp("normal")
 	});
  });
+ 
+ $(window).ready(function(){
+			$('.dropdown-login').stop().hide()
+	 });
+ $(document).ready(function(){
+	  
+		$('.dropdown-login_button').click(function(){
+			$('.dropdown-login').stop().fadeToggle("normal")
+		});
+	 });
   </script>
 <body class="text-center">
 
@@ -163,7 +173,7 @@
 								</li>
 						</ul>
 						<ul class="navbar-nav text-uppercase ml-auto">
-							<li class="nav-item"><label class="nav-link">로그인</label></li>
+							<li class="nav-item dropdown-login_button"><label class="nav-link">로그인</label></li>
 							<li class="nav-item"><label class="nav-link">회원가입</label></li>
 
 								
@@ -191,6 +201,9 @@
 									 <a	class="dropdown-item" href="#">내 게시물 및 댓글 확인</a>
 								</div></li>
 						</ul>
+					</div>
+					<div class="dropdown-login" style="position: absolute; left: 20%; right:10%; margin: 0 0 0 -10%; padding: 0 0 0 0; top: 100%; overflow: hidden; height: auto;" >
+						<jsp:include page="login.jsp"></jsp:include>
 					</div>
 				</div>
 			</nav>

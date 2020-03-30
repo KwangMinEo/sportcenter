@@ -13,13 +13,13 @@
 <body>
 
 <div class="container-fluid">
-  <div class="row no-gutter">
+  <div class="row no-gutter" style="width: 104%;">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-    <div class="col-md-8 col-lg-6">
+    <div class="col-md-8 col-lg-6" style="background-color: white;">
       <div class="login d-flex align-items-center py-5">
-        <div class="container">
+        <div class="container" style="position: absolute;left: 15%; right:30% margin: 0 0 0 -10%;">
           <div class="row">
-            <div class="col-md-9 col-lg-8 mx-auto">
+            <div class="col-md-9 col-lg-8 mx-auto" style="width: 500px">
               <h3 class="login-heading mb-4">Welcome back!</h3>
               <form>
                 <div class="form-label-group">
@@ -35,7 +35,7 @@
 
                 <div class="custom-control custom-checkbox mb-3">
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+                  <label class="custom-control-label" for="customCheck1" style="color: black;">Remember password</label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
                 <div class="text-center">
