@@ -26,7 +26,7 @@
 <link href="css/calendar.css" rel="stylesheet">
 <script src="js/calendar.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
+<link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
 #headbg {
 	background: url('images/football.jpg') no-repeat center;
@@ -123,6 +123,7 @@ hr {
 .lowerbtn{
 	background-color:#82A5c5;
 }
+
 </style>
 <script type="text/javascript">
 	$(document)
@@ -189,9 +190,9 @@ hr {
 												agendaDay : 'dddd d'
 											},
 											titleFormat : {
-												month : 'MMMM yyyy', // September 2009
-												week : "MMMM yyyy", // September 2009
-												day : 'MMMM yyyy' // Tuesday, Sep 8, 2009
+												month : 'yyyy MMMM', // September 2009
+												week : "yyyy MMMM", // September 2009
+												day : 'yyyy MMMM' // Tuesday, Sep 8, 2009
 											},
 											allDaySlot : false,
 											selectHelper : true,
@@ -215,14 +216,10 @@ hr {
 											drop : function(date, allDay) { // this function is called when something is dropped
 
 												// retrieve the dropped element's stored Event Object
-												var originalEventObject = $(
-														this).data(
-														'eventObject');
+												var originalEventObject = $(this).data('eventObject');
 
 												// we need to copy it, so that multiple events don't have a reference to the same object
-												var copiedEventObject = $
-														.extend({},
-																originalEventObject);
+												var copiedEventObject = $.extend({},originalEventObject);
 
 												// assign it the date that was reported
 												copiedEventObject.start = date;
@@ -235,14 +232,6 @@ hr {
 																'renderEvent',
 																copiedEventObject,
 																true);
-
-												// is the "remove after drop" checkbox checked?
-												if ($('#drop-remove').is(
-														':checked')) {
-													// if so, remove the element from the "Draggable Events" list
-													$(this).remove();
-												}
-
 											},
 
 											events : [
@@ -292,40 +281,124 @@ hr {
 													} ],
 										});
 					});
-	
-	$(document).ready(function(){
-		$('.fm').mouseenter(function(){ 
-			$('.fmsub').stop().slideDown("normal")
-		});
-		$('.fmm').mouseleave(function(){
-			$('.fmsub').stop().slideUp("normal")
-		});
-		$('.bm').mouseenter(function(){
-			$('.bmsub').stop().slideDown("normal")
-		});
-		$('.bmm').mouseleave(function(){
-			$('.bmsub').stop().slideUp("normal")
-		});
-		$('.bbm').mouseenter(function(){
-			$('.bbmsub').stop().slideDown("normal")
-		});
-		$('.bbmm').mouseleave(function(){
-			$('.bbmsub').stop().slideUp("normal")
-		});
-		$('.sm').mouseenter(function(){
-			$('.smsub').stop().slideDown("normal")
-		});
-		$('.smm').mouseleave(function(){
-			$('.smsub').stop().slideUp("normal")
-		});
-	});
 </script>
 </head>
 
 <body style="background-color:black;">
-<jsp:include page="CenterHeader.jsp">
-<jsp:param value="" name=""/>
-</jsp:include>
+<div class="container-fluid" id="headbg" align="center" style="padding-top: 45pt; height:150pt">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<font style="color: white; font-size: 50px">예약화면</font>
+			</div>
+			<div class="col-sm-2">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="navbar navbar-sm"
+			style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
+			<div class="navbar">
+				현제위치 표시 ex):<img src='images/ico-home.gif'>
+				<font color="white">예약하기>이용수칙</font>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container-fluid " style="margin-left: 0px;">
+			<div class="row">
+				<div class="col-sm-2" style="background-color: rgb(89, 102, 114); height: auto">
+					<!-- carousel시작 -->
+					<h2>새로운 소식</h2>
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+						<br>
+						<div class="carousel-inner">
+							<div class="carousel-item active" align="center">
+								<h4>
+									코로나 바이러스<br>
+									<span style="font-style: normal;">예방수칙:1, 2, 3, 4...</span>
+								</h4>
+							</div>
+							<div class="carousel-item" align="center">
+								<h4>
+									새로운 시설 개장예정<br>
+									<span style="font-style: normal;">볼링장:1, 2, 3, 4, 5, ...</span>
+								</h4>
+							</div>
+							<div class="carousel-item" align="center">
+								<h4>
+									국가 시설 평가<br>
+									<span style="font-style: normal;">2020년	최고의 시설</span>
+								</h4>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						</a> <Br>
+					</div>
+
+					<!-- 왼쪽 메뉴바 -->
+					<nav align="center">
+				        <div class="menu-item">
+				          <h4><font>축구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
+				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
+				            <li><a href="#">축구장 예약확인</a></li>
+				            <li><a href="#">축구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>농구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
+				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
+				            <li><a href="#">농구장 예약확인</a></li>
+				            <li><a href="#">농구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>야구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
+				            <li><a href="CenterListBaseball.jsp">야구장 게시판</a></li>
+				            <li><a href="#">야구장 예약확인</a></li>
+				            <li><a href="#">야구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>수영장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
+				            <li><a href="CenterListSwim.jsp">수영장 게시판</a></li>
+				            <li><a href="#">수영장 예약확인</a></li>
+				            <li><a href="#">수영장 예약하기</a></li>
+				          </ul>
+				        </div>
+				    </nav>
+					<hr>
+					<h3>
+						<a href="CenterReservation.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
+					</h3>
+					<h3>
+						<a href="CenterList.jsp" id="ab2" class="btn btn-block lowerbtn">게시판</a>
+					</h3>
+					<h3>
+						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관 현황</a>
+					</h3>
+					<h3>
+						<a href='CenterReservationTable.jsp' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
+					</h3>
+					<h3>
+						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
+					</h3>
+				</div>
+				<!-- 메인 내용 -->
 				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
 					<div id='wrap'>
 						<div id='calendar'></div>

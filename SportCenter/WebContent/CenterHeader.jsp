@@ -24,17 +24,7 @@
 	crossorigin="anonymous"></script>
 
 <!-- datefilter -->
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
-<link rel="stylesheet" href="css/badge.css"/>
- 
+<link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
 #headbg {
 	background: url('images/topimg.png') no-repeat center;
@@ -73,32 +63,7 @@ hr {
 
 </style>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('.fm').mouseenter(function(){ 
-			$('.fmsub').stop().slideDown("normal")
-		});
-		$('.fmm').mouseleave(function(){
-			$('.fmsub').stop().slideUp("normal")
-		});
-		$('.bm').mouseenter(function(){
-			$('.bmsub').stop().slideDown("normal")
-		});
-		$('.bmm').mouseleave(function(){
-			$('.bmsub').stop().slideUp("normal")
-		});
-		$('.bbm').mouseenter(function(){
-			$('.bbmsub').stop().slideDown("normal")
-		});
-		$('.bbmm').mouseleave(function(){
-			$('.bbmsub').stop().slideUp("normal")
-		});
-		$('.sm').mouseenter(function(){
-			$('.smsub').stop().slideDown("normal")
-		});
-		$('.smm').mouseleave(function(){
-			$('.smsub').stop().slideUp("normal")
-		});
-	});
+
 </script>
 </head>
 
@@ -161,65 +126,47 @@ hr {
 					</div>
 
 					<!-- 왼쪽 메뉴바 -->
-					<div class="fmm">
-						<button class="btn upperbtn btn-block rounded fm" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-							축구장
-						</button>
-						<div class="collapse fmsub" id="collapseExample1">
-							<div class="card card-body">
-								<a href="CenterDetailFootball.jsp">축구장 설명</a>
-								<a href="CenterListFootball.jsp">축구장 게시판</a>
-								<hr>
-								<a href="#">축구장 예약하기</a>
-								<a href="#">축구장 예약확인</a>
-							</div>
-						</div>
-					</div>
-					<div class="bmm">
-						<button class="btn upperbtn btn-block rounded bm" type="button"	data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-							농구장
-						</button>
-						<div class="collapse bmsub" id="collapseExample2">
-							<div class="card card-body">
-								<a href="CenterDetailBasketball.jsp">농구장 설명</a>
-								<a href="CenterListBasketball.jsp">농구장 게시판</a>
-								<hr>
-								<a href="#">농구장 예약하기</a>
-								<a href="#">농구장 예약확인</a>
-							</div>
-						</div>
-					</div>
-					<div class="bbmm">
-						<button class="btn upperbtn btn-block rounded bbm" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-							야구장
-						</button>
-						<div class="collapse bbmsub" id="collapseExample3">
-							<div class="card card-body">
-								<a href="CenterDetailBaseball.jsp">야구장 설명</a>
-								<a href="CenterListBaseball.jsp">야구장 게시판</a>
-								<hr>
-								<a href="#">야구장 예약하기</a>
-								<a href="#">야구장 예약확인</a>
-							</div>
-						</div>
-					</div>
-					<div class="smm">
-						<button class="btn upperbtn btn-block rounded sm" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
-							수영장
-						</button>
-						<div class="collapse smsub" id="collapseExample4">
-							<div class="card card-body">
-								<a href="CenterDetailSwim.jsp">수영장 설명</a>
-								<a href="CenterListSwim.jsp">수영장 게시판</a>
-								<hr>
-								<a href="#">수영장 예약하기</a>
-								<a href="#">수영장 예약확인</a>
-							</div>
-						</div>
-					</div>
+					<nav align="center">
+				        <div class="menu-item rounded-lg">
+				          <h4><font>축구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
+				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
+				            <li><a href="#">축구장 예약확인</a></li>
+				            <li><a href="CenterReservationTableFootball.jsp">축구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>농구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
+				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
+				            <li><a href="#">농구장 예약확인</a></li>
+				            <li><a href="CenterReservationTableBasketball.jsp">농구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>야구장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
+				            <li><a href="CenterListBaseball.jsp">야구장 게시판</a></li>
+				            <li><a href="#">야구장 예약확인</a></li>
+				            <li><a href="CenterReservationTableBaseball.jsp">야구장 예약하기</a></li>
+				          </ul>
+				        </div>
+				        <div class="menu-item">
+				          <h4><font>수영장</font></h4>
+				          <ul>
+				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
+				            <li><a href="CenterListSwim.jsp">수영장 게시판</a></li>
+				            <li><a href="#">수영장 예약확인</a></li>
+				            <li><a href="CenterReservationTableSwim.jsp">수영장 예약하기</a></li>
+				          </ul>
+				        </div>
+				    </nav>
 					<hr>
 					<h3>
-						<a href="CenterReservation.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
+						<a href="CenterMain.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
 					</h3>
 					<h3>
 						<a href="CenterList.jsp" id="ab2" class="btn btn-block lowerbtn">게시판</a>
