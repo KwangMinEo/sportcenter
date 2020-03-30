@@ -170,7 +170,7 @@
 						</ul>
 						
 					</div>
-					<div class="dropdown-menu" style="position: absolute; left: 50%; margin: 0 0 0 -5%; padding: 0 0 0 0;">
+					<div class="dropdown-menu" style="position: absolute; left: 50%; margin: 0px -150px 0px -150px; padding: 0 0 0 0;">
 						<ul style="list-style-type : none; margin: 0 0 0 0; padding: 0 0 0 0; overflow: auto;">
 							<li style=" margin: 0 0 0 0; padding: 0 0 0 0; float: left; display: inline;"><div >
 									<a class="dropdown-item introduction_Soccer" href="#">축구장 소개</a>
