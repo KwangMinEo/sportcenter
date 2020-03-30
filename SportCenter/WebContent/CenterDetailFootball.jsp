@@ -103,10 +103,10 @@
 								</td>
 							</tr>
 							<tr>
-								<td>부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(5,244석), 야간조명<br></td><td></td>
+								<td colspan="2">부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(5,244석), 야간조명<br></td><td></td>
 							</tr>
 							<tr>
-								<td>
+								<td colspan="2">
 								선수 대기실
 								<hr>
 								<img src="images/place/fblocker1.jpg" class="detailimg">

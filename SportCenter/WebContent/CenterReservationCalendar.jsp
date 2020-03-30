@@ -323,21 +323,22 @@ hr {
 </head>
 
 <body style="background-color:black;">
-<div class="container-fluid" id="headbg" align="center"	style="padding-top: 45pt">
-	<div class="row">
-		<div class="col-sm-2">
-		</div>
-		<div class="col-sm-8">
-			<font style="color: white; font-size: 50px">예약화면</font>
-		</div>
-		<div class="col-sm-2">
+	<div class="container-fluid" id="headbg" align="center" style="padding-top: 45pt; height:150pt">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<font style="color: white; font-size: 50px">예약화면</font>
+			</div>
+			<div class="col-sm-2">
+			</div>
 		</div>
 	</div>
-</div>
 	<div class="container-fluid">
-		<div class="navbar navbar-sm" style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
+		<div class="navbar navbar-sm"
+			style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
 			<div class="navbar">
-				현제위치 표시 ex):<img src='images/ico-home.gif'><font color="white">예약하기>이용수칙</font>
+				현제위치 표시 ex):<img src='images/ico-home.gif'>
+				<font color="white">예약하기>이용수칙</font>
 			</div>
 		</div>
 	</div>
@@ -352,20 +353,20 @@ hr {
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
 								<h4>
-									코로나 바이러스<br> <span style="font-style: normal;">예방수칙:1,
-										2, 3, 4...</span>
+									코로나 바이러스<br>
+									<span style="font-style: normal;">예방수칙:1, 2, 3, 4...</span>
 								</h4>
 							</div>
 							<div class="carousel-item" align="center">
 								<h4>
-									새로운 시설 개설<br> <span style="font-style: normal;">볼링장:1,
-										2, 3, 4, 5, ...</span>
+									새로운 시설 개장예정<br>
+									<span style="font-style: normal;">볼링장:1, 2, 3, 4, 5, ...</span>
 								</h4>
 							</div>
 							<div class="carousel-item" align="center">
 								<h4>
-									국가 시설 평가<br> <span style="font-style: normal;">2020년
-										최고의 시설</span>
+									국가 시설 평가<br>
+									<span style="font-style: normal;">2020년	최고의 시설</span>
 								</h4>
 							</div>
 						</div>
@@ -374,8 +375,8 @@ hr {
 							<span class="sr-only">Previous</span>
 						</a>
 						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 						</a> <Br>
 					</div>
 
@@ -386,11 +387,11 @@ hr {
 						</button>
 						<div class="collapse fmsub" id="collapseExample1">
 							<div class="card card-body">
-								<a href="#">축구장 설명</a>
-								<a href="#">축구장 계시판</a>
+								<a href="CenterDetailFootball.jsp">축구장 설명</a>
+								<a href="CenterListFootball.jsp">축구장 게시판</a>
+								<hr>
 								<a href="#">축구장 예약하기</a>
 								<a href="#">축구장 예약확인</a>
-								<a href="#">축구장 관련 정보</a>
 							</div>
 						</div>
 					</div>
@@ -400,11 +401,11 @@ hr {
 						</button>
 						<div class="collapse bmsub" id="collapseExample2">
 							<div class="card card-body">
-								<a href="#">농구장 설명</a>
-								<a href="#">농구장 게시판</a>
-								<a href="#">축구장 예약하기</a>
-								<a href="#">축구장 예약확인</a>
-								<a href="#">농구장 관련 정보</a>
+								<a href="CenterDetailBasketball.jsp">농구장 설명</a>
+								<a href="CenterListBasketball.jsp">농구장 게시판</a>
+								<hr>
+								<a href="#">농구장 예약하기</a>
+								<a href="#">농구장 예약확인</a>
 							</div>
 						</div>
 					</div>
@@ -414,11 +415,11 @@ hr {
 						</button>
 						<div class="collapse bbmsub" id="collapseExample3">
 							<div class="card card-body">
-								<a href="#">야구장 설명</a>
-								<a href="#">야구장 게시판</a>
-								<a href="#">축구장 예약하기</a>
-								<a href="#">축구장 예약확인</a>
-								<a href="#">야구장 관련 정보</a>
+								<a href="CenterDetailBaseball.jsp">야구장 설명</a>
+								<a href="CenterListBaseball.jsp">야구장 게시판</a>
+								<hr>
+								<a href="#">야구장 예약하기</a>
+								<a href="#">야구장 예약확인</a>
 							</div>
 						</div>
 					</div>
@@ -428,11 +429,11 @@ hr {
 						</button>
 						<div class="collapse smsub" id="collapseExample4">
 							<div class="card card-body">
-								<a href="#">수영장 설명</a>
-								<a href="#">수영장 게시판</a>
-								<a href="#">축구장 예약하기</a>
-								<a href="#">축구장 예약확인</a>
-								<a href="#">수영장 관련 정보</a>
+								<a href="CenterDetailSwim.jsp">수영장 설명</a>
+								<a href="CenterListSwim.jsp">수영장 게시판</a>
+								<hr>
+								<a href="#">수영장 예약하기</a>
+								<a href="#">수영장 예약확인</a>
 							</div>
 						</div>
 					</div>
@@ -444,7 +445,7 @@ hr {
 						<a href="CenterList.jsp" id="ab2" class="btn btn-block lowerbtn">게시판</a>
 					</h3>
 					<h3>
-						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관	현황</a>
+						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관 현황</a>
 					</h3>
 					<h3>
 						<a href='CenterReservationTable.jsp' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
