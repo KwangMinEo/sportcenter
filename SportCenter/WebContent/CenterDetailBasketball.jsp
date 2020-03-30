@@ -7,12 +7,6 @@
 	<meta charset="UTF-8">
 	<title>스포츠센터 농구장</title>
 
-	<!-- jQuery -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -90,36 +84,36 @@
 						<div class='shadow'>
 							<table class="table">
 							<tr>
-							<td>농구장 설명</td>
+								<td>농구장 설명</td>
 							</tr>
 							<tr>
-							<td><img src="images/place/경기장1.jpg"></td>
-							<td>농구장<br>
-								22,911㎡부지에 2,893석의 관람석이 있으며 축구장(운동장) 전용조명시설을 갖추고 있습니다.
-								약 5,000여명의 인원을 수용할 수 있는 축구장(운동장)은 천연잔디의 촉감과 동일하고 눈의 피로가 전혀 없는 국제 규격의 인조잔디이며 육상트랙은 
-								400m 8레인으로 인체공학적인 탁월한 탄력성이 있는 트랙으로 선수 보호 및 기록향상을 위한 시설로 설치되어 있습니다.
-							</td>
+								<td><img src="images/place/경기장1.jpg"></td>
+								<td>농구장<br>
+									20,000명을 동시에 수용할 수 있는 실내체육관으로 1층은 수납식 객석이 있어 다목적으로 공간을 활용할 수 있으며, 
+									체육행사, 대규모 콘서트, 일반기업행사 등 다양한 대형 행사를 할 수 있습니다.
+	
+								</td>
 							<tr>
-							<td>경기장 면적</td>
-							</tr>
-							</tr>
-							<td colspan="2">
-								-주경기장 : 120m × 80m(9,600㎡)<br>
-								-실외 : 110m × 76m(8,360㎡)<br>
-							</td>
-							<tr>
-							<td>부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(6,050석), 조명 및 음향시스템 <br></td><td></td>
+								<td>경기장 면적</td>
+								<td colspan="2">
+									-실내경기장 : 26,096㎡<br>
+									-실외 : 110m × 76m(8,360㎡)<br>
+								</td>
 							</tr>
 							<tr>
-							<td>
-							선수 대기실
-							<hr>
-							<img src="images/place/basketballlocker.jpg" class="detailimg">
-							<br><hr width="100%">
-							샤워실
-							<hr width="100%">
-							<img src="images/place/basketballshower.jpg" class="detailimg">
-							</td>
+								<td colspan="2">부대시설 : 선수대기실, 샤워실, 홍보실, 조명 및 음향시스템
+								<br>좌석: <br>1층 1,000석<br> 2층 4,273석<br>3층 5,759석 <br></td><td></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								선수 대기실
+								<hr>
+								<img src="images/place/basketballlocker.jpg" class="detailimg">
+								<br colspan="2"><hr width="100%">
+								샤워실
+								<hr width="100%">
+								<img src="images/place/basketballshower.jpg" class="detailimg">
+								</td>
 							</tr>
 							
 							

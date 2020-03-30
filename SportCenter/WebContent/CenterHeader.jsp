@@ -37,7 +37,7 @@
  
 <style type="text/css">
 #headbg {
-	background: url('images/football.jpg') no-repeat center;
+	background: url('images/topimg.png') no-repeat center;
 	background-size: cover;
 	height: 150pt;
 }
@@ -167,8 +167,8 @@ hr {
 						</button>
 						<div class="collapse fmsub" id="collapseExample1">
 							<div class="card card-body">
-								<a href="CenterReservationfootballDetail.jsp">축구장 설명</a>
-								<a href="CenterFBList.jsp">축구장 게시판</a>
+								<a href="CenterDetailFootball.jsp">축구장 설명</a>
+								<a href="CenterListFootball.jsp">축구장 게시판</a>
 								<a href="#">축구장 예약하기</a>
 								<a href="#">축구장 예약확인</a>
 								<a href="#">축구장 관련 정보</a>
@@ -181,8 +181,8 @@ hr {
 						</button>
 						<div class="collapse bmsub" id="collapseExample2">
 							<div class="card card-body">
-								<a href="CenterReservationBasketballDetail.jsp">농구장 설명</a>
-								<a href="CenterBasketballList.jsp">농구장 게시판</a>
+								<a href="CenterDetailBasketball.jsp">농구장 설명</a>
+								<a href="CenterListBasketball.jsp">농구장 게시판</a>
 								<a href="#">농구장 예약하기</a>
 								<a href="#">농구장 예약확인</a>
 								<a href="#">농구장 관련 정보</a>
@@ -195,8 +195,8 @@ hr {
 						</button>
 						<div class="collapse bbmsub" id="collapseExample3">
 							<div class="card card-body">
-								<a href="CenterReservationBaseballDetail.jsp">야구장 설명</a>
-								<a href="CenterBaseballList.jsp">야구장 게시판</a>
+								<a href="CenterDetailBaseball.jsp">야구장 설명</a>
+								<a href="CenterListBaseball.jsp">야구장 게시판</a>
 								<a href="#">야구장 예약하기</a>
 								<a href="#">야구장 예약확인</a>
 								<a href="#">야구장 관련 정보</a>
@@ -209,8 +209,8 @@ hr {
 						</button>
 						<div class="collapse smsub" id="collapseExample4">
 							<div class="card card-body">
-								<a href="CenterReservationSwimDetail.jsp">수영장 설명</a>
-								<a href="CenterswimList.jsp">수영장 게시판</a>
+								<a href="CenterDetailSwim.jsp">수영장 설명</a>
+								<a href="CenterListSwim.jsp">수영장 게시판</a>
 								<a href="#">수영장 예약하기</a>
 								<a href="#">수영장 예약확인</a>
 								<a href="#">수영장 관련 정보</a>

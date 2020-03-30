@@ -5,14 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>스포츠센터 야구장</title>
-
-	<!-- jQuery -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+	<title>스포츠센터 수영장</title>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -90,39 +83,58 @@
 						<div class='shadow'>
 							<table class="table">
 							<tr>
-							<td>야구장 설명</td>
+							<td>수영장 설명</td>
 							</tr>
 							<tr>
-							<td><img src="images/place/야구장3.jpg"></td>
-							<td>야구장<br>
-								22,911㎡부지에 2,893석의 관람석이 있으며 축구장(운동장) 전용조명시설을 갖추고 있습니다.
-								약 5,000여명의 인원을 수용할 수 있는 축구장(운동장)은 천연잔디의 촉감과 동일하고 눈의 피로가 전혀 없는 국제 규격의 인조잔디이며 육상트랙은 
-								400m 8레인으로 인체공학적인 탁월한 탄력성이 있는 트랙으로 선수 보호 및 기록향상을 위한 시설로 설치되어 있습니다.
+								<td><img src="images/place/수영장.jpg"></td>
+								<td>수영장<br>
+									온탕, 사우나실 등의 부대시설을 갖추고 있습니다.
+									수심은 1,5m이며 자동수온조절 기능으로 항상 27~29℃의 적정온도를 유지, 회원들이 쾌적한 환경에서 수영장을 이용하실 수 있도록 최선의 노력을 다하고 있습니다. 
+									무엇보다도 수질 청결을 위해 Over flow형태로 인공해수풀과 오존 살균정수 System을 도입하여 식수 수준의 최소의 수질을 유지하고 있습니다.
+								</td>
+							<tr>
+								<td>경기장 면적</td>
+								<td colspan="2">
+									-성인풀 : 1,986㎡ (25m×13m, 6레인)<br>
+									-유아풀 : 10m×8.75m <br>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(502석), 조명 및 음향시스템 <br></td><td></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								선수 대기실
+								<hr>
+								<img src="images/place/swimlocker.jpeg" class="detailimg">
+								<br colspan="2"><hr width="100%">
+								샤워실
+								<hr width="100%">
+								<img src="images/place/swimshower.jpg" class="detailimg">
 							</td>
-							<tr>
-							<td>경기장 면적</td>
-							</tr>
-							</tr>
-							<td colspan="2">
-								-주경기장 : 120m × 80m(9,600㎡)<br>
-								-A구장 : 110m × 76m(8,360㎡)<br>
-							</td>
-							<tr>
-							<td>부대시설 : 선수대기실, 샤워실, 홍보실, 관람석(7,214석), 조명 및 음향시스템 <br></td><td></td>
 							</tr>
 							<tr>
-							<td>
-							선수 대기실
-							<hr>
-							<img src="images/place/baseballlocker.jpg" class="detailimg">
-							<br><hr width="100%">
-							샤워실
-							<hr width="100%">
-							<img src="images/place/baseballshower.jpg" class="detailimg">
-							</td>
+								<td colspan="2">수영장 이용수칙</td>
 							</tr>
-							
-							
+							<tr>
+								<td colspan="2">
+									수영장 내에서는 항상 정숙해 주십시오.<br>
+									수영장 출입시에는 반드시 비누샤워를 하고 입장해 주십시오.<br>
+									수영전에는 반드시 준비운동을 해 주십시오.<br>
+									눈병이나 전염병 환자의 출입을 금합니다.<br>
+									음식물이나 소지품을 가지고 들어오지 마십시오.<br>
+									강습시간을 준수해 주십시오.<br>
+									수영장 내에서는 반드시 지도자의 지시에 따라 주십시오.<br>
+									수영장 내에서는 가운, 신발 등을 착용하지 마십시오.<br>
+									반드시 수영모를 착용해 주십시오.<br>
+									안전사고를 위해 수영장 내에서는 밀거나 뛰지 마십시오.<br>
+									물 속에서 침을 뱉거나 코를 풀지 마십시오.<br>
+									수영장 내에서는 반드시 금연입니다.<br>
+									기타 본인의 부주의로 일어난 사고는 책임지지 않습니다.<br>
+									※ 평일,주말 자유수영시간에 수영장 정원 마감 시 안전사고예방을 위해 수영장 출입이 제한될 수 있습니다.<br>
+								
+								</td>
+							</tr>
 							</table>
 						</div>
 					</div>

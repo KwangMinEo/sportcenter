@@ -56,8 +56,8 @@
 		<table class="table">
 			<tr>
 				<td colspan="2">총10건 &nbsp;&nbsp;2/12</td>
-				<td colspan="4" align="right">
-					<div class="row">
+				<td colspan="4" align="right" style="padding-right:20px">
+					<div class="row" style="float:right;">
 						<select class="custom-select" style="width:70px;">
 							<option>제목</option>
 							<option>작성자</option>
