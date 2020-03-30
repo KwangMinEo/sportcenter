@@ -132,34 +132,34 @@ hr {
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
 				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
-				            <li><a href="#">축구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendarFootball.jsp">축구장 예약확인</a></li>
 				            <li><a href="CenterReservationTableFootball.jsp">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
-				        <div class="menu-item">
+				        <div class="menu-item rounded-lg">
 				          <h4><font>농구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
-				            <li><a href="#">농구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendarBasketball.jsp">농구장 예약확인</a></li>
 				            <li><a href="CenterReservationTableBasketball.jsp">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
-				        <div class="menu-item">
+				        <div class="menu-item rounded-lg">
 				          <h4><font>야구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
 				            <li><a href="CenterListBaseball.jsp">야구장 게시판</a></li>
-				            <li><a href="#">야구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendarBaseball.jsp">야구장 예약확인</a></li>
 				            <li><a href="CenterReservationTableBaseball.jsp">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
-				        <div class="menu-item">
+				        <div class="menu-item rounded-lg">
 				          <h4><font>수영장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
 				            <li><a href="CenterListSwim.jsp">수영장 게시판</a></li>
-				            <li><a href="#">수영장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendarSwim.jsp">수영장 예약확인</a></li>
 				            <li><a href="CenterReservationTableSwim.jsp">수영장 예약하기</a></li>
 				          </ul>
 				        </div>

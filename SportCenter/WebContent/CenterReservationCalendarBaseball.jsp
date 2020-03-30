@@ -203,12 +203,6 @@ hr {
 										});
 					});
 	
-	$(function(){
-		var date = new Date();
-		$('#test').append("년:"+ date.getFullYear()+"<br>");
-		$('#test').append("월+1:"+ (date.getMonth()+1)+"<br>");
-		$('#test').append("일:"+ date.getDate());
-	})
 </script>
 </head>
 
@@ -328,6 +322,7 @@ hr {
 				</div>
 				<!-- 메인 내용 -->
 				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
+				<font>농구장 예약확인</font>
 					<div id='wrap'>
 						<div id='calendar'></div>
 						<div style='clear: both'></div>
