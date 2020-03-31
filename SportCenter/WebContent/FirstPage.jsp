@@ -220,7 +220,7 @@
 						<form class="form-signin">
 
 							<!-- 	로그인 창 위 아이콘	 -->
-							<img class="mb-4" src="images/place/축구공.jpg" alt="" width="400"
+							<img class="mb-4" src="images/place/축구공.png" alt="" width="400"
 								height="400">
 							<h1 class="h3 mb-3 font-weight-normal">Show in our Homepage</h1>
 							<p class="mt-5 mb-3 text-muted">our history</p>
