@@ -1,32 +1,38 @@
 /* body { */
-.dropdown-signUp .sign_body {
+/* .dropdown-signUp .sign_body { */
+/* background:url('../images/other/tevarak-phanduang-eOvv4N6yNmk-unsplash.jpg'); */
+/* font-family:'PT Sans',Helvetica, Arial, sans-serif; */
+/* color:#fff; */
+/*    background-repeat: no-repeat; */
+/*    background-size: 100% 950px; */
+/* } */
+
+.dropdown-signUp .page-container {
 background:url('../images/other/tevarak-phanduang-eOvv4N6yNmk-unsplash.jpg');
 font-family:'PT Sans',Helvetica, Arial, sans-serif;
 color:#fff;
    background-repeat: no-repeat;
-   background-size: 100% 950px;
+   background-size: 100% 100%;
+	margin: 0 auto 0 auto;
+	height: 830px;
 }
 
-.dropdown-signUp .sign_body .page-container {
-margin: 120px auto 0 auto;
-}
-
-.dropdown-signUp .sign_body h1 {
+.dropdown-signUp .page-container h1 {
 	font-size: 30px;
 	font-weight: 700;
 	text-shadow:0 1px 4px rgba(0,0,0,.2);
 	text-align:center;
 }
 
-.dropdown-signUp .sign_body form {
+.dropdown-signUp .page-container form {
 position:relative;
 width:305px;
-margin:15px auto 0 auto;
+margin: 0px auto 0 auto;
 text-align:center;
 
 }
 
-.dropdown-signUp .sign_body input {
+.dropdown-signUp .page-container input {
 width:270px;
 height:42px;
 margin-top:25px;
@@ -52,11 +58,11 @@ text-shadow:0 1px 2px rgba(0,0,0,.1);
 -ms-transition: all .2s;
 }
 
-.dropdown-signUp .sign_body input:-moz-placeholder { color: #fff; }
-.dropdown-signUp .sign_body input:-ms-input-placeholder { color: #fff; }
-.dropdown-signUp .sign_body input::-webkit-input-placeholder { color: #fff; }
+.dropdown-signUp .page-container input:-moz-placeholder { color: #fff; }
+.dropdown-signUp .page-container input:-ms-input-placeholder { color: #fff; }
+.dropdown-signUp .page-container input::-webkit-input-placeholder { color: #fff; }
 
-.dropdown-signUp .sign_body input:focus {
+.dropdown-signUp .page-container input:focus {
 outline:none;
 -moz-box-shadow:
         0 2px 3px 0 rgba(0,0,0,.1) inset,
@@ -69,7 +75,7 @@ box-shadow:
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-.dropdown-signUp .sign_body button {
+.dropdown-signUp .page-container button {
 cursor:pointer;
 width:300px;
 height:44px;
@@ -100,7 +106,7 @@ text-shadow:0 1px 2px rgba(0,0,0,.1);
     -ms-transition: all .2s;
 }
 
-.dropdown-signUp .sign_body button:hover {
+.dropdown-signUp .page-container button:hover {
     -moz-box-shadow:
         0 15px 30px 0 rgba(255,255,255,.15) inset,
         0 2px 7px 0 rgba(0,0,0,.2);
@@ -112,7 +118,7 @@ text-shadow:0 1px 2px rgba(0,0,0,.1);
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-.dropdown-signUp .sign_body button:active {
+.dropdown-signUp .page-container button:active {
     -moz-box-shadow:
         0 15px 30px 0 rgba(255,255,255,.15) inset,
         0 2px 7px 0 rgba(0,0,0,.2);
@@ -128,27 +134,27 @@ text-shadow:0 1px 2px rgba(0,0,0,.1);
 
 
 
-.dropdown-signUp .sign_body .navbar {
+.dropdown-signUp .page-container .navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
 }
 
-.dropdown-signUp .sign_body .navbar a {float: left;font-size: 16px;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}
+.dropdown-signUp .page-container .navbar a {float: left;font-size: 16px;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}
 
-.dropdown-signUp .sign_body .dropdown {float: left;overflow: hidden;}
+.dropdown-signUp .page-container .dropdown {float: left;overflow: hidden;}
 
-.dropdown-signUp .sign_body .dropdown .dropbtn {font-size: 16px;border: none;outline: none;color: white;padding: 14px 16px;background-color: inherit;}
+.dropdown-signUp .page-container .dropdown .dropbtn {font-size: 16px;border: none;outline: none;color: white;padding: 14px 16px;background-color: inherit;}
 
-.dropdown-signUp .sign_body .navbar a:hover, .dropdown:hover .dropbtn {background-color: red}
+.dropdown-signUp .page-container .navbar a:hover, .dropdown:hover .dropbtn {background-color: red}
 
-.dropdown-signUp .sign_body .dropdown-content {display: none;position: absolute;background-color: #f9f9f9;width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+.dropdown-signUp .page-container .dropdown-content {display: none;position: absolute;background-color: #f9f9f9;width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
 
-.dropdown-signUp .sign_body .dropdown-content a {float: none;color: black;padding: 12px 16px;text-decoration: none;display: block;text-align: left;}
+.dropdown-signUp .page-container .dropdown-content a {float: none;color: black;padding: 12px 16px;text-decoration: none;display: block;text-align: left;}
 
-.dropdown-signUp .sign_body .dropdown-content a:hover {background-color: #ddd;}
+.dropdown-signUp .page-container .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown-signUp .sign_body .dropdown:hover .dropdown-content {display: block;}
+.dropdown-signUp .page-container .dropdown:hover .dropdown-content {display: block;}
 
 
 

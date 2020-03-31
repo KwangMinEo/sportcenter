@@ -32,8 +32,6 @@
 <!-- Bootstrap core CSS -->
 <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom styles for this template -->
-<link href="signin.css" rel="stylesheet">
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- 부트스트랩 배경 및 네비게이터 -->
 <!-- Bootstrap core CSS -->
@@ -55,6 +53,7 @@
 
 <!-- Custom styles for this template -->
 <link href="css/FirstPage.css" rel="stylesheet">
+<link href="css/signUp2.css" rel="stylesheet">
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
@@ -123,15 +122,22 @@
 	});
  });
  
+// 로그인 관련 쿼리문
  $(window).ready(function(){
 			$('.dropdown-login').stop().hide()
+			$('.dropdown-signUp').stop().hide()
 	 });
  $(document).ready(function(){
 	  
 		$('.dropdown-login_button').click(function(){
 			$('.dropdown-login').stop().fadeToggle("normal")
 		});
+
+		$('.dropdown-signUp_button').click(function(){
+			$('.dropdown-signUp').stop().fadeToggle("normal")
+		});
 	 });
+ 
   </script>
 <body class="text-center">
 
@@ -174,7 +180,7 @@
 						</ul>
 						<ul class="navbar-nav text-uppercase ml-auto">
 							<li class="nav-item dropdown-login_button"><label class="nav-link">로그인</label></li>
-							<li class="nav-item"><label class="nav-link">회원가입</label></li>
+							<li class="nav-item dropdown-signUp_button"><label class="nav-link">회원가입</label></li>
 
 								
 						</ul>
@@ -202,8 +208,13 @@
 								</div></li>
 						</ul>
 					</div>
+					<!-- 로그인 페이지 관련 -->
 					<div class="dropdown-login" style="position: absolute; left: 20%; right:10%; margin: 0 0 0 -10%; padding: 0 0 0 0; top: 100%; overflow: hidden; height: auto;" >
 						<jsp:include page="login.jsp"></jsp:include>
+					</div>
+					<!-- 회원가입 페이지 관련 -->
+					<div class="dropdown-signUp" style="position: absolute; left: 20%; right:10%; margin: 0 0 0 -10%; padding: 0 0 0 0; top: 100%; overflow: hidden; height: auto; " >
+						<jsp:include page="signUp.jsp"></jsp:include>
 					</div>
 				</div>
 			</nav>
