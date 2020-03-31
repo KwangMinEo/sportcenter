@@ -7,41 +7,6 @@
 <meta charset="UTF-8">
 <title>스포츠센터 축구장 예약화면</title>
 
-<!-- jQuery -->
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<!-- Bootstrap -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
-
-<!-- datefilter -->
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
-
 <style type="text/css">
 #headbg {
 	background: url('images/football.jpg') no-repeat center;
@@ -82,9 +47,6 @@
 	cursor: pointer;
 }
 
-.hasDatepicker {
-	cursor: pointer;
-}
 .shadow{
 	margin: 0 auto;
 	width: 900px;
@@ -103,41 +65,17 @@
 }
 </style>
 <script type="text/javascript">
-	$(function() {
-		$("#price").html('<font style="color:red;"> 1234 </font>');
-		$(".widget input[type=submit, .widget a, .widget button").button();
-	});
-
-	$(function() {
-		$('input[name="dates"]').daterangepicker({
-			autoApply : true,
-			autoUpdateInput : false,
-			locale : {
-				cancelLabel : 'Clear'
-			}
-		});
-		$('input[name="dates"]').on(
-				'apply.daterangepicker',
-				function(ev, picker) {
-					$(this).val(
-							picker.startDate.format('YYYY-MM-DD') + ' - '
-									+ picker.endDate.format('YYYY-MM-DD'));
-				});
-
-		$('input[name="dates"]').on('cancel.daterangepicker',
-				function(ev, picker) {
-					$(this).val('');
-				});
-
-	});
+	
 </script>
 </head>
 
 <body>
-	<jsp:include page="CenterHeader.jsp" />
-	<!-- 메인 내용 표시되는 곳 -->
+<jsp:include page="CenterHeader.jsp" flush="true">
+<jsp:param value="" name=""/>
+</jsp:include>
 	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
 		<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
+		<form method="get" name="myform" action="reservation.sport">
 		<table style="column-width: 1000px;">
 			<tr align="center">
 				<td width="1000px"><font style="font-size: 30px; color: cadetblue">축구장 예약</font></td>
@@ -145,20 +83,13 @@
 			<tr align="center">
 				<td>
 					<hr>
-					<h4>입금자명</h4> <br> <input type="text">
-				</td>
-			</tr>
-			<tr align="center" style="padding-top: 20">
-				<td>
-					<hr>
-					<h4>사용인원</h4> <br> <input type="number" value="0" min="0">
+					<h4>입금자명</h4> <br> <input type="text" name="Name">
 				</td>
 			</tr>
 			<tr align="center">
 				<td>
 					<hr>
-					<h4>사용날자</h4> <br> <br> <input type="text" name="dates"
-					style="width: 210px;">
+					<h4>사용날자</h4> <br> <br> <input type="text" name="datefilter" value=""/>
 				</td>
 			</tr>
 			<tr align="center">
@@ -181,12 +112,22 @@
 									<label class="btn btn-info">
 										<input type="checkbox" autocomplete="off">18:00~20:00</label>
 									<label class="btn btn-info">
-										<input type="checkbox" autocomplete="off">20:00~22:00
-									</label>
+										<input type="checkbox" autocomplete="off">20:00~22:00</label>
 								</div>
 							</td>
 						</tr>
 					</table></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<hr>
+					<h4>남기실 말</h4>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<textarea style="width:800px; height:100px" name="RContent"></textarea>
+				</td>
 			</tr>
 			<tr align="center">
 				<td>
@@ -200,14 +141,13 @@
 			</tr>
 			<tr align="center">
 				<td><hr>
-					<div class="widget">
-					<button type="button" class="btn btn-outline-primary" style="width:35%">예약하기</button>
+					<button type="submit" class="btn btn-outline-primary" style="width:35%">예약하기</button>
 					<font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
-					<button type="button" class="btn btn-outline-secondary" style="width:35%">취소하기</button>
-					</div>
+					<button type="reset" class="btn btn-outline-secondary" style="width:35%">취소하기</button>
 				</td>
 			</tr>
 		</table>
+		</form>
 		</div>
 	</div>
 	<br><br><br><br>

@@ -11,7 +11,7 @@ public class DB {
 			String url="jdbc:oracle:thin:@127.0.0.1:1600:XE";
 			CN=DriverManager.getConnection(url, "system", "1234");
 			}catch(Exception ex){
-				System.out.println("����: "+ex.toString());
+				System.out.println("데이터베이스 연결실패"+ex.toString());
 				}
 		return CN;
 	}

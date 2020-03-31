@@ -138,32 +138,15 @@
 	<!-- 메인 내용 표시되는 곳 -->
 	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
 		<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
+		<form method="get" action="">
 		<table style="column-width: 1000px;">
 			<tr align="center">
-				<td width="1000px"><font style="font-size: 30px; color: cadetblue">예약</font></td>
-			</tr>
-			<tr align="center">
-				<td>
-					<hr>
-					<h4>경기장</h4> <br>
-					<select class="custom-select" style="width:300px">
-						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;축구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
-						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;농구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
-						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;야구장&nbsp;&nbsp;&nbsp;&nbsp;</option>
-						<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수영장&nbsp;&nbsp;&nbsp;&nbsp;</option>
-					</select> <br>
-				</td>
+				<td width="1000px"><font style="font-size: 30px; color: cadetblue">${cen } 예약</font></td>
 			</tr>
 			<tr align="center">
 				<td>
 					<hr>
 					<h4>입금자명</h4> <br> <input type="text">
-				</td>
-			</tr>
-			<tr align="center" style="padding-top: 20">
-				<td>
-					<hr>
-					<h4>사용인원</h4> <br> <input type="number" value="0" min="0">
 				</td>
 			</tr>
 			<tr align="center">
@@ -220,6 +203,8 @@
 				</td>
 			</tr>
 		</table>
+				</form>
+		
 		</div>
 	</div>
 	<br><br><br><br>

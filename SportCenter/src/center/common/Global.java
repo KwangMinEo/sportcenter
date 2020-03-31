@@ -2,9 +2,9 @@ package center.common;
 
 import java.sql.*;
 import java.util.Date;
-import java.util.ArrayList;//��ü��ȸ, �Ѱ���ȸ
+import java.util.ArrayList;
 
-public class Global {// �ٸ���Ű���� �������� public �� �ؾ��Ѵ�.
+public class Global {
 	public Connection CN;
 	public Statement ST;
 	public PreparedStatement PST;
@@ -15,11 +15,11 @@ public class Global {// �ٸ���Ű���� �������� pu
 	public int Atotal = 1;
 	public int Gtotal = 1;
 
-	public int GRN, Gdata;
-	public int Gsabun, Gpay;
-	public String Gname, Gtitle;
-	public Date Gwdate;
-
+	public int Rnum, Rmoney, Rrn;
+	public String Rid, Rname, Rcontent;
+	public Date Rstart, Rend;
+	
+	
 	public String msg;
 
 	public ArrayList Glist;

@@ -23,7 +23,12 @@
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
 
-<!-- datefilter -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
 <link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
 #headbg {
@@ -63,7 +68,27 @@ hr {
 
 </style>
 <script type="text/javascript">
+$(function(){
+	$(function() {
 
+  $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' ~ ' + picker.endDate.format('YYYY-MM-DD'));
+  });
+  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+  
+});
+});
+$(function() {
+	$("#price").html('<font style="color:red;"> 1234 </font>');
+});
 </script>
 </head>
 
@@ -131,36 +156,36 @@ hr {
 				          <h4><font>축구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
-				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
+				            <li><a href="CenterList.jsp?idx=football">축구장 게시판</a></li>
 				            <li><a href="CenterReservationCalendarFootball.jsp">축구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableFootball.jsp">축구장 예약하기</a></li>
+				            <li><a href="reservation.sport?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>농구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
-				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
+				            <li><a href="CenterList.jsp?idx=basketball">농구장 게시판</a></li>
 				            <li><a href="CenterReservationCalendarBasketball.jsp">농구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableBasketball.jsp">농구장 예약하기</a></li>
+				            <li><a href="reservation.sport?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>야구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
-				            <li><a href="CenterListBaseball.jsp">야구장 게시판</a></li>
+				            <li><a href="CenterList.jsp?idx=baseball">야구장 게시판</a></li>
 				            <li><a href="CenterReservationCalendarBaseball.jsp">야구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableBaseball.jsp">야구장 예약하기</a></li>
+				            <li><a href="reservation.sport?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>수영장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
-				            <li><a href="CenterListSwim.jsp">수영장 게시판</a></li>
+				            <li><a href="CenterList.jsp?idx=swim">수영장 게시판</a></li>
 				            <li><a href="CenterReservationCalendarSwim.jsp">수영장 예약확인</a></li>
-				            <li><a href="CenterReservationTableSwim.jsp">수영장 예약하기</a></li>
+				            <li><a href="reservation.sport?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
 				    </nav>
