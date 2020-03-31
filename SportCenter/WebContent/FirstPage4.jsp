@@ -117,7 +117,7 @@
 	$('.dropdown').mouseenter(function(){ 
 		$('.dropdown-menu').stop().slideDown("normal")
 	});
-	$('.dropdown-menu').mouseleave(function(){
+	$('.dropdown').mouseleave(function(){
 		$('.dropdown-menu').stop().slideUp("normal")
 	});
  });
@@ -169,7 +169,7 @@
 							</li>
 							
 							<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="CenterMain.jsp" id="navbardrop"
+							class="nav-link dropdown-toggle" href="#" id="navbardrop"
 							data-toggle="dropdown"> 예약하기 </a>
 							</li>
 								
@@ -196,15 +196,15 @@
 									 <a	class="dropdown-item introduction_video" href="#">영상 소개</a>
 							</div></li>
 							<li style=" margin: 0 0 0 0; padding: 0 0 0 0; float: left; display: inline;"><div>
-									<a class="dropdown-item" href="CenterReservationTableFootball.jsp">축구장 예약하기</a>
-									 <a	class="dropdown-item" href="CenterReservationTableBasketball.jsp">농구장 예약하기</a>
-									 <a	class="dropdown-item" href="CenterReservationTableBaseball.jsp">야구장 예약하기</a>
-									 <a	class="dropdown-item" href="CenterReservationTableSwim.jsp">수영장 예약하기</a>
+									<a class="dropdown-item" href="#">축구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">농구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">야구장 예약하기</a>
+									 <a	class="dropdown-item" href="#">수영장 예약하기</a>
 							</div></li>
 							<li style=" margin: 0 0 0 0; padding: 0 0 0 0; float: left; display: inline;"><div>
-									<a class="dropdown-item" href="CenterReservationCalendarFootball.jsp">예약확인</a>
+									<a class="dropdown-item" href="#">예약확인</a>
 									 <a	class="dropdown-item" href="#">개인정보수정</a>
-									 <a	class="dropdown-item" href="CenterList.jsp">내 게시물 및 댓글 확인</a>
+									 <a	class="dropdown-item" href="#">내 게시물 및 댓글 확인</a>
 								</div></li>
 						</ul>
 					</div>
