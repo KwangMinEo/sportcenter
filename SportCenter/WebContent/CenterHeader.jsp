@@ -70,25 +70,52 @@ hr {
 <script type="text/javascript">
 $(function(){
 	$(function() {
+		
+		$('input[name="datefilter"]').daterangepicker({
+			autoUpdateInput: false,
+			locale: {
+			    cancelLabel: 'Clear'
+			}
+		});
+		$('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+			$(this).val(picker.startDate.format('YYYYMMDD') + '~' + picker.endDate.format('YYYYMMDD'));
+		});
+		$('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+			$(this).val('');
+		});
+	  
+	});
+});
 
-  $('input[name="datefilter"]').daterangepicker({
-      autoUpdateInput: false,
-      locale: {
-          cancelLabel: 'Clear'
-      }
-  });
-  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
-      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' ~ ' + picker.endDate.format('YYYY-MM-DD'));
-  });
-  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
-      $(this).val('');
-  });
-  
-});
-});
-$(function() {
-	$("#price").html('<font style="color:red;"> 1234 </font>');
-});
+$(function(){
+	$(function(){
+		$('input[name="datefilter"]').on('apply.daterangepicker', function(){
+			var f=$('#date').val();
+			if(f != 0){
+				var fsplit= f.split('~');
+				var fulldate=fsplit[1]-fsplit[0];
+				$('#fdate').html(fulldate+" 일");
+			}
+			else{
+				$('#fdate').html("");
+			}
+		});
+		$('input:checkbox[name="time"]').on('click', function(){
+			var chked = $('input:checkbox[name="time"]:checked').length;
+			if(chked != 0){
+				$('#ftime').html(chked*2+" 시간");
+			}
+			else{
+				$('#ftime').html("");
+			}
+		});
+		
+		if(fulldate != 0 || chked != 0){
+			$('#price').html("20,000 <br>총 가격 = "+fulldate*(chked*2*20000));
+		}
+		
+		});
+	});
 </script>
 </head>
 
@@ -106,9 +133,14 @@ $(function() {
 	<div class="container-fluid">
 		<div class="navbar navbar-sm"
 			style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
+			<div class="row">
 			<div class="navbar">
 				현제위치 표시 ex):<img src='images/ico-home.gif'>
-				<font color="white">예약하기>이용수칙</font>
+				<font color="white">예약하기>${cen }</font>
+			</div>
+			<div align="right">
+				아이디표시
+			</div>
 			</div>
 		</div>
 	</div>
@@ -204,6 +236,14 @@ $(function() {
 					</h3>
 					<h3>
 						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
+					</h3>
+					
+					<hr>
+					<h3>
+						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;">나의 예약상태</a>
+					</h3>
+					<h3>
+						<a href="CenterList.jsp" class="btn btn-block" style="background-color:tomato;">내 게시물 및 댓글 확인</a>
 					</h3>
 				</div>
 </body>

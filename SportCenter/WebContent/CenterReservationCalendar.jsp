@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
 #headbg {
-	background: url('images/football.jpg') no-repeat center;
+	background: url('images/topimg.png') no-repeat center;
 	background-size: cover;
 	height: 150pt;
 }
@@ -324,6 +324,13 @@ hr {
 					</h3>
 					<h3>
 						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
+					</h3>
+					<hr>
+					<h3>
+						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;">나의 예약상태</a>
+					</h3>
+					<h3>
+						<a href="CenterList.jsp" class="btn btn-block" style="background-color:tomato;">내 게시물 및 댓글 확인</a>
 					</h3>
 				</div>
 				<!-- 메인 내용 -->
