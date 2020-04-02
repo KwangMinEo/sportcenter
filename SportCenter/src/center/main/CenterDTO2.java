@@ -7,7 +7,7 @@ public class CenterDTO2 {
 	private String pwd;
 	private String name;
 	private String phone;
-	private Date bdate;
+	private String bdate;
 	private int gender;
 	private String email;
 	private String loc;
@@ -37,10 +37,10 @@ public class CenterDTO2 {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public Date getBdate() {
+	public String getBdate() {
 		return bdate;
 	}
-	public void setBdate(Date bdate) {
+	public void setBdate(String bdate) {
 		this.bdate = bdate;
 	}
 	public int getGender() {

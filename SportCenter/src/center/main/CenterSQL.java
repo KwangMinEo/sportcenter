@@ -9,9 +9,9 @@ public class CenterSQL extends Global {
 	{
 	try {
 		Connection CN = DB.getConnection();
-		System.out.println("GuesSQL.java에 연결 성공");
+		System.out.println("GuesSQL1.java에 연결 성공");
 	} catch (Exception e) {
-		System.out.println("GuesSQL.java에 연결 실패 : " + e);
+		System.out.println("GuesSQL1.java에 연결 실패 : " + e);
 	}
 }
 

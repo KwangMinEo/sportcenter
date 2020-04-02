@@ -28,7 +28,7 @@
 				<input type="password" name="password" class="Address" placeholder="password">
                 <input type="text" name="name" class="Name" placeholder="Name">
                 <input type="text" name="tele" class="Tele" placeholder="Number Phone">
-                <input type="date" name="date of birth" class="date of birth" placeholder="date of birth">
+                <input type="text" name="date of birth" class="date of birth" placeholder="date of birth">
                 <input type="text" name="gender" class="gender" placeholder="gender">
 				<input type="email" name="email" class="Email" placeholder="Email">
                 <input type="text" name="Home address" class="Home address" placeholder="Home address">

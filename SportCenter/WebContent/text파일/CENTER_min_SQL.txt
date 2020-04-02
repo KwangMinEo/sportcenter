@@ -48,6 +48,11 @@ INSERT INTO CLIENTDATA
 VALUES
         ('kyk.master','1234' ,'김영기' ,'01077777777' ,TO_DATE(19940628,'YYYYMMDD') ,1,'kyk1234@center.com','서울특별시영등포구선유동2로70이화빌딩2층');
 
+INSERT INTO CLIENTDATA
+        (ID ,PWD ,NAME ,PHONE ,BDATE ,GENDER ,EMAIL ,LOC)
+VALUES
+        ('aaaa','1234' ,'김영기' ,'01077777777' ,TO_DATE(20001111,'YYYYMMDD') ,1,'kyk1234@center.com','서울특별시영등포구선유동2로70이화빌딩2층');
+
 INSERT INTO RESERVATION
         (ID ,RRN ,NAME ,RCONTENT ,RNUM ,RSTART ,REND ,RCONFIRM ,RMONY)
 VALUES

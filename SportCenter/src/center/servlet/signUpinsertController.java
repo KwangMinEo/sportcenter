@@ -54,17 +54,28 @@ public class signUpinsertController extends HttpServlet {
 		String Gpwd = request.getParameter("pwd");
 		String Gname = request.getParameter("name");
 		String Gphone = request.getParameter("phone");
-		String Change = request.getParameter("bdate");
-		Date Gbdate = null;
-		try {
-			Gbdate = fm.parse(Change);
-		} catch (ParseException e1) {
-			e1.printStackTrace();
-		}
+		String Gbdate = request.getParameter("bdate");
+//		String Change = request.getParameter("bdate");
+//		Date Gbdate = null;
+//		try {
+//			Gbdate = fm.parse(Change);
+//		} catch (ParseException e1) {
+//			e1.printStackTrace();
+//		}
 		int Ggender = Integer.parseInt(request.getParameter("gender"));
 		String Gemail = request.getParameter("email");
 		String Gloc = request.getParameter("loc");
 		
+		//데이터 수신 테스트
+		System.out.println(Gid);
+		System.out.println(Gpwd);
+		System.out.println(Gname);
+		System.out.println(Gphone);
+//		System.out.println(Change);
+		System.out.println(Gbdate);
+		System.out.println(Ggender);
+		System.out.println(Gemail);
+		System.out.println(Gloc);
 		
 		try {
 		CenterDTO2 dto = new CenterDTO2();

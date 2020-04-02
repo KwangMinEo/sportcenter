@@ -27,7 +27,7 @@ public class CenterSQL2 extends Global{
 		 	   PST.setString(2, dto.getPwd());
 		 	   PST.setString(3, dto.getName());
 		 	   PST.setString(4, dto.getPhone());
-		 	   PST.setDate(5, dto.getBdate());
+		 	   PST.setString(5, dto.getBdate());
 		 	   PST.setInt(6, dto.getGender());
 		 	   PST.setString(7, dto.getEmail());
 		 	   PST.setString(8, dto.getLoc());
@@ -45,8 +45,8 @@ public class CenterSQL2 extends Global{
 			ST=CN.createStatement();
 			ok=ST.executeUpdate(msg);
 		 
-		 if(ok>0){System.out.println("CenterSQL2 centerInsert 성공"); }
-		}catch(Exception ex){System.out.println("CenterSQL2 centerInsert 실패" + ex); }
+		 if(ok>0){System.out.println("CenterSQL2 centerInsert2 성공"); }
+		}catch(Exception ex){System.out.println("CenterSQL2 centerInsert2 실패" + ex); }
 		return ok ;
 	  }//end
 }
