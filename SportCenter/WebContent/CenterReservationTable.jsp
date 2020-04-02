@@ -113,12 +113,13 @@
 					<hr>
 					<h4>가격</h4> <br>
 					<div id="total">
-						<font color="blue">여기에 총 일수 + 시간을 표시</font>
+						<font color="blue"></font>
 					</div>
 					<span>
 						<font id="fdate" style="color:red;"></font>
 						<font id="ftime" style="color:red;"></font>
 						<font id="price" style="color:red;"></font>
+						<input type="text" name="pr" value="" readonly placeholder="여기에 총 일수 + 시간을 표시">
 					</span>
 				</td>
 			</tr>

@@ -1,7 +1,6 @@
 package center.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,14 +28,13 @@ public class ReservationCompleteController extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		
 		String r3, r4="";
-		PrintWriter out = response.getWriter();
 		String center = request.getParameter("center");
 		String Rname = request.getParameter("name");
 		String Rdate = request.getParameter("datefilter");
 		String Rstart=Rdate.substring(0, 8);
 		String Rend =Rdate.substring(9, 17);
 		String Rcontent = request.getParameter("Rcontent");
-		String Rmoney = request.getParameter("price");
+		String Rmoney = request.getParameter("pr");
 		String[] Rtime = request.getParameterValues("time");
 		if(Rtime.length>1) {
 			String[] r1 = Rtime[0].split("~");
@@ -48,7 +46,7 @@ public class ReservationCompleteController extends HttpServlet {
 			r3 = r1[0];
 			r4 = r1[1];
 		}
-			System.out.println(r3+", "+r4);
+		System.out.println(r3+", "+r4);
 		System.out.println("시작: "+Rstart+r3);
 		System.out.println("종료: "+Rend+r4);
 		System.out.println("center: "+center);

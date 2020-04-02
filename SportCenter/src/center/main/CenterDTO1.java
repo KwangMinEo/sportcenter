@@ -5,15 +5,36 @@ public class CenterDTO1 {
 	private int Rrn;
 	private String name;
 	private String Rcontent;
-	private int Rnum;
-	private java.util.Date Rstart;
-	private java.util.Date Rend;
-	private boolean Rconfirm;
+	private String Rnum;
+	private String Rstart;
+	private String Rend;
+	private int Rconfirm;
 	private int Rmoney;
+	private int Syear, Smonth, Sday;
+	private int Eyear, Emonth, Eday;
 	
 	
 	public String getId() { return id; }
 	public void setId(String id) { this.id = id; }
+	
+	public int getSyear() { return Syear; }
+	public void setSyear(int syear) { Syear = syear; }
+	
+	public int getSmonth() { return Smonth;	}
+	public void setSmonth(int smonth) {	Smonth = smonth; }
+	
+	public int getSday() { return Sday; }
+	public void setSday(int sday) {	Sday = sday; }
+	
+	public int getEyear() {	return Eyear; }
+	public void setEyear(int eyear) { Eyear = eyear; }
+	
+	public int getEmonth() { return Emonth; }
+	public void setEmonth(int emonth) {	Emonth = emonth; }
+	
+	public int getEday() { return Eday;	}
+	public void setEday(int eday) {	Eday = eday; }
+	
 	
 	public int getRrn() { return Rrn; }
 	public void setRrn(int rrn) { Rrn = rrn; }
@@ -24,17 +45,17 @@ public class CenterDTO1 {
 	public String getRcontent() { return Rcontent; }
 	public void setRcontent(String rcontent) { Rcontent = rcontent; }
 	
-	public int getRnum() { return Rnum; }
-	public void setRnum(int rnum) { Rnum = rnum; }
+	public String getRnum() { return Rnum; }
+	public void setRnum(String string) { Rnum = string; }
 	
-	public java.util.Date getRstart() { return Rstart; }
-	public void setRstart(java.util.Date rstart) { Rstart = rstart; }
+	public String getRstart() { return Rstart; }
+	public void setRstart(String rstart) { Rstart = rstart; }
 	
-	public java.util.Date getRend() { return Rend; }
-	public void setRend(java.util.Date rend) { Rend = rend; }
+	public String getRend() { return Rend; }
+	public void setRend(String rend) { Rend = rend; }
 	
-	public boolean isRconfirm() { return Rconfirm; }
-	public void setRconfirm(boolean rconfirm) { Rconfirm = rconfirm; }
+	public int getRconfirm() { return Rconfirm;	}
+	public void setRconfirm(int rconfirm) {	Rconfirm = rconfirm; }
 	
 	public int getRmoney() { return Rmoney; }
 	public void setRmoney(int rmoney) {	Rmoney = rmoney; }

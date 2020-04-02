@@ -277,7 +277,7 @@ hr {
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
 				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarFootball.jsp">축구장 예약확인</a></li>
+				            <li><a href="calendar.center?">축구장 예약확인</a></li>
 				            <li><a href="CenterReservationTableFootball.jsp">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -286,7 +286,7 @@ hr {
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarBasketball.jsp">농구장 예약확인</a></li>
+				            <li><a href="calendar.center">농구장 예약확인</a></li>
 				            <li><a href="CenterReservationTableBasketball.jsp">농구장 예약하기</a></li>
 				          </ul>
 				        </div>

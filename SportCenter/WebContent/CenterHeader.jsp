@@ -87,33 +87,37 @@ $(function(){
 	});
 });
 
+var fulldate="";
+var chked="";
+var c=40000;/* 1시간당 가격 */
 $(function(){
 	$(function(){
 		$('input[name="datefilter"]').on('apply.daterangepicker', function(){
 			var f=$('#date').val();
 			if(f != 0){
 				var fsplit= f.split('~');
-				var fulldate=fsplit[1]-fsplit[0];
-				$('#fdate').html(fulldate+" 일");
-			}
-			else{
-				$('#fdate').html("");
-			}
-		});
-		$('input:checkbox[name="time"]').on('click', function(){
-			var chked = $('input:checkbox[name="time"]:checked').length;
-			if(chked != 0){
-				$('#ftime').html(chked*2+" 시간");
+				fulldate=fsplit[1]-fsplit[0];
+				$('#fdate').html(fulldate+" 일 ");
+				$('input[name=pr]').val(fulldate*(chked*2)*c);
 			}
 			else{
 				$('#ftime').html("");
+				$('#fdate').html("");
+				$('input[name=pr]').val("");
 			}
 		});
-		
-		if(fulldate != 0 || chked != 0){
-			$('#price').html("20,000 <br>총 가격 = "+fulldate*(chked*2*20000));
-		}
-		
+		$('input:checkbox[name="time"]').on('click', function(){
+			chked = $('input:checkbox[name="time"]:checked').length;
+			if(chked != 0){
+				$('#ftime').html(chked+" 시간 * "+c+" = ");
+				$('input[name=pr]').val(fulldate*(chked*2)*c);
+			}
+			else{
+				$('#ftime').html("");
+				$('#fdate').html("");
+				$('input[name=pr]').val("");
+			}
+		});
 		});
 	});
 </script>
@@ -189,7 +193,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
 				            <li><a href="CenterList.jsp?idx=football">축구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarFootball.jsp">축구장 예약확인</a></li>
+				            <li><a href="calendar.center?idx=football">축구장 예약확인</a></li>
 				            <li><a href="reservation.sport?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -198,7 +202,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="CenterList.jsp?idx=basketball">농구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarBasketball.jsp">농구장 예약확인</a></li>
+				            <li><a href="calendar.center?idx=basketball">농구장 예약확인</a></li>
 				            <li><a href="reservation.sport?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -207,7 +211,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
 				            <li><a href="CenterList.jsp?idx=baseball">야구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarBaseball.jsp">야구장 예약확인</a></li>
+				            <li><a href="calendar.center?idx=baseball">야구장 예약확인</a></li>
 				            <li><a href="reservation.sport?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -216,7 +220,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
 				            <li><a href="CenterList.jsp?idx=swim">수영장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarSwim.jsp">수영장 예약확인</a></li>
+				            <li><a href="calendar.center?idx=swim">수영장 예약확인</a></li>
 				            <li><a href="reservation.sport?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
