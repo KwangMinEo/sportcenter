@@ -9,6 +9,34 @@
 <link href="css/login.css" rel="stylesheet">
 <link href="js/login.css" rel="stylesheet">
 
+
+<script type="text/javascript"> 
+ $(function( ){ 
+       $('#btnlogin').click( function( ){  
+			$.ajax({
+			  url  : "loginselect.center" , //서블릿문서
+			  type : "get",
+			  dataType: "html" ,
+			  data : { UID: $('#userid').val(), UPWD: $('#userpwd').val( )} ,
+			  beforeSend: function( ){ 
+					$('#loading-mask').show();
+					$('#loading-mask').html("<div align=center><img src='./images/ajax-loader.gif' width=500 height=250></div> ");
+					$("#loading-mask").css("opacity","0.9").stop().animate({opacity:3},5000);	
+			  }, 
+			  success: function(data){
+				setTimeout(function() {
+					$('#msg').html(data);
+				}, 1000);
+			  },
+			  cache: false,
+			  error: function(err){
+				     alert('로그인실패 error' + err)
+				  }
+			});
+	   });
+  });
+</script>
+
 </head>
 <body>
 
@@ -21,7 +49,7 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto" style="width: 500px">
               <h3 class="login-heading mb-4">Welcome back!</h3>
-              <form>
+              <form action="loginselect.center" method="get" name="login_form">
                 <div class="form-label-group">
                   <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userid">UserID</label>
