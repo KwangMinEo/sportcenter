@@ -1,11 +1,11 @@
 package center.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession; //�����߰�
 
 import center.common.DB;
-import center.main.CenterDTO2;
-import center.main.CenterSQL2;
+//import center.main.CenterDTO2;
+//import center.main.CenterSQL2;
 
 
-@WebServlet("/loginselect.center")
+@WebServlet("/Login.center")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,7 +35,7 @@ public class LoginController extends HttpServlet {
 	public void doUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	  response.setContentType("text/html;charset=UTF-8");
 	  response.setCharacterEncoding("UTF-8");
-	  PrintWriter out = response.getWriter(); 
+//	  PrintWriter out = response.getWriter(); 
 	
 	  //out.println("LoginController.java��Ʈ�ѷ�����");
 	  //HttpSession session = request.getSession();
@@ -43,10 +43,10 @@ public class LoginController extends HttpServlet {
 		  	Connection CN=DB.getConnection();
 		  	int total=0;
 		   	
-		  	String usera=request.getParameter("UID");
-		   	String userb=request.getParameter("UPWD");
-		   	System.out.println("UID=" + usera + "  UPWD=" + userb) ;
-		   	String  msg="select count(*) as cnt from login where userid=?  and pwd=?" ;
+		  	String usera=request.getParameter("userid");
+		   	String userb=request.getParameter("userpwd");
+		   	System.out.println("UID=" + usera + ", UPWD=" + userb) ;
+		   	String  msg="select count(*) as cnt from Clientdata where id=? and pwd=?" ;
 		     PreparedStatement PST=CN.prepareStatement(msg); //�������̸����ؼ�    
 		   		PST.setString(1, usera);
 		   		PST.setString(2, userb);
@@ -56,9 +56,17 @@ public class LoginController extends HttpServlet {
 		     	 HttpSession session = request.getSession();
 		     	 session.setAttribute("centerID", usera); //���Ǽ���
 		     	 System.out.println("로그인 성공"); 
+
+		     	 request.setAttribute("userID", usera);
+		     	 request.setAttribute("usePWD", userb);
 		     }else{
+		    	 System.out.println("로그인 실패"); 
 		      }
 		    }catch(Exception ex){  }	
+	  
+
+ 	  RequestDispatcher dis = request.getRequestDispatcher("testpage.jsp");
+   	 dis.forward(request, response);
 	}//end
 	
 }//class END

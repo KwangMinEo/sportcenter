@@ -22,7 +22,7 @@
 
 <div class="page-container">
             
-            <form action="#" method="POST">
+            <form action="signUpinsert.center" method="get" name="signUp_form">
 			<h1>Sign Up</h1>
 				<input type="text" name="id" class="Id" placeholder="id">
 				<input type="password" name="password" class="Address" placeholder="password">
@@ -30,7 +30,7 @@
                 <input type="text" name="tele" class="Tele" placeholder="Number Phone">
                 <input type="text" name="date of birth" class="date of birth" placeholder="date of birth">
                 <input type="text" name="gender" class="gender" placeholder="gender">
-				<input type="text" name="email" class="Email" placeholder="Email">
+				<input type="email" name="email" class="Email" placeholder="Email">
                 <input type="text" name="Home address" class="Home address" placeholder="Home address">
                 <button type="submit" value="Add" name="submit">Submit</button>
             </form>

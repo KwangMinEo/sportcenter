@@ -29,17 +29,7 @@
 <link rel="canonical"
 	href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
-<!-- Bootstrap core CSS -->
-<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- 부트스트랩 배경 및 네비게이터 -->
-<!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom fonts for this template -->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
-	type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
@@ -56,11 +46,10 @@
 <link href="css/signUp2.css" rel="stylesheet">
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!--   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-<link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
+
+<script type="text/javascript">
     $(window).scroll(function () {
         var scrollValue = $(document).scrollTop();
         if (scrollValue > 150) {
@@ -123,21 +112,57 @@
  });
  
 // 로그인 관련 쿼리문
- $(window).ready(function(){
-			$('.dropdown-login').stop().hide()
-			$('.dropdown-signUp').stop().hide()
-	 });
- $(document).ready(function(){
+//  $(window).ready(function(){
+// 			$('.dropdown-login').stop().hide()
+// 			$('.dropdown-signUp').stop().hide()
+// 	 });
+//  $(document).ready(function(){
 	  
-		$('.dropdown-login_button').click(function(){
-			$('.dropdown-login').stop().fadeToggle("normal")
-		});
+// 		$('.dropdown-login_button').click(function(){
+// 			$('.dropdown-login').stop().fadeToggle("normal")
+// 		});
 
-		$('.dropdown-signUp_button').click(function(){
-			$('.dropdown-signUp').stop().fadeToggle("normal")
-		});
-	 });
- 
+// 		$('.dropdown-signUp_button').click(function(){
+// 			$('.dropdown-signUp').stop().fadeToggle("normal")
+// 		});
+// 	 });
+// 로그아웃 관련 쿼리문
+//  $(window).ready(function(){
+// 			$('.dropdown-login').stop().hide()
+// 	 });
+ $(window).ready(function(){
+	 var sessionCK = "<%=(String)session.getAttribute("userID")%>";
+	if( sessionCK != "null"){
+		$(document).ready(function(){
+			  $('.loginCheckin').show()
+			  $('.loginCheckout').hide()
+			  $('.dropdown-login').stop().hide()
+			  $('.dropdown-signUp').stop().hide()
+		  });
+	}else {
+		$(document).ready(function(){
+			  $('.loginCheckin').hide()
+			  $('.loginCheckout').show()
+			  $('.dropdown-login').stop().hide()
+			  $('.dropdown-signUp').stop().hide()
+		  });
+		 $(document).ready(function(){
+			  
+				$('.dropdown-login_button').click(function(){
+					$('.dropdown-login').stop().fadeToggle("normal")
+				});
+
+				$('.dropdown-signUp_button').click(function(){
+					$('.dropdown-signUp').stop().fadeToggle("normal")
+				});
+			 });
+		}
+ });
+// 		$('.dropdown-signUp_button').click(function(){
+// 			$('.dropdown-signUp').stop().fadeToggle("normal")
+// 		});
+// 	 });
+
   </script>
 <body class="text-center">
 
@@ -161,32 +186,39 @@
 						Menu <i class="fas fa-bars"></i>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<div>
 						<ul class="navbar-nav text-uppercase ml-auto">
 						
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle introduction" href="#" id="navbardrop"
-								data-toggle="dropdown"> 경기장소개 </a>
+								data-toggle="dropdown">&nbsp;&nbsp;&nbsp; 경기장 소개 &nbsp;</a> 
 							</li>
 							
 							<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="CenterMain.jsp" id="navbardrop"
 							data-toggle="dropdown"> 예약하기 </a>
 							</li>
-								
+							
+						</ul>
+						</div>
+						<div class="loginCheckout"  style="position: absolute; right : 20%;">
+						<ul class="navbar-nav text-uppercase ml-auto">
+							<li class="nav-item dropdown-login_button"><label class="nav-link">로그인</label></li>
+							<li class="nav-item dropdown-signUp_button"><label class="nav-link">회원가입</label></li>
+						</ul>
+						</div>
+						<div class="loginCheckin" style="position: absolute; right : 20%;">
+						<ul class="navbar-nav text-uppercase ml-auto">
+							<li class="nav-item"><label class="nav-link"><%= session.getAttribute("userID") %>님 환영합니다.</label></li>	
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle" href="#" id="navbardrop"
 								data-toggle="dropdown"> 마이페이지 </a>
 								</li>
+							<li class="nav-item logout_button"><a href="Logout.jsp"><label class="nav-link">로그아웃</label></a></li>
 						</ul>
-						<ul class="navbar-nav text-uppercase ml-auto">
-							<li class="nav-item dropdown-login_button"><label class="nav-link">로그인</label></li>
-							<li class="nav-item dropdown-signUp_button"><label class="nav-link">회원가입</label></li>
-
-								
-						</ul>
-						
+						</div>
 					</div>
-					<div class="dropdown-menu" style="position: absolute; left: 50%; margin: 0 0 0 -5%; padding: 0 0 0 0;">
+					<div class="dropdown-menu" style="position: absolute; left: 35%; margin: 0 0 0 -5%; padding: 0 0 0 0;">
 						<ul style="list-style-type : none; margin: 0 0 0 0; padding: 0 0 0 0; overflow: auto;">
 							<li style=" margin: 0 0 0 0; padding: 0 0 0 0; float: left; display: inline;"><div >
 									<a class="dropdown-item introduction_Soccer" href="#">축구장 소개</a>

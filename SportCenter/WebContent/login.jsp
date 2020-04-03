@@ -7,34 +7,34 @@
 <title>login page</title>
 
 <link href="css/login.css" rel="stylesheet">
-<link href="js/login.css" rel="stylesheet">
 
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
 <script type="text/javascript"> 
- $(function( ){ 
-       $('#btnlogin').click( function( ){  
-			$.ajax({
-			  url  : "loginselect.center" , //서블릿문서
-			  type : "get",
-			  dataType: "html" ,
-			  data : { UID: $('#userid').val(), UPWD: $('#userpwd').val( )} ,
-			  beforeSend: function( ){ 
-					$('#loading-mask').show();
-					$('#loading-mask').html("<div align=center><img src='./images/ajax-loader.gif' width=500 height=250></div> ");
-					$("#loading-mask").css("opacity","0.9").stop().animate({opacity:3},5000);	
-			  }, 
-			  success: function(data){
-				setTimeout(function() {
-					$('#msg').html(data);
-				}, 1000);
-			  },
-			  cache: false,
-			  error: function(err){
-				     alert('로그인실패 error' + err)
-				  }
-			});
-	   });
-  });
+//  $(function( ){ 
+//        $('#btnlogin').click( function( ){ 
+//     	   var ajaxid = $('#userid').val();
+//     	   var ajaxpwd = $('#userpwd').val();
+// 			 $.ajax({
+// 			  	url : "./LoginCK.jsp" , //서블릿문서
+// 				type: "POST",
+// 				data : {userid:ajax,userpwd:ajaxpwd},
+// 				dataType : "text",
+// 			  	success: function(data){
+// 					setTimeout(function() {
+// 						alert('로그인성공');
+// 						$('#msg').html(data);
+// 					}, 1000);
+// 				},
+			 
+// 				error: function(err){
+// 				 	alert('로그인실패 error' + err);
+// 				}
+// 			}); 
+// 	   });
+//   });
 </script>
 
 </head>
@@ -49,15 +49,15 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto" style="width: 500px">
               <h3 class="login-heading mb-4">Welcome back!</h3>
-              <form action="loginselect.center" method="get" name="login_form">
+              <form name="login_form" action="LoginCK.jsp" method="get">
                 <div class="form-label-group">
-                  <input type="text" id="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
+                  <input type="text" id="userid" name="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userid">UserID</label>
                   	
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="userpwd" class="form-control" placeholder="Password" required oninvalid="this.setCustomValidity('영어 + 숫자 , 특수문자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
+                  <input type="text" id="userpwd" name="userpwd"class="form-control" placeholder="Password" required oninvalid="this.setCustomValidity('영어 + 숫자 , 특수문자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userpwd">Password</label>
                 </div>
 
@@ -65,7 +65,7 @@
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1" style="color: black;">Remember password</label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" id="btnlogin" type="submit">Sign in</button>
                 <div class="text-center">
                   <a class="small" href="#">Forgot password?</a></div>
               </form>
