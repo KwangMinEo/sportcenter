@@ -49,7 +49,7 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto" style="width: 500px">
               <h3 class="login-heading mb-4">Welcome back!</h3>
-              <form name="login_form" action="LoginCK.jsp" method="get">
+              <form name="login_form" action="Login.center" method="get">
                 <div class="form-label-group">
                   <input type="text" id="userid" name="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userid">UserID</label>

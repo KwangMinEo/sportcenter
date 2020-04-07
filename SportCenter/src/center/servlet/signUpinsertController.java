@@ -88,9 +88,10 @@ public class signUpinsertController extends HttpServlet {
 		dto.setGender(Ggender);
 		dto.setEmail(Gemail);
 		dto.setLoc(Gloc);
-		int OK=sql.centerInsert2(dto);
-		if(OK>0) { 
-			System.out.println("signUpinsertController 회원가입 성공");
+//		int ok = sql.centerInsert2(dto);
+		int ok = sql.centerInsert(Gid, Gpwd, Gname, Gphone,Gbdate, Ggender,Gemail, Gloc);
+		if(ok>0) {
+			System.out.println("저장 성공" + ok);
 		}
 		} catch (Exception e) {
 		System.out.println("에러다 임마 : " + e);

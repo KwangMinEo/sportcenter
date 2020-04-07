@@ -25,13 +25,13 @@
             <form action="signUpinsert.center" method="get" name="signUp_form">
 			<h1>Sign Up</h1>
 				<input type="text" name="id" class="Id" placeholder="id">
-				<input type="password" name="password" class="Address" placeholder="password">
+				<input type="password" name="pwd" class="Address" placeholder="password">
                 <input type="text" name="name" class="Name" placeholder="Name">
-                <input type="text" name="tele" class="Tele" placeholder="Number Phone">
-                <input type="text" name="date of birth" class="date of birth" placeholder="date of birth">
-                <input type="text" name="gender" class="gender" placeholder="gender">
+                <input type="text" name="phone" class="Tele" placeholder="Number Phone">
+                <input type="text" name="bdate" class="date of birth" placeholder="date of birth">
+                <input type="number" name="gender" class="gender" placeholder="gender">
 				<input type="email" name="email" class="Email" placeholder="Email">
-                <input type="text" name="Home address" class="Home address" placeholder="Home address">
+                <input type="text" name="loc" class="Home address" placeholder="Home address">
                 <button type="submit" value="Add" name="submit">Submit</button>
             </form>
         </div>

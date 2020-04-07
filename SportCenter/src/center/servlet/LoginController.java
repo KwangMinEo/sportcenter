@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 //import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,9 +35,9 @@ public class LoginController extends HttpServlet {
 	public void doUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	  response.setContentType("text/html;charset=UTF-8");
 	  response.setCharacterEncoding("UTF-8");
+	  System.out.println("진입");
 //	  PrintWriter out = response.getWriter(); 
 	
-	  //out.println("LoginController.java��Ʈ�ѷ�����");
 	  //HttpSession session = request.getSession();
 	  try{
 		  	Connection CN=DB.getConnection();
@@ -45,28 +45,27 @@ public class LoginController extends HttpServlet {
 		   	
 		  	String usera=request.getParameter("userid");
 		   	String userb=request.getParameter("userpwd");
-		   	System.out.println("UID=" + usera + ", UPWD=" + userb) ;
+		   	System.out.println("userid=" + usera + ", userpwd=" + userb) ;
 		   	String  msg="select count(*) as cnt from Clientdata where id=? and pwd=?" ;
-		     PreparedStatement PST=CN.prepareStatement(msg); //�������̸����ؼ�    
+		     PreparedStatement PST=CN.prepareStatement(msg); 
 		   		PST.setString(1, usera);
 		   		PST.setString(2, userb);
 		     ResultSet RS=PST.executeQuery();
 		     if(RS.next()==true){total=RS.getInt("cnt"); }
 		     if(total>0){
 		     	 HttpSession session = request.getSession();
-		     	 session.setAttribute("centerID", usera); //���Ǽ���
-		     	 System.out.println("로그인 성공"); 
-
+		     	 session.setAttribute("userID", usera); 
+		     	 System.out.println("로그인 성공 세션업로드 :" + (String)session.getAttribute("userID")); 
+		     	
 		     	 request.setAttribute("userID", usera);
 		     	 request.setAttribute("usePWD", userb);
 		     }else{
 		    	 System.out.println("로그인 실패"); 
 		      }
-		    }catch(Exception ex){  }	
+		    }catch(Exception ex){ System.out.println("로그인 실패" + ex);  }	
 	  
 
- 	  RequestDispatcher dis = request.getRequestDispatcher("testpage.jsp");
-   	 dis.forward(request, response);
+		response.sendRedirect("FirstPage.jsp");
 	}//end
 	
 }//class END
