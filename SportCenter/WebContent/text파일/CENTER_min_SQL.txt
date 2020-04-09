@@ -75,6 +75,7 @@ CREATE TABLE LIST(
 	CONSTRAINT center_L_FK FOREIGN KEY (ID) REFERENCES ClientData(ID) on delete set null
 );
 
+
 CREATE SEQUENCE center_L_SEQ
 START WITH 1
 INCREMENT BY 1
@@ -92,3 +93,9 @@ INSERT INTO LIST
         (ID ,Lrn ,TITLE ,CONTENT ,SDATE ,HIT ,CENTER)
 VALUES
         ('ekm.master',center_r_SEQ.NEXTVAL,'센터 2번공지 입니다' ,'안녕하세요 센터관장입니다.' ,SYSDATE ,0 ,'SOCCER');
+
+INSERT INTO LIST
+        (ID ,Lrn ,TITLE ,CONTENT ,SDATE ,HIT ,CENTER)
+VALUES
+        ('aaaa',center_L_SEQ.NEXTVAL,'게시판테스트' ,'게시글 잘보입니다' ,TO_DATE('01-20-2020 12:00:00','MM-DD-YYYY HH24:MI:SS'),0 ,'SOCCER');
+        

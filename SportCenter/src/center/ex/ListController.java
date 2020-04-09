@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.tis.guest.GuestDTO;
-import net.tis.guest.GuestSQL;
+import net.tis.guest.GuestDTO2;
+import net.tis.guest.GuestSQL2;
 
 
 @WebServlet("/glist.tis")

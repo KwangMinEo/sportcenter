@@ -236,7 +236,7 @@
 							<li style=" margin: 0 0 0 0; padding: 0 0 0 0; float: left; display: inline;"><div>
 									<a class="dropdown-item" href="CenterReservationCalendarFootball.jsp">예약확인</a>
 									 <a	class="dropdown-item" href="#">개인정보수정</a>
-									 <a	class="dropdown-item" href="CenterList.jsp">내 게시물 및 댓글 확인</a>
+									 <a	class="dropdown-item" href="List.center">내 게시물 및 댓글 확인</a>
 								</div></li>
 						</ul>
 					</div>

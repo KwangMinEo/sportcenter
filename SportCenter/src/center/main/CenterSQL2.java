@@ -1,6 +1,7 @@
 package center.main;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Date;
 
 import center.common.DB;
@@ -81,4 +82,86 @@ public class CenterSQL2 extends Global{
 		}catch(Exception ex){System.out.println("CenterSQL2 centerInsert3 실패" + ex); }
 		 return ok;
 	  }//end
+	 
+	 
+	 public ArrayList<CenterDTO2> centerSelect(int start, int end){
+		  ArrayList<CenterDTO2> list= new ArrayList<CenterDTO2>();
+		 try {
+		  String a=" select * from ( ";
+		  String b=" select rownum rn,id,Lrn,title,content,sdate,hit,center from list";
+		  String c=" ) where rn between " + start +" and " + end ;
+		  msg=a+b+c;
+		  ST = CN.createStatement();
+		  RS = ST.executeQuery(msg);
+		  while(RS.next()==true) {
+			  CenterDTO2 dto = new CenterDTO2(); 
+			  dto.setRn(RS.getInt("rn"));
+			  dto.setId(RS.getString("id")); 
+			  dto.setLrn(RS.getInt("Lrn"));
+			  dto.setTitle(RS.getString("title"));
+			  dto.setContent(RS.getString("content"));
+			  dto.setSdate(RS.getDate("sdate"));
+			  dto.setHit(RS.getInt("hit"));
+			  dto.setCenter(RS.getString("center"));
+			  list.add(dto); 
+
+//			  System.out.println(RS.getString("id"));
+//			  System.out.println(RS.getString("title"));
+//			  System.out.println(RS.getString("content"));
+		  }
+		 }catch(Exception e) { }
+		 return list;
+	  }
+	 
+	 public ArrayList<CenterDTO2> centerSelect(int start, int end, String skey, String sval){
+		  ArrayList<CenterDTO2> list= new ArrayList<CenterDTO2>();
+		 try {
+		  String a=" select * from ( ";
+		  String b=" select rownum rn,id,Lrn,title,content,sdate,hit,center from list";
+		  String c=" where "+ skey+ " like '%"+sval+"%') where rn between " + start +" and " + end ;
+		  msg=a+b+c;
+		  ST = CN.createStatement();
+		  RS = ST.executeQuery(msg);
+		  while(RS.next()==true) {
+			  CenterDTO2 dto = new CenterDTO2(); 
+			  dto.setRn(RS.getInt("rn"));
+			  dto.setId(RS.getString("id")); 
+			  dto.setLrn(RS.getInt("Lrn"));
+			  dto.setTitle(RS.getString("title"));
+			  dto.setContent(RS.getString("content"));
+			  dto.setSdate(RS.getDate("sdate"));
+			  dto.setHit(RS.getInt("hit"));
+			  dto.setCenter(RS.getString("center"));
+			  list.add(dto); 
+
+//			  System.out.println(RS.getString("id"));
+//			  System.out.println(RS.getString("title"));
+//			  System.out.println(RS.getString("content"));
+		  }
+		 }catch(Exception e) { }
+		 return list;
+	  }
+	 
+  public int centerAlltotal() {
+	int count=0;
+	try {
+	 msg="select count(*) as cnt from List ";
+	 ST=CN.createStatement();
+	 RS=ST.executeQuery(msg);
+	 if(RS.next()==true) { count=RS.getInt("cnt"); }
+	}catch(Exception ex) { }
+	return count;
+  }//end
+  
+  public int centerAlltotalSearch(String skey, String sval) {
+		 int count=0;
+		 try {
+			 msg="select count(*) as cnt from list  where "+ skey+ " like '%"+sval+"%'" ;
+			 ST=CN.createStatement();
+			 RS=ST.executeQuery(msg);
+			 if(RS.next()==true) { count=RS.getInt("cnt");}
+		 }catch(Exception ex) { }
+		 return count;
+	  }//end
+  
 }

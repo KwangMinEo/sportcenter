@@ -13,25 +13,26 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
 <script type="text/javascript"> 
-
 function chk() {
 	var user_id = document.login_form.userid;
 	var useridStr = user_id.value;
 	var useridLen = useridStr.length;
 	if(useridStr ==''){
-		document.getElementById('userid').setCustomValidity('ID 입력해주세요');
+		alert('ID를 입력하시오');
 	}else if(useridLen <=3 || useridLen >=9){
-		document.getElementById('userid').setCustomValidity('4자리 이상, 8자리 이하로 입력해주세요');
+		alert('4자리 이상, 8자리 이하로 입력하시오')
+		
 	}
 	
 	var user_pwd = document.login_form.userpwd;
 	var userpwdStr = user_pwd.value;
 	var userpwdLen = userpwdStr.length;
 	if(userpwdStr ==''){
-		document.getElementById('userpwd').setCustomValidity('PWD 입력해주세요');
+		alert('PASSWORD를 입력하시오');
 	}else if(userpwdLen <=3 || userpwdLen >=9){
-		document.getElementById('userpwd').setCustomValidity('4자리 이상, 8자리 이하로 입력해주세요');
+		alert('4자리 이상, 8자리 이하로 입력하시오')
 	}
+	
 }
 </script>
  
@@ -49,13 +50,13 @@ function chk() {
               <h3 class="login-heading mb-4">Welcome back!</h3>
               <form name="login_form" action="Login.center" method="get">
                 <div class="form-label-group">
-                  <input type="text" id="userid" name="userid" class="form-control" placeholder="userid" required autofocus  oninput="setCustomValidity('')">
+                  <input type="text" id="userid" name="userid" class="form-control" placeholder="userid" required autofocus oninvalid="this.setCustomValidity('영어 + 숫자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userid">UserID</label>
                   	
                 </div>
 
                 <div class="form-label-group">
-                  <input type="text" id="userpwd" name="userpwd"class="form-control" placeholder="Password" required oninput="setCustomValidity('')">
+                  <input type="text" id="userpwd" name="userpwd"class="form-control" placeholder="Password" required oninvalid="this.setCustomValidity('영어 + 숫자 , 특수문자 조합으로 입력해주세요')" oninput="setCustomValidity('')">
                   <label for="userpwd">Password</label>
                 </div>
 

@@ -3,6 +3,7 @@ package center.main;
 import java.util.Date;
 
 public class CenterDTO2 {
+	//Clientdata table
 	private String id;
 	private String pwd;
 	private String name;
@@ -11,6 +12,15 @@ public class CenterDTO2 {
 	private int gender;
 	private String email;
 	private String loc;
+	
+	//List table
+	private int rn;
+	private int Lrn;
+	private String title;
+	private String content;
+	private Date sdate;
+	private int hit;
+	private String center;
 	
 	
 	public String getId() {
@@ -60,6 +70,52 @@ public class CenterDTO2 {
 	}
 	public void setLoc(String loc) {
 		this.loc = loc;
+	}
+	
+	
+	
+
+	public int getRn() {
+		return rn;
+	}
+	public void setRn(int rn) {
+		this.rn = rn;
+	}
+	public int getLrn() {
+		return Lrn;
+	}
+	public void setLrn(int lrn) {
+		Lrn = lrn;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getSdate() {
+		return sdate;
+	}
+	public void setSdate(Date sdate) {
+		this.sdate = sdate;
+	}
+	public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+	public String getCenter() {
+		return center;
+	}
+	public void setCenter(String center) {
+		this.center = center;
 	}
 	
 }
