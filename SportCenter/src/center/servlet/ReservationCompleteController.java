@@ -53,7 +53,7 @@ public class ReservationCompleteController extends HttpServlet {
 		System.out.println("center: "+center);
 		System.out.println("content: "+Rcontent);
 		System.out.println("price: "+Rmoney);
-		
+		 
 		try {
 		CenterSQL1 sql1 = new CenterSQL1();
 		sql1.reservate(center, Rname, Rstart+r3, Rend+r4, Rcontent, Rmoney);
