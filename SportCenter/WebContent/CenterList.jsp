@@ -92,12 +92,15 @@
 				<td colspan="6" align="center">
 					<ul class="pagination justify-content-center">
 						<li class="page-item disabled">
-							<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+						
+							<a class="page-link" href="List.center?pageNum=${startpage-10}" <c:if test="${startpage>10}">aria-disabled="true"</c:if>>이전</a>
+						
 						</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
+							<c:forEach var="i" begin="${startpage}" end="${endpage}">
+								<li class="page-item"><a class="page-link" href="List.center?pageNum=${i}">${i}</a></li>
+							</c:forEach>
+							<li class="page-item">
+							<a class="page-link" href="List.center?pageNum=${startpage+10}"<c:if test="${startpage<10}">aria-disabled="true"</c:if>>다음</a>
 						</li>
 					</ul>
 				</td>

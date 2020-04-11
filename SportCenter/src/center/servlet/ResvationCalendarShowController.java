@@ -29,8 +29,6 @@ public class ResvationCalendarShowController extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		String center = request.getParameter("idx");
 		
-		
-		
 		String Rid, Rname, Rrn, Rstart, Rend="";
 		int Rcon, Syear, Smonth, Sday, Eyear, Emonth, Eday=0;
 		

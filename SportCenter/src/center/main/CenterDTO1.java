@@ -12,14 +12,63 @@ public class CenterDTO1 {
 	private String Rend;
 	private int Rconfirm;
 	private int Rmoney;
-	private int Syear, Smonth, Sday;
-	private int Eyear, Emonth, Eday;
 	
+	
+	//달력관련
+	private String ctitle, cid, cinfo;
+	private String start, end;
+	
+	public String getCtitle() {
+		return ctitle;
+	}
+	public void setCtitle(String ctitle) {
+		this.ctitle = ctitle;
+	}
+	public String getCid() {
+		return cid;
+	}
+	public void setCid(String cid) {
+		this.cid = cid;
+	}
+	public String getCinfo() {
+		return cinfo;
+	}
+	public void setCinfo(String cinfo) {
+		this.cinfo = cinfo;
+	}
+	public String getStart() {
+		return start;
+	}
+	public void setStart(String start) {
+		this.start = start;
+	}
+	public String getEnd() {
+		return end;
+	}
+	public void setEnd(String end) {
+		this.end = end;
+	}
+	
+		
+		
+		
 	private String Lid, Title, Content, Center;
 	private int Lrn, HIT;
 	private Date Sdate;
 	
-//	게시판 데이터 출력
+//	게시
+	private int gtotal, rn;
+	
+	
+	
+	
+	public int getRn() { return rn; }
+	public void setRn(int rn) {	this.rn = rn;}
+	
+	public int getGtotal() { return gtotal;	}
+	public void setGtotal(int gtotal) {	this.gtotal = gtotal; }
+	
+	//	게시판 데이터 출력
 	public String getLid() { return Lid; }
 	public void setLid(String lid) { Lid = lid; }
 	
@@ -45,23 +94,6 @@ public class CenterDTO1 {
 	public String getId() { return id; }
 	public void setId(String id) { this.id = id; }
 	
-	public int getSyear() { return Syear; }
-	public void setSyear(int syear) { Syear = syear; }
-	
-	public int getSmonth() { return Smonth;	}
-	public void setSmonth(int smonth) {	Smonth = smonth; }
-	
-	public int getSday() { return Sday; }
-	public void setSday(int sday) {	Sday = sday; }
-	
-	public int getEyear() {	return Eyear; }
-	public void setEyear(int eyear) { Eyear = eyear; }
-	
-	public int getEmonth() { return Emonth; }
-	public void setEmonth(int emonth) {	Emonth = emonth; }
-	
-	public int getEday() { return Eday;	}
-	public void setEday(int eday) {	Eday = eday; }
 
 //	예약데이터 저장
 	public int getRrn() { return Rrn; }

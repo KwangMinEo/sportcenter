@@ -192,8 +192,8 @@ $(function(){
 				          <h4><font>축구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
-				            <li><a href="list.center?idx=SOCCER">축구장 게시판</a></li>
-				            <li><a href="calendarshow.center?idx=football">축구장 예약확인</a></li>
+				            <li><a href="list.center?idx=soccer">축구장 게시판</a></li>
+				            <li><a href="CenterReservationCalendar.jsp">축구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -202,7 +202,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="list.center?idx=basketball">농구장 게시판</a></li>
-				            <li><a href="calendarshow.center?idx=basketball">농구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp">농구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -211,7 +211,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
 				            <li><a href="list.center?idx=baseball">야구장 게시판</a></li>
-				            <li><a href="calendarshow.center?idx=baseball">야구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp">야구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -220,7 +220,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
 				            <li><a href="list.center?idx=swim">수영장 게시판</a></li>
-				            <li><a href="calendarshow.center?idx=swim">수영장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp">수영장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -230,13 +230,13 @@ $(function(){
 						<a href="CenterMain.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
 					</h3>
 					<h3>
-						<a href="CenterList.jsp" id="ab2" class="btn btn-block lowerbtn">게시판</a>
+						<a href="List.center" id="ab2" class="btn btn-block lowerbtn">게시판</a>
 					</h3>
 					<h3>
 						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관 현황</a>
 					</h3>
 					<h3>
-						<a href='CenterReservationTable.jsp' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
+						<a href='reservation.center' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
 					</h3>
 					<h3>
 						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
@@ -247,7 +247,7 @@ $(function(){
 						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;">나의 예약상태</a>
 					</h3>
 					<h3>
-						<a href="CenterList.jsp" class="btn btn-block" style="background-color:tomato;">내 게시물 및 댓글 확인</a>
+						<a href="List.center" class="btn btn-block" style="background-color:tomato;">내 게시물 및 댓글 확인</a>
 					</h3>
 				</div>
 </body>

@@ -1,6 +1,7 @@
 package center.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/calendar.center")
+import center.main.CenterDTO1;
+import center.main.CenterSQL1;
+
+@WebServlet("/Calendar.center")
 public class ResvationCalendarController/*(복사용)*/ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,9 +27,10 @@ public class ResvationCalendarController/*(복사용)*/ extends HttpServlet {
 	protected void doUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		
-		String center = request.getParameter("idx");
-		request.setAttribute("cen", center);
+		ArrayList<CenterDTO1> dto = new ArrayList<CenterDTO1>();
+			CenterSQL1 sql = new CenterSQL1();
+			dto = sql.showcal1();
+		request.setAttribute("dto", dto);
 		RequestDispatcher dis = request.getRequestDispatcher("CenterReservationCalendar.jsp");
 		dis.forward(request, response);
 	}

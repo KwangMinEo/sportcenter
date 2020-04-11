@@ -47,6 +47,7 @@ public class ReservationCompleteController extends HttpServlet {
 			r4 = r1[1];
 		}
 		System.out.println(r3+", "+r4);
+		System.out.println(Rname);
 		System.out.println("시작: "+Rstart+r3);
 		System.out.println("종료: "+Rend+r4);
 		System.out.println("center: "+center);
