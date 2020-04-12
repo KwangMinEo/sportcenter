@@ -31,6 +31,12 @@
 
 <link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
+@font-face{
+	font-family:"bm";
+	src:url("font/CookieRun Bold.otf")format("opentype");
+}
+font{ font-family:bm; font-size:23px;}
+
 #headbg {
 	background: url('images/topimg.png') no-repeat center;
 	background-size: cover;
@@ -89,7 +95,7 @@ $(function(){
 
 var fulldate="";
 var chked="";
-var c=40000;/* 1시간당 가격 */
+var c=40000;      /* 1시간당 가격 */
 $(function(){
 	$(function(){
 		$('input[name="datefilter"]').on('apply.daterangepicker', function(){
@@ -109,7 +115,7 @@ $(function(){
 		$('input:checkbox[name="time"]').on('click', function(){
 			chked = $('input:checkbox[name="time"]:checked').length;
 			if(chked != 0){
-				$('#ftime').html(chked+" 시간 * "+c+" = ");
+				$('#ftime').html((chked*2)+" 시간 "+c+" = ");
 				$('input[name=pr]').val(fulldate*(chked*2)*c);
 			}
 			else{
@@ -128,7 +134,7 @@ $(function(){
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8">
-				<font style="color: white; font-size: 50px">예약화면</font>
+				<font style="color: white; font-size: 50px; font-family: bm;">#FANTASY#</font>
 			</div>
 			<div class="col-sm-2">
 			</div>
@@ -189,7 +195,7 @@ $(function(){
 					<!-- 왼쪽 메뉴바 -->
 					<nav align="center">
 				        <div class="menu-item rounded-lg">
-				          <h4><font>축구장</font></h4>
+				          <h4><font color="white"><img src="images/smile.png" style="width:20px; hwight:20px">축구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
 				            <li><a href="list.center?idx=soccer">축구장 게시판</a></li>
@@ -198,7 +204,7 @@ $(function(){
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
-				          <h4><font>농구장</font></h4>
+				          <h4><font color="white"><img src="images/smile.png" style="width:20px; hwight:20px">농구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="list.center?idx=basketball">농구장 게시판</a></li>
@@ -207,7 +213,7 @@ $(function(){
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
-				          <h4><font>야구장</font></h4>
+				          <h4><font color="white"><img src="images/smile.png" style="width:20px; hwight:20px">야구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
 				            <li><a href="list.center?idx=baseball">야구장 게시판</a></li>
@@ -216,7 +222,7 @@ $(function(){
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
-				          <h4><font>수영장</font></h4>
+				          <h4><font color="white"><img src="images/smile.png" style="width:20px; hwight:20px">수영장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
 				            <li><a href="list.center?idx=swim">수영장 게시판</a></li>
@@ -227,24 +233,24 @@ $(function(){
 				    </nav>
 					<hr>
 					<h3>
-						<a href="CenterMain.jsp" id="ab" class="btn btn-block lowerbtn">메인</a>
+						<a href="CenterMain.jsp" id="ab" class="btn btn-block lowerbtn"><font>메인</font></a>
 					</h3>
 					<h3>
-						<a href="List.center" id="ab2" class="btn btn-block lowerbtn">게시판</a>
+						<a href="List.center" id="ab2" class="btn btn-block lowerbtn"><font>게시판</font></a>
 					</h3>
 					<h3>
-						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관 현황</a>
+						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn"><font>전체 대관 현황</font></a>
 					</h3>
 					<h3>
-						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
+						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn"><font>오시는 길</font></a>
 					</h3>
 					
 					<hr>
 					<h3>
-						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;">나의 예약상태</a>
+						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;"><font>나의 예약상태</font></a>
 					</h3>
 					<h3>
-						<a href="List.center" class="btn btn-block" style="background-color:tomato;">내 게시물 및 댓글 확인</a>
+						<a href="List.center" class="btn btn-block" style="background-color:tomato;"><font>내 게시물 및 댓글 확인</font></a>
 					</h3>
 				</div>
 </body>

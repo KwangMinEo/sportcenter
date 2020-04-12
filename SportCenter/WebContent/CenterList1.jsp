@@ -98,20 +98,20 @@ function clearText(){
 			<!-- 게시글 여기 -->
 			
 			
-			<tr >
+			<tr>
   				<td colspan="6" align="center">
   				<ul class="pagination justify-content-center">
-					<li class="page-item disabled">
-					<c:if test="${startpage > 10}"><a href="List.center?pageNum=${startpage-10}&keyfield=${skey}&keyword=${sval}"> Previous </a> </c:if>
+					<li class="page-item">
+						<c:if test="${startpage > 10}"><a class="page-link" href="List.center?pageNum=${startpage-10}&keyfield=${skey}&keyword=${sval}"> Previous </a> </c:if>
 			  		</li>
-			  		<c:forEach var="i" begin="${startpage}" end="${endpage}">
-					  	<li class="page-item">
-						  	<c:choose>
-							  	<c:when test="${i==pageNUM}"><font class="page-link">${i}</font></c:when>
-							  	<c:otherwise><a class="page-link" href="List.center?pageNum=${i}&keyfield=${skey}&keyword=${sval}"> ${i} </a> </c:otherwise>
-						  	</c:choose>
-					  	</li>
-				  	</c:forEach>
+				  		<c:forEach var="i" begin="${startpage}" end="${endpage}">
+						  	<li class="page-item">
+							  	<c:choose>
+								  	<c:when test="${i==pageNUM}"><font class="page-link">${i}</font></c:when>
+								  	<c:otherwise><a class="page-link" href="List.center?pageNum=${i}&keyfield=${skey}&keyword=${sval}"> ${i} </a> </c:otherwise>
+							  	</c:choose>
+						  	</li>
+					  	</c:forEach>
 				  	<li class="page-item">
 						<c:if test="${endpage != pagecount}"><a class="page-link" href="List.center?pageNum=${startpage+10}&keyfield=${skey}&keyword=${sval}"> Next </a> </c:if>
 					</li>
