@@ -81,7 +81,7 @@
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
 					<div align='center'>
-						<div class='shadow'>
+						<div class="shadow w-auto p-3">
 							<table class="table">
 							<tr>
 							<td>야구장 설명</td>
@@ -122,7 +122,7 @@
 					</div>
 				</div>
 				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="padding: 0px; width: 100%; height: 100%;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
 								<img src="images/football2.jpg" style="width:300px; height:600px;">

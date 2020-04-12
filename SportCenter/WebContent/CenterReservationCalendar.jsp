@@ -108,8 +108,7 @@ hr {
 				     <c:when test="${cen eq 'swim'}">수영장</c:when>
 				</c:choose></h2>
 				</div>
-						 <div id='calendar'></div>
-					<div id="test"> </div>
+					<div id='calendar' class="w-auto p-3 h-auto d-inline-block"></div>
 				</div>
 
 

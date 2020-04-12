@@ -56,7 +56,7 @@ function clearText(){
 	<jsp:include page="CenterHeader.jsp" />
 	<!-- 메인 내용 표시되는 곳 -->
 	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
-	<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
+	<div class="shadow w-auto p-3 " style="padding-top:50px; padding-bottom: 50px;">
 		<table class="table">
 			<tr>
 				<td colspan="2"> 총${Gtotal}건 &nbsp;&nbsp;${Atotal}/${Gtotal}</td>
@@ -115,6 +115,7 @@ function clearText(){
 				  	<li class="page-item">
 						<c:if test="${endpage != pagecount}"><a class="page-link" href="List.center?pageNum=${startpage+10}&keyfield=${skey}&keyword=${sval}"> Next </a> </c:if>
 					</li>
+				</ul>
 			    </td>
 		  </tr>
 		</table>

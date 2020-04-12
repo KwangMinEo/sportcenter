@@ -110,10 +110,20 @@ hr {
 <jsp:include page="CenterHeader.jsp"/>
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px; align:center">
-					<div class="shadow">
-						<div style="align:center;">
-							<h2>오시는 길</h2>
-							<img src="images/map.png" style="width:700px;height:500px;">
+					<div class="shadow w-auto p-3">
+						<div>
+						<table class="table">
+						<tr>
+							<td style="align:center;">
+								<h2>오시는 길</h2>
+							</td>
+						</tr>
+						<tr>
+							<td style="align:center;">
+								<img src="images/map.png" style="width:800px;height:500px;">
+							</td>
+						</tr>
+						</table>
 						</div>
 					</div> 
 				</div>

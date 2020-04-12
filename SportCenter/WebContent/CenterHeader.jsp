@@ -193,7 +193,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
 				            <li><a href="list.center?idx=soccer">축구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendar.jsp">축구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp?idx=football">축구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -202,7 +202,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
 				            <li><a href="list.center?idx=basketball">농구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendar.jsp">농구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp?idx=basketball">농구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -211,7 +211,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
 				            <li><a href="list.center?idx=baseball">야구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendar.jsp">야구장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp?idx=baseball">야구장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -220,7 +220,7 @@ $(function(){
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
 				            <li><a href="list.center?idx=swim">수영장 게시판</a></li>
-				            <li><a href="CenterReservationCalendar.jsp">수영장 예약확인</a></li>
+				            <li><a href="CenterReservationCalendar.jsp?idx=swim">수영장 예약확인</a></li>
 				            <li><a href="reservation.center?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
@@ -234,9 +234,6 @@ $(function(){
 					</h3>
 					<h3>
 						<a href="CenterReservationCalendar.jsp" id="ab1" class="btn btn-block lowerbtn">전체 대관 현황</a>
-					</h3>
-					<h3>
-						<a href='reservation.center' id="ab3" class="btn btn-block lowerbtn">예약 화면</a>
 					</h3>
 					<h3>
 						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>

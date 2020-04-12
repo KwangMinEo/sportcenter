@@ -78,40 +78,44 @@
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
 					<div align='center'>
-						<div class='shadow'>
-						<table class="table" style="background-color:#EFF8Ff; width:78%;">
-						<tr align="center">
-							<td colspan="3" style="background-color:#2B7797;">
-								센터 평일 개방시간
-							</td>
-						</tr>
-						<tr>
-						<td>구분</td><td>시간</td><td>비고</td>
-						</tr>
-						<tr >
-							<td>
-								월요일 ~ 금요일
-							<br>
-								토요일
-							</td>
-							<td colspan="2">
-								06:00 ~ 21:50 
-							</td>
-						</tr>
-						<tr>
-							<td>
-								일요일
-							</td>
-							<td>
-								09:00 ~ 15:50
-							</td>
-							<td>
-								매월 둘째주 일요일은 정기휴관
-							</td>
-						</tr>
-						</table>
+						<div class="shadow w-auto p-3">
+							<div style="padding-top: 20pt;">
+								<table class="table" style="background-color:#EFF8Ff; width:78%; padding-top: 50pt;">
+								<tr align="center">
+									<td colspan="3" style="background-color:#2B7797;">
+										센터 평일 개방시간
+									</td>
+								</tr>
+								<tr>
+									<td>구분</td><td>시간</td><td>비고</td>
+								</tr>
+								<tr >
+									<td>
+										월요일 ~ 금요일
+										<br>
+										토요일
+									</td>
+									<td colspan="2">
+										06:00 ~ 21:50 
+									</td>
+								</tr>
+								<tr>
+									<td>
+										일요일
+									</td>
+									<td>
+										09:00 ~ 15:50
+									</td>
+									<td>
+										매월 둘째주 일요일은 정기휴관
+									</td>
+								</tr>
+								</table>
+							</div>
 						<!-- 중간 이미지 -->
+						<div style="padding-top: 50pt;">
 								대관절차<br><img src="images/rentstep.jpg">
+						</div>
 							<br>
 							<!-- 아래 테이블 -->
 							<hr>

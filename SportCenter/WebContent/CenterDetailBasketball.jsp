@@ -81,7 +81,7 @@
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
 					<div align='center'>
-						<div class='shadow'>
+						<div class="shadow w-auto p-3">
 							<table class="table">
 							<tr>
 								<td>농구장 설명</td>
@@ -122,26 +122,28 @@
 					</div>
 				</div>
 				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
-					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
+					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="padding: 0px; width: 100%; height: 100%;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">
-								<img src="images/football2.jpg" style="width:300px; height:600px;">
+								<img src="images/football2.jpg"	style="width: 300px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<img src="images/goal.jpg" style="width:300px; height:600px;">
+								<img src="images/goal.jpg" style="width: 300px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<img src="images/place/경기장야경.jpg" style="width:280px; height:600px;">
+								<img src="images/place/경기장야경.jpg"	style="width: 280px; height: 600px;">
 							</div>
 							<div class="carousel-item" align="center">
-								<h1>광고문의:<br> 000-0000-0000</h1>
+								<h1>
+									광고문의:<br> 000-0000-0000
+								</h1>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button"	data-slide="prev">
+						<a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a>
-						<a class="carousel-control-next" href="#carouselExampleControls1" role="button"	data-slide="next">
+						<a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a>

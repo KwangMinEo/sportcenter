@@ -50,68 +50,65 @@
 </head>
 
 <body>
-	<jsp:include page="CenterHeader.jsp" />
+	<jsp:include page="CenterHeader.jsp">
+	<jsp:param value="" name=""/>
+	</jsp:include>
 	<!-- 메인 내용 표시되는 곳 -->
 	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
-	<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
-		<table class="table">
-			<tr>
-				<td colspan="2"> 총10건 &nbsp;&nbsp;2/12</td>
-				<td colspan="4" align="right" style="padding-right:20px">
-					<div class="row" style="float:right;">
-						<select class="custom-select" style="width:70px;">
-							<option>제목</option>
-							<option>작성자</option>
-						</select>
-						<div class="input-group" style="width:200px ; align:right;">
-							<input type="text" class="form-control" placeholder="Search">
-		  					<div class="input-group-append">
-								<button class="btn btn-info" type="submit">Go</button> 
+		<div class="shadow w-auto p-3 " style="padding-top:50px; padding-bottom: 50px;">
+			<table class="table">
+				<tr>
+					<td colspan="2"> 총10건 &nbsp;&nbsp;2/12</td>
+					<td colspan="4" align="right" style="padding-right:20px">
+						<div class="row" style="float:right;">
+							<select class="custom-select" style="width:70px;">
+								<option>제목</option>
+								<option>작성자</option>
+							</select>
+							<div class="input-group" style="width:200px ; align:right;">
+								<input type="text" class="form-control" placeholder="Search">
+			  					<div class="input-group-append">
+									<button class="btn btn-info" type="submit">Go</button> 
+								</div>
 							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>번호</td>
-				<td width="30%">제목</td>
-				<td>작성자</td>
-				<td>작성 날짜</td>
-				<td>카테고리</td>
-				<td>조회수</td>
-			</tr>
-			<c:forEach var="to" items="${LI}">
-			<tr>
-				<td>${to.lrn}</td><td>${to.title}</td><td>${to.lid}</td><td>${to.sdate}</td><td>${to.center}</td><td>${to.HIT}</td>
-			</tr>
-			</c:forEach>
-			<!-- 게시글 여기 -->
-			
-			
-			<tr>
-				<td colspan="6" align="center">
-					<ul class="pagination justify-content-center">
-						<li class="page-item disabled">
-						
-							<a class="page-link" href="List.center?pageNum=${startpage-10}" <c:if test="${startpage>10}">aria-disabled="true"</c:if>>이전</a>
-						
-						</li>
-							<c:forEach var="i" begin="${startpage}" end="${endpage}">
-								<li class="page-item"><a class="page-link" href="List.center?pageNum=${i}">${i}</a></li>
-							</c:forEach>
-							<li class="page-item">
-							<a class="page-link" href="List.center?pageNum=${startpage+10}"<c:if test="${startpage<10}">aria-disabled="true"</c:if>>다음</a>
-						</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
-</div>
-
-
-
+					</td>
+				</tr>
+				<tr>
+					<td>번호</td>
+					<td width="30%">제목</td>
+					<td>작성자</td>
+					<td>작성 날짜</td>
+					<td>카테고리</td>
+					<td>조회수</td>
+				</tr>
+				<c:forEach var="to" items="${LI}">
+				<tr>
+					<td>${to.lrn}</td><td>${to.title}</td><td>${to.lid}</td><td>${to.sdate}</td><td>${to.center}</td><td>${to.HIT}</td>
+				</tr>
+				</c:forEach>
+				<!-- 게시글 여기 -->
+				<tr>
+					<td colspan="6" align="center">
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled">
+							
+								<a class="page-link" href="List.center?pageNum=${startpage-10}" <c:if test="${startpage>10}">aria-disabled="true"</c:if>>이전</a>
+							
+							</li>
+								<c:forEach var="i" begin="${startpage}" end="${endpage}">
+									<li class="page-item"><a class="page-link" href="List.center?pageNum=${i}">${i}</a></li>
+								</c:forEach>
+								<li class="page-item">
+								<a class="page-link" href="List.center?pageNum=${startpage+10}"<c:if test="${startpage<10}">aria-disabled="true"</c:if>>다음</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
-					<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
+				<div class="col-sm-2" style="padding-top: 20px; background-color: rgb(89, 102, 114);">
 					<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:250px; height:600px;">
 						<div class="carousel-inner">
 							<div class="carousel-item active" align="center">

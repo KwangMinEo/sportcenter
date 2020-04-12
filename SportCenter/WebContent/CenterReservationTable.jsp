@@ -45,7 +45,7 @@
 	<jsp:include page="CenterHeader.jsp" />
 	<!-- 메인 내용 표시되는 곳 -->
 	<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
-		<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
+		<div class="shadow w-auto p-3" style="padding-top:50px; padding-bottom: 50px;">
 		<form method="get" name="myform" action="reservationcomplete.sport">
 		<table style="column-width: 1000px;">
 			<tr align="center">

@@ -81,7 +81,7 @@
 				<!-- 메인 내용 표시되는 곳 -->
 				<div id="menus" class="col-sm-8"style="padding-top: 20px; background-color: lightgray; padding-bottom:50px">
 					<div align='center'>
-						<div class='shadow'>
+						<div class="shadow w-auto p-3">
 							<table class="table">
 							<tr>
 								<td>축구장 설명</td>

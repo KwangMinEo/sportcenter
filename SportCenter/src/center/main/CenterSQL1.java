@@ -133,12 +133,10 @@ public class CenterSQL1 extends Global{
 		return list;
 	}
 	
-	public ArrayList<CenterDTO1> showcal1(){
+	public ArrayList<CenterDTO1> showcal1( ){
 		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
-		String T = "'T'";
 		try {
 			String msg="select id, name, Rnum, rstart ,rend, rconfirm from reservation where rconfirm=1";
-			
 			ST = CN.createStatement();
 			RS = ST.executeQuery(msg);
 			while(RS.next()) {
@@ -157,7 +155,4 @@ public class CenterSQL1 extends Global{
 		}
 		return list;
 	}
-	
-	
-	
 }
