@@ -58,68 +58,109 @@ public class CenterSQL1 extends Global{
 		return ok;
 	}
 
-	public ArrayList<CenterDTO1> ShowCal() {
+	public ArrayList<CenterDTO1> ShowCal(String center) {
 		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
+		String cen="";
 		try {
-			String msg="select rn, id, name, Rnum, to_char(Rstart,'yyyy,mm,dd, hh24,mi') as startr, to_char(Rend, 'yyyy,mm,dd, hh24,mi') as rend, rconfirm from (select rownum rn, t.* from testres t)";
+			if(center.equals("football")){
+				cen="SC";
+			}
+			else if(center.equals("basketball")) {
+				cen="BB";
+			}
+			else if(center.equals("baseball")) {
+				cen="ML";
+			}
+			else if(center.equals("swim")) {
+				cen="SM";
+			}
+			else {cen="??";}
+			String msg="select rn, id, name, rnum, to_char(Rstart,'yyyy,mm,dd, hh24,mi') as startr, to_char(Rend, 'yyyy,mm,dd, hh24,mi') as rend, rconfirm, to_char(rend, 'yyyy')-to_char(sysdate, 'yyyy') eyear, to_char(rend, 'mm')-to_char(sysdate, 'mm') emonth, to_char(rend, 'dd') eday,  to_char(rstart, 'yyyy')-to_char(sysdate, 'yyyy') syear, to_char(rstart, 'mm')-to_char(sysdate, 'mm') smonth, to_char(rstart, 'dd') sday from (select rownum rn, t.* from testres t where Rnum like '%"+cen+"%')";
 			ST=CN.createStatement();
 			RS=ST.executeQuery(msg);
-			if(RS.next()) {
+			while(RS.next()) {
 				CenterDTO1 dto = new CenterDTO1();
 				dto.setRrn(RS.getInt("rn"));
 				dto.setId(RS.getString("id"));
 				dto.setName(RS.getString("name"));
-				dto.setRnum(RS.getString("Rnum"));
+				dto.setRnum(RS.getString("rnum"));
 				dto.setRstart(RS.getString("startr"));
 				dto.setRend(RS.getString("rend"));
-				dto.setRconfirm(RS.getInt("rconfrim"));
-				list.add(dto);
-			}
-			
-		}catch(Exception e) {System.out.println("예약확인 에러 캘린더에 출력할수 없습니다"+e);}
-		return list;
-	}
-	
-	public ArrayList<CenterDTO1> getdataymd() {
-		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
-		String smsg="";
-		String emsg="";
-		try {
-			CenterDTO1 dto = new CenterDTO1();
-			smsg="select to_char(rstart, 'yyyy')-to_char(sysdate, 'yyyy')as syear, to_char(rstart, 'mm')-to_char(sysdate, 'mm')as smonth, to_char(rstart, 'dd')-to_char(sysdate, 'dd')as sday from testres";
-			ST=CN.createStatement();
-			RS=ST.executeQuery(smsg);
-			if(RS.next()) {
+				dto.setRconfirm(RS.getInt("rconfirm"));
+				dto.setEyear(RS.getInt("eyear"));
+				dto.setEmonth(RS.getInt("emonth"));
+				dto.setEday(RS.getInt("eday"));
 				dto.setSyear(RS.getInt("syear"));
 				dto.setSmonth(RS.getInt("smonth"));
 				dto.setSday(RS.getInt("sday"));
 				list.add(dto);
 			}
-			emsg="select to_char(rend, 'yyyy')-to_char(sysdate, 'yyyy')as eyear, to_char(rend, 'mm')-to_char(sysdate, 'mm')as emonth, to_char(rend, 'dd')-to_char(sysdate, 'dd')as eday from testres;";
+			System.out.println("예약확인 되었습니다!");
+		}catch(Exception e) {System.out.println("예약확인 에러 캘린더에 출력할수 없습니다"+e);}
+		return list;
+	}
+	
+	public ArrayList<CenterDTO1> getEnddata() {
+		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
+		String emsg="";
+		try {
+			CenterDTO1 dto = new CenterDTO1();
+			emsg="select to_char(rend, 'yyyy')-to_char(sysdate, 'yyyy') eyear, to_char(rend, 'mm')-to_char(sysdate, 'mm') emonth, to_char(rend, 'dd')-to_char(sysdate, 'dd') eday from testres";
 			ST=CN.createStatement();
 			RS=ST.executeQuery(emsg);
-			if(RS.next()) {
+			while(RS.next()) {
 				dto.setEyear(RS.getInt("eyear"));
 				dto.setEmonth(RS.getInt("emonth"));
 				dto.setEday(RS.getInt("eday"));
 				list.add(dto);
 			}
-			System.out.println("일차를가져오는데 성공 했습니다.");
-		}catch(Exception e) { System.out.println("시작/종료 년, 월, 달 가져오기 실패"+ e );}
+			System.out.println("종료 일차를가져오는데 성공 했습니다.");
+		}catch(Exception e) { System.out.println("종료 년, 월, 달 가져오기 실패"+ e );}
+		return list;
+	}
+	
+	public ArrayList<CenterDTO1> getStartdata() {
+		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
+		String smsg="";
+		try {
+			CenterDTO1 dto = new CenterDTO1();
+			smsg="select to_char(rstart, 'yyyy')-to_char(sysdate, 'yyyy') syear, to_char(rstart, 'mm')-to_char(sysdate, 'mm') smonth, to_char(rstart, 'dd')-to_char(sysdate, 'dd') sday from testres";
+			ST=CN.createStatement();
+			RS=ST.executeQuery(smsg);
+			while(RS.next()) {
+				dto.setSyear(RS.getInt("syear"));
+				dto.setSmonth(RS.getInt("smonth"));
+				dto.setSday(RS.getInt("sday"));
+				list.add(dto);
+			}
+			System.out.println("시작 일차를가져오는데 성공 했습니다.");
+			
+		}catch(Exception e) { System.out.println("시작 년, 월, 달 가져오기 실패"+ e );}
 		return list;
 	}
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public ArrayList<CenterDTO1> showlist(String center) {
+		ArrayList<CenterDTO1> list = new ArrayList<CenterDTO1>();
+		try {
+			CenterDTO1 dto = new CenterDTO1();
+			String msg="select * from list where center like '%SOCCER%'";
+			ST=CN.createStatement();
+			RS=ST.executeQuery(msg);
+			while(RS.next()) {
+				dto.setLid(RS.getString("id"));
+				dto.setTitle(RS.getString("title"));
+				dto.setContent(RS.getString("content"));
+				dto.setCenter(RS.getString("center"));
+				dto.setLrn(RS.getInt("lrn"));
+				dto.setHIT(RS.getInt("hit"));
+				dto.setSdate(RS.getDate("sdate"));
+				list.add(dto);
+			}
+			System.out.println("게시판 데이터 불러오기 완료");
+		}catch(Exception e) {System.out.println("게시판 리스트 불러오기 실패sql :"+e);}
+		return list;
+	}
 	
 }

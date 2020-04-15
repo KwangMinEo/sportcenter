@@ -118,8 +118,8 @@ $(function(){
 				$('input[name=pr]').val("");
 			}
 		});
-		});
 	});
+});
 </script>
 </head>
 
@@ -192,36 +192,36 @@ $(function(){
 				          <h4><font>축구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
-				            <li><a href="CenterList.jsp?idx=football">축구장 게시판</a></li>
-				            <li><a href="calendar.center?idx=football">축구장 예약확인</a></li>
-				            <li><a href="reservation.sport?idx=football">축구장 예약하기</a></li>
+				            <li><a href="list.center?idx=SOCCER">축구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=football">축구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>농구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
-				            <li><a href="CenterList.jsp?idx=basketball">농구장 게시판</a></li>
-				            <li><a href="calendar.center?idx=basketball">농구장 예약확인</a></li>
-				            <li><a href="reservation.sport?idx=basketball">농구장 예약하기</a></li>
+				            <li><a href="list.center?idx=basketball">농구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=basketball">농구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>야구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
-				            <li><a href="CenterList.jsp?idx=baseball">야구장 게시판</a></li>
-				            <li><a href="calendar.center?idx=baseball">야구장 예약확인</a></li>
-				            <li><a href="reservation.sport?idx=baseball">야구장 예약하기</a></li>
+				            <li><a href="list.center?idx=baseball">야구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=baseball">야구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>수영장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
-				            <li><a href="CenterList.jsp?idx=swim">수영장 게시판</a></li>
-				            <li><a href="calendar.center?idx=swim">수영장 예약확인</a></li>
-				            <li><a href="reservation.sport?idx=swim">수영장 예약하기</a></li>
+				            <li><a href="list.center?idx=swim">수영장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=swim">수영장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
 				    </nav>

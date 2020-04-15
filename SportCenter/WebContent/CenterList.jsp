@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -55,7 +56,7 @@
 	<div class="shadow" style="padding-top:50px; padding-bottom: 50px;">
 		<table class="table">
 			<tr>
-				<td colspan="2">총10건 &nbsp;&nbsp;2/12</td>
+				<td colspan="2"> 총10건 &nbsp;&nbsp;2/12</td>
 				<td colspan="4" align="right" style="padding-right:20px">
 					<div class="row" style="float:right;">
 						<select class="custom-select" style="width:70px;">
@@ -79,13 +80,12 @@
 				<td>카테고리</td>
 				<td>조회수</td>
 			</tr>
+			<c:forEach var="to" items="${LI}">
 			<tr>
-				<td></td>
+				<td>${to.lrn}</td><td>${to.title}</td><td>${to.lid}</td><td>${to.sdate}</td><td>${to.center}</td><td>${to.HIT}</td>
 			</tr>
-			<tr>
-				<td>1</td><td>blah..blah..blah</td><td>blah</td><td>blah</td><td>blah</td><td></td>
+			</c:forEach>
 			<!-- 게시글 여기 -->
-			</tr>
 			
 			
 			<tr>

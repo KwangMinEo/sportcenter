@@ -1,5 +1,6 @@
+<%@page import="com.sun.org.apache.bcel.internal.generic.CALOAD"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -23,16 +24,12 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+	
 <link href="css/calendar.css" rel="stylesheet">
 <script src="js/calendar.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 <link rel="stylesheet" href="css/dropdown.css">
 <style type="text/css">
-#headbg {
-	background: url('images/topimg.png') no-repeat center;
-	background-size: cover;
-	height: 150pt;
-}
 
 hr {
 	padding-top: 12px;
@@ -93,127 +90,136 @@ hr {
 
 </style>
 <script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
-						var date = new Date();
-						var d = date.getDate();
-						var m = date.getMonth();
-						var y = date.getFullYear();
+$(document).ready(function() {
+    var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+	
+	/*  className colors
+	
+	className: default(transparent), important(red), chill(pink), success(green), info(blue)
+	
+	*/		
+	
+	  
+	/* initialize the external events
+	-----------------------------------------------------------------*/
 
-						/*  className colors
-						
-						className: default(transparent), important(red), chill(pink), success(green), info(blue)
-						
-						 */
+	$('#external-events div.external-event').each(function() {
+	
+		// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+		// it doesn't need to have a start or end
+		var eventObject = {
+			title: $.trim($(this).text()) // use the element's text as the event title
+		};
+		
+		// store the Event Object in the DOM element so we can get to it later
+		$(this).data('eventObject', eventObject);
+		
+		// make the event draggable using jQuery UI
+		$(this).draggable({
+			zIndex: 999,
+			revert: true,      // will cause the event to go back to its
+			revertDuration: 0  //  original position after the drag
+		});
+		
+	});
 
 
-						/* initialize the calendar
-						-----------------------------------------------------------------*/
-
-						var calendar = $('#calendar')
-								.fullCalendar(
-										{
-											header : {
-												left : 'title',
-												center : 'agendaDay,agendaWeek,month',
-												right : 'prev,next today'
-											},
-											editable : true,
-											firstDay : 0, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-											selectable : false,
-											defaultView : 'month',
-
-											axisFormat : 'h:mm',
-											columnFormat : {
-												month : 'ddd', // Mon
-												week : 'ddd d', // Mon 7
-												day : 'dddd M/d', // Monday 9/7
-												agendaDay : 'dddd d'
-											},
-											titleFormat : {
-												month : 'yyyy MMMM', // September 2009
-												week : "yyyy MMMM", // September 2009
-												day : 'yyyy MMMM' // Tuesday, Sep 8, 2009
-											},
-											allDaySlot : false,
-											selectHelper : true,
-											select : function(start, end,
-													allDay) {
-												var title = prompt('Event Title:');
-												if (title) {
-													calendar.fullCalendar(
-															'renderEvent', {
-																title : title,
-																start : start,
-																end : end,
-																allDay : allDay
-															}, true // make the event "stick"
-													);
-												}
-												calendar
-														.fullCalendar('unselect');
-											},
-
-											events : [
-													{
-														title : 'All Day Event',
-														start : new Date(y, m, 1)
-													},
-													{
-														id : 999,
-														title : 'Repeating Event',
-														start : new Date(y, m, d - 3, 16, 0),
-														allDay : false,
-														className : 'info'
-													},
-													{
-														id : 999,
-														title : 'Repeating Event',
-														start : new Date(y, m, d + 4, 16, 0),
-														allDay : false,
-														className : 'info'
-													},
-													{
-														title : 'Meeting',
-														start : new Date(y, m, d, 10, 30),
-														allDay : false,
-														className : 'important'
-													},
-													{
-														title : 'Lunch',
-														start : new Date(y, m, d, 12, 0),
-														end : new Date(y, m, d, 14, 0),
-														allDay : false,
-														className : 'important'
-													},
-													{
-														title : 'Birthday Party',
-														start : new Date(y, m, d + 1, 19, 0),
-														end : new Date(y, m, d + 1, 22, 30),
-														allDay : false,
-													},
-													{
-														title : 'Click for Google',
-														start : new Date(y, m, 28),
-														end : new Date(y, m, 29),
-														url : 'https://ccp.cloudaccess.net/aff.php?aff=5188',
-														className : 'success'
-													} ],
-										});
-					});
+	/* initialize the calendar
+	-----------------------------------------------------------------*/
+	
+	var calendar =  $('#calendar').fullCalendar({
+		header: {
+			left: 'title',
+			center: 'agendaDay,agendaWeek,month',
+			right: 'prev,next today'
+		},
+		editable: true,
+		firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+		selectable: false,
+		defaultView: 'month',
+		
+		axisFormat: 'h:mm',
+		columnFormat: {
+            month: 'ddd',    // Mon
+            week: 'ddd d', // Mon 7
+            day: 'dddd M/d',  // Monday 9/7
+            agendaDay: 'dddd d'
+        },
+        titleFormat: {
+            month: 'MMMM yyyy', // September 2009
+            week: "MMMM yyyy", // September 2009
+            day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
+        },
+		allDaySlot: false,
+		selectHelper: true,
+		select: function(start, end, allDay) {
+			var title = prompt('Event Title:');
+			if (title) {
+				calendar.fullCalendar('renderEvent',
+					{
+						title: title,
+						start: start,
+						end: end,
+						allDay: allDay
+					},
+					true // make the event "stick"
+				);
+			}
+			calendar.fullCalendar('unselect');
+		},
+		droppable: true, // this allows things to be dropped onto the calendar !!!
+		drop: function(date, allDay) { // this function is called when something is dropped
+		
+			// retrieve the dropped element's stored Event Object
+			var originalEventObject = $(this).data('eventObject');
+			
+			// we need to copy it, so that multiple events don't have a reference to the same object
+			var copiedEventObject = $.extend({}, originalEventObject);
+			
+			// assign it the date that was reported
+			copiedEventObject.start = date;
+			copiedEventObject.allDay = allDay;
+			
+			// render the event on the calendar
+			// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+			$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+			
+			// is the "remove after drop" checkbox checked?
+			if ($('#drop-remove').is(':checked')) {
+				// if so, remove the element from the "Draggable Events" list
+				$(this).remove();
+			}
+			
+		},
+		
+		events: [
+					<c:forEach var="bean" items="${CAL}">
+						{
+						title : "<c:out value="${bean.name}"></c:out>님의 예약",
+						start : new Date(y+<c:out value="${bean.syear}"></c:out>, m+<c:out value="${bean.smonth}"></c:out>, <c:out value="${bean.sday}"></c:out>),
+						end : new Date(y+<c:out value="${bean.eyear}"></c:out>, m+<c:out value="${bean.emonth}"></c:out>, <c:out value="${bean.eday}"></c:out>),
+						},
+					</c:forEach> 
+						{	}
+						],
+				});
+		});
 	
 	$(function(){
 		var date = new Date();
 		$('#test').append("년:"+ date.getFullYear()+"<br>");
-		$('#test').append("월+1:"+ (date.getMonth()+1)+"<br>");
+		$('#test').append("월:"+ (date.getMonth())+"<br>");
 		$('#test').append("일:"+ date.getDate());
 	})
 </script>
 </head>
 
 <body style="background-color:black;">
-<div class="container-fluid" id="headbg" align="center" style="padding-top: 45pt; height:150pt">
+	<div class="container-fluid" align="center" style="padding-top: 45pt; height:150pt; background: url('images/topimg.png') no-repeat center;
+	background-size: cover;	height: 150pt;">
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8">
@@ -226,9 +232,14 @@ hr {
 	<div class="container-fluid">
 		<div class="navbar navbar-sm"
 			style="background-color: #33475C; margin-left: -15px; margin-right: -15px; height: 50px;">
+			<div class="row">
 			<div class="navbar">
 				현제위치 표시 ex):<img src='images/ico-home.gif'>
-				<font color="white">예약하기>이용수칙</font>
+				<font color="white">예약하기>${cen }</font>
+			</div>
+			<div align="right">
+				아이디표시
+			</div>
 			</div>
 		</div>
 	</div>
@@ -276,36 +287,36 @@ hr {
 				          <h4><font>축구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailFoot.jsp">축구장 설명</a></li>
-				            <li><a href="CenterListFootball.jsp">축구장 게시판</a></li>
-				            <li><a href="calendar.center?">축구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableFootball.jsp">축구장 예약하기</a></li>
+				            <li><a href="CenterList.jsp?idx=football">축구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=football">축구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=football">축구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>농구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBasketball.jsp">농구장 설명</a></li>
-				            <li><a href="CenterListBaseball.jsp">농구장 게시판</a></li>
-				            <li><a href="calendar.center">농구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableBasketball.jsp">농구장 예약하기</a></li>
+				            <li><a href="CenterList.jsp?idx=basketball">농구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=basketball">농구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=basketball">농구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>야구장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailBaseball.jsp">야구장 설명</a></li>
-				            <li><a href="CenterListBaseball.jsp">야구장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarBaseball.jsp">야구장 예약확인</a></li>
-				            <li><a href="CenterReservationTableBaseball.jsp">야구장 예약하기</a></li>
+				            <li><a href="CenterList.jsp?idx=baseball">야구장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=baseball">야구장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=baseball">야구장 예약하기</a></li>
 				          </ul>
 				        </div>
 				        <div class="menu-item rounded-lg">
 				          <h4><font>수영장</font></h4>
 				          <ul>
 				            <li><a href="CenterDetailSwim.jsp">수영장 설명</a></li>
-				            <li><a href="CenterListSwim.jsp">수영장 게시판</a></li>
-				            <li><a href="CenterReservationCalendarSwim.jsp">수영장 예약확인</a></li>
-				            <li><a href="CenterReservationTableSwim.jsp">수영장 예약하기</a></li>
+				            <li><a href="CenterList.jsp?idx=swim">수영장 게시판</a></li>
+				            <li><a href="calendarshow.center?idx=swim">수영장 예약확인</a></li>
+				            <li><a href="reservation.center?idx=swim">수영장 예약하기</a></li>
 				          </ul>
 				        </div>
 				    </nav>
@@ -325,6 +336,7 @@ hr {
 					<h3>
 						<a href="CenterLocation.jsp" id="ab4" class="btn btn-block lowerbtn">오시는 길</a>
 					</h3>
+					
 					<hr>
 					<h3>
 						<a href="CenterReservationCalendar.jsp" class="btn btn-block" style="background-color:tomato;">나의 예약상태</a>
@@ -335,11 +347,67 @@ hr {
 				</div>
 				<!-- 메인 내용 -->
 				<div id="menus" class="col-sm-8" style="padding-top: 20px; background-color: lightgray; padding-bottom: 50px">
+				<div>
+				<h2><c:choose>
+				    <c:when test="${cen eq 'football'}">축구장</c:when>
+				    <c:when test="${cen eq 'basketball'}">농구장</c:when>
+				     <c:when test="${cen eq 'baseball'}">야구장</c:when>
+				     <c:when test="${cen eq 'swim'}">수영장</c:when>
+				</c:choose></h2>
+				</div>
 					<div id='wrap'>
 						<div id='calendar'></div>
 						<div style='clear: both'></div>
 					</div>
 					<div id="test"> </div>
+					<table class="table">
+					<tr><td>아이디</td><td>이름</td><td>시작 날자</td><td>종료 날자</td></tr>
+					<c:forEach var="bean" items="${CAL}">
+					<tr>
+						<td>
+						<c:out value="${bean.id}"></c:out>
+						</td>
+						<td>
+						<c:out value="${bean.name}"></c:out>
+						</td>
+						<td>
+						<c:out value="${bean.rstart}"></c:out>
+						</td>
+						<td>
+						<c:out value="${bean.rend}"></c:out>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						시작 날자 
+						</td>
+						<td>
+							년:<c:out value="${bean.syear}"></c:out>
+							</td>
+							<td>
+							월:<c:out value="${bean.smonth}"></c:out>
+							</td>
+							<td>
+							일:<c:out value="${bean.sday}"></c:out>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						종료 날자
+						</td>
+						<td>
+							년:<c:out value="${bean.eyear}"></c:out>
+							</td>
+							<td>
+							월:<c:out value="${bean.emonth}"></c:out>
+							</td>
+							<td>
+							일:<c:out value="${bean.eday}"></c:out>
+						</td>
+					</tr>
+					</c:forEach>
+					<c:out value="${cen}"></c:out>
+					</table>
 				</div>
 
 

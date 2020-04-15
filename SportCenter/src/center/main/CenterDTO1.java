@@ -1,5 +1,7 @@
 package center.main;
 
+import java.util.Date;
+
 public class CenterDTO1 {
 	private String id;
 	private int Rrn;
@@ -13,7 +15,33 @@ public class CenterDTO1 {
 	private int Syear, Smonth, Sday;
 	private int Eyear, Emonth, Eday;
 	
+	private String Lid, Title, Content, Center;
+	private int Lrn, HIT;
+	private Date Sdate;
 	
+//	게시판 데이터 출력
+	public String getLid() { return Lid; }
+	public void setLid(String lid) { Lid = lid; }
+	
+	public String getTitle() { return Title; }
+	public void setTitle(String title) { Title = title; }
+	
+	public String getContent() { return Content; }
+	public void setContent(String content) { Content = content;	}
+	
+	public String getCenter() { return Center; }
+	public void setCenter(String center) { Center = center; }
+	
+	public int getLrn() { return Lrn; }
+	public void setLrn(int lrn) { Lrn = lrn; }
+	
+	public int getHIT() { return HIT; }
+	public void setHIT(int hIT) { HIT = hIT; }
+	
+	public Date getSdate() { return Sdate; }
+	public void setSdate(Date sdate) { this.Sdate = sdate; }
+	
+//	달력데이터 가져오기
 	public String getId() { return id; }
 	public void setId(String id) { this.id = id; }
 	
@@ -34,8 +62,8 @@ public class CenterDTO1 {
 	
 	public int getEday() { return Eday;	}
 	public void setEday(int eday) {	Eday = eday; }
-	
-	
+
+//	예약데이터 저장
 	public int getRrn() { return Rrn; }
 	public void setRrn(int rrn) { Rrn = rrn; }
 	
